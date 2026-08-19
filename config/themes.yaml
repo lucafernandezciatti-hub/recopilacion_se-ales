@@ -1,0 +1,131 @@
+# Mapa temático del proyecto.
+# Editable sin tocar código. Las descripciones se le pasan al clasificador.
+
+project:
+  core_topic: "La educación primaria en Argentina en 2050"
+  horizon: 2050
+  geography: "Argentina (con contexto regional y global cuando aporta)"
+  languages: ["es", "en", "pt"]
+  description: >
+    Investigación de futuros sobre la educación primaria argentina con horizonte 2050.
+    Interesan indicios observables en el presente que puedan alterar cómo se organiza,
+    financia, enseña, evalúa o legitima la escuela primaria: no noticias educativas
+    genéricas, sino cambios que abran preguntas sobre futuros posibles del sistema.
+
+# ---------------------------------------------------------------------------
+# TEMÁTICAS NÚCLEO — caen directamente dentro del objeto de estudio
+# ---------------------------------------------------------------------------
+core_themes:
+  - name: "Alfabetización y comprensión lectora"
+    description: >
+      Aprendizaje y enseñanza de lectura y escritura, resultados de comprensión lectora,
+      métodos de alfabetización inicial, políticas de alfabetización.
+
+  - name: "Trayectorias escolares y escolarización"
+    description: >
+      Acceso, permanencia, repitencia, sobreedad, abandono, asistencia, extensión de la
+      jornada escolar y organización del ciclo primario.
+
+  - name: "Trabajo y formación docente"
+    description: >
+      Formación inicial y continua, salarios, condiciones laborales, sindicatos, carrera
+      docente, escasez o sobreoferta de maestros, prestigio de la profesión.
+
+  - name: "Evaluación y datos del sistema"
+    description: >
+      Pruebas estandarizadas nacionales e internacionales, sistemas de información
+      educativa, uso de datos para política pública, transparencia y disponibilidad.
+
+  - name: "Currículum y contenidos"
+    description: >
+      Qué se enseña en primaria: prioridades curriculares, matemática, ciencias,
+      educación emocional, ciudadanía digital, reformas de contenidos.
+
+  - name: "Infraestructura y conectividad escolar"
+    description: >
+      Edificios, servicios básicos, dispositivos, conectividad, equipamiento y el
+      estado material de la escuela primaria.
+
+  - name: "Financiamiento educativo"
+    description: >
+      Inversión pública en educación, distribución nacional-provincial, salarios como
+      proporción del gasto, sostenibilidad fiscal del sistema.
+
+# ---------------------------------------------------------------------------
+# TEMÁTICAS ADYACENTES — periferia con consecuencias posibles sobre el núcleo
+# ---------------------------------------------------------------------------
+adjacent_themes:
+  - name: "IA y tecnologías de aprendizaje"
+    description: >
+      Sistemas de IA aplicados a enseñanza, tutoría, corrección, planificación docente
+      y plataformas escolares; también su uso por parte de los chicos fuera de la escuela.
+
+  - name: "Demografía y natalidad"
+    description: >
+      Caída de la natalidad, envejecimiento poblacional, tamaño de las cohortes
+      escolares futuras, distribución territorial de la población infantil.
+
+  - name: "Pobreza infantil y protección social"
+    description: >
+      Ingresos de los hogares con niños, transferencias, asignaciones, informalidad
+      laboral de las familias y su efecto sobre la escolaridad.
+
+  - name: "Primera infancia y cuidados"
+    description: >
+      Desarrollo temprano, jardines, políticas de cuidado, licencias y todo lo que
+      determina con qué llegan los chicos a primer grado.
+
+  - name: "Salud y nutrición infantil"
+    description: >
+      Alimentación escolar, seguridad alimentaria, obesidad y desnutrición, salud
+      general de la población infantil.
+
+  - name: "Pantallas, atención y salud mental infantil"
+    description: >
+      Uso de dispositivos, regulación del celular, capacidad de atención sostenida,
+      ansiedad y bienestar psíquico de niños y niñas.
+
+  - name: "Neurociencia y ciencia del aprendizaje"
+    description: >
+      Evidencia sobre cómo aprenden los chicos, memoria, lectura en pantalla vs papel,
+      efectos cognitivos de herramientas externas.
+
+  - name: "Economía argentina y empleo futuro"
+    description: >
+      Macroeconomía, inflación, estructura productiva, automatización del empleo y qué
+      competencias se vuelven valiosas.
+
+  - name: "Federalismo y gobernanza educativa"
+    description: >
+      Reparto de competencias entre Nación y provincias, capacidad estatal, judicialización,
+      continuidad o discontinuidad de políticas.
+
+  - name: "Migraciones internas y urbanización"
+    description: >
+      Movimientos de población, crecimiento o vaciamiento de territorios, escuelas rurales,
+      periferias urbanas.
+
+  - name: "Clima y ambiente en la escuela"
+    description: >
+      Olas de calor, inundaciones, suspensión de clases por eventos extremos, adaptación
+      edilicia, educación ambiental.
+
+  - name: "Educación privada y mercado edtech"
+    description: >
+      Migración a la escuela privada, cooperativas, homeschooling, plataformas comerciales
+      y financiamiento privado de la educación.
+
+  - name: "Datos, privacidad y vigilancia de menores"
+    description: >
+      Recolección de datos de niños en plataformas educativas, biometría escolar,
+      regulación de privacidad infantil.
+
+  - name: "Lenguas, diversidad y pueblos originarios"
+    description: >
+      Educación intercultural bilingüe, diversidad lingüística, inclusión de poblaciones
+      históricamente postergadas.
+
+  - name: "Credenciales y futuro de la certificación"
+    description: >
+      Qué certifica la escuela, validez de títulos, credenciales alternativas, señales
+      de aprendizaje reconocidas por el mercado.

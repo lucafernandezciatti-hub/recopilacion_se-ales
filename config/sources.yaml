@@ -1,0 +1,258 @@
+# Fuentes de relevamiento, organizadas por cuadrante STEEP.
+# La guía de la cátedra exige un mínimo de 5 fuentes por cuadrante.
+#
+# `owner` agrupa fuentes que pertenecen al mismo grupo editorial o institución:
+# el diagnóstico de diversidad cuenta owners, no feeds ("diez feeds del mismo
+# grupo mediático son una fuente").
+#
+# `feed_status` lo completa scripts/validate_feeds.py — no editar a mano.
+
+sources:
+
+  # -------------------------------------------------------------------------
+  # SOCIAL
+  # -------------------------------------------------------------------------
+  - name: "UNICEF Argentina"
+    domain: "unicef.org"
+    owner: "UNICEF"
+    steep_primary: "Social"
+    kind: "organismo_internacional"
+    homepage: "https://www.unicef.org/argentina/informes"
+
+  - name: "Observatorio de la Deuda Social Argentina (UCA)"
+    domain: "uca.edu.ar"
+    owner: "UCA"
+    steep_primary: "Social"
+    kind: "centro_academico"
+    homepage: "https://uca.edu.ar/es/observatorio-de-la-deuda-social-argentina"
+
+  - name: "Argentinos por la Educación"
+    domain: "argentinosporlaeducacion.org"
+    owner: "Argentinos por la Educación"
+    steep_primary: "Social"
+    kind: "ong"
+    homepage: "https://argentinosporlaeducacion.org/informes/"
+
+  - name: "The Conversation — Education"
+    domain: "theconversation.com"
+    owner: "The Conversation"
+    steep_primary: "Social"
+    kind: "medio_academico"
+    rss: "https://theconversation.com/global/topics/education-115/articles.atom"
+
+  - name: "CIPPEC — Educación"
+    domain: "cippec.org"
+    owner: "CIPPEC"
+    steep_primary: "Social"
+    kind: "think_tank"
+    homepage: "https://www.cippec.org/educacion/"
+
+  - name: "Save the Children"
+    domain: "savethechildren.net"
+    owner: "Save the Children"
+    steep_primary: "Social"
+    kind: "ong"
+    homepage: "https://www.savethechildren.net/news"
+
+  # -------------------------------------------------------------------------
+  # TECHNOLOGICAL
+  # -------------------------------------------------------------------------
+  - name: "MIT Technology Review"
+    domain: "technologyreview.com"
+    owner: "MIT"
+    steep_primary: "Technological"
+    kind: "medio_especializado"
+    rss: "https://www.technologyreview.com/feed/"
+
+  - name: "Nature — Education / npj Science of Learning"
+    domain: "nature.com"
+    owner: "Springer Nature"
+    steep_primary: "Technological"
+    kind: "journal"
+    rss: "https://www.nature.com/npjscilearn.rss"
+
+  - name: "Ars Technica"
+    domain: "arstechnica.com"
+    owner: "Condé Nast"
+    steep_primary: "Technological"
+    kind: "medio_especializado"
+    rss: "https://feeds.arstechnica.com/arstechnica/index"
+
+  - name: "EdSurge"
+    domain: "edsurge.com"
+    owner: "ISTE"
+    steep_primary: "Technological"
+    kind: "medio_especializado"
+    homepage: "https://www.edsurge.com/news"
+
+  - name: "arXiv cs.CY (Computers and Society)"
+    domain: "arxiv.org"
+    owner: "arXiv"
+    steep_primary: "Technological"
+    kind: "preprint"
+    rss: "https://rss.arxiv.org/rss/cs.CY"
+
+  - name: "Rest of World"
+    domain: "restofworld.org"
+    owner: "Rest of World"
+    steep_primary: "Technological"
+    kind: "medio_especializado"
+    rss: "https://restofworld.org/feed/latest/"
+
+  # -------------------------------------------------------------------------
+  # ECONOMIC
+  # -------------------------------------------------------------------------
+  - name: "Banco Mundial — Educación"
+    domain: "worldbank.org"
+    owner: "Banco Mundial"
+    steep_primary: "Economic"
+    kind: "organismo_internacional"
+    homepage: "https://www.worldbank.org/en/topic/education"
+
+  - name: "OCDE — Education"
+    domain: "oecd.org"
+    owner: "OCDE"
+    steep_primary: "Economic"
+    kind: "organismo_internacional"
+    homepage: "https://www.oecd.org/en/topics/education.html"
+
+  - name: "BID — Educación"
+    domain: "iadb.org"
+    owner: "BID"
+    steep_primary: "Economic"
+    kind: "organismo_internacional"
+    homepage: "https://www.iadb.org/es/quienes-somos/temas/educacion"
+
+  - name: "INDEC"
+    domain: "indec.gob.ar"
+    owner: "INDEC"
+    steep_primary: "Economic"
+    kind: "estadistica_oficial"
+    homepage: "https://www.indec.gob.ar/"
+
+  - name: "CEPAL"
+    domain: "cepal.org"
+    owner: "CEPAL"
+    steep_primary: "Economic"
+    kind: "organismo_internacional"
+    homepage: "https://www.cepal.org/es/publicaciones"
+
+  - name: "Chequeado — Economía y datos"
+    domain: "chequeado.com"
+    owner: "Chequeado"
+    steep_primary: "Economic"
+    kind: "medio_verificacion"
+    rss: "https://chequeado.com/feed/"
+
+  # -------------------------------------------------------------------------
+  # ENVIRONMENTAL
+  # -------------------------------------------------------------------------
+  - name: "UNESCO — Educación y cambio climático"
+    domain: "unesco.org"
+    owner: "UNESCO"
+    steep_primary: "Environmental"
+    kind: "organismo_internacional"
+    homepage: "https://www.unesco.org/en/climate-change-education"
+
+  - name: "Carbon Brief"
+    domain: "carbonbrief.org"
+    owner: "Carbon Brief"
+    steep_primary: "Environmental"
+    kind: "medio_especializado"
+    rss: "https://www.carbonbrief.org/feed/"
+
+  - name: "Servicio Meteorológico Nacional (Argentina)"
+    domain: "smn.gob.ar"
+    owner: "SMN"
+    steep_primary: "Environmental"
+    kind: "organismo_oficial"
+    homepage: "https://www.smn.gob.ar/noticias"
+
+  - name: "The Guardian — Environment"
+    domain: "theguardian.com"
+    owner: "Guardian Media Group"
+    steep_primary: "Environmental"
+    kind: "medio_generalista"
+    rss: "https://www.theguardian.com/environment/rss"
+
+  - name: "Nature Climate Change"
+    domain: "nature.com"
+    owner: "Springer Nature"
+    steep_primary: "Environmental"
+    kind: "journal"
+    rss: "https://www.nature.com/nclimate.rss"
+
+  - name: "Fundación Ambiente y Recursos Naturales (FARN)"
+    domain: "farn.org.ar"
+    owner: "FARN"
+    steep_primary: "Environmental"
+    kind: "ong"
+    homepage: "https://farn.org.ar/novedades/"
+
+  # -------------------------------------------------------------------------
+  # POLITICAL
+  # -------------------------------------------------------------------------
+  - name: "Ministerio de Capital Humano — Educación (Argentina)"
+    domain: "argentina.gob.ar"
+    owner: "Estado Nacional Argentino"
+    steep_primary: "Political"
+    kind: "organismo_oficial"
+    homepage: "https://www.argentina.gob.ar/capital-humano/educacion"
+
+  - name: "UNESCO — Global Education Monitoring Report"
+    domain: "unesco.org"
+    owner: "UNESCO"
+    steep_primary: "Political"
+    kind: "organismo_internacional"
+    homepage: "https://www.unesco.org/gem-report/en"
+
+  - name: "Infobae — Educación"
+    domain: "infobae.com"
+    owner: "Infobae"
+    steep_primary: "Political"
+    kind: "medio_generalista"
+    rss: "https://www.infobae.com/feeds/rss/"
+
+  - name: "La Nación — Educación"
+    domain: "lanacion.com.ar"
+    owner: "La Nación"
+    steep_primary: "Political"
+    kind: "medio_generalista"
+    homepage: "https://www.lanacion.com.ar/sociedad/educacion/"
+
+  - name: "Página/12 — Sociedad"
+    domain: "pagina12.com.ar"
+    owner: "Página/12"
+    steep_primary: "Political"
+    kind: "medio_generalista"
+    rss: "https://www.pagina12.com.ar/rss/secciones/sociedad/notas"
+
+  - name: "Cenital"
+    domain: "cenital.com"
+    owner: "Cenital"
+    steep_primary: "Political"
+    kind: "medio_generalista"
+    rss: "https://cenital.com/feed/"
+
+# Términos de búsqueda para alimentar el relevamiento cuando no hay feed.
+search_queries:
+  core:
+    - "alfabetización inicial Argentina resultados"
+    - "comprensión lectora tercer grado Argentina"
+    - "pruebas Aprender resultados primaria"
+    - "trayectorias escolares abandono primaria Argentina"
+    - "formación docente reforma Argentina"
+    - "jornada extendida escuela primaria Argentina"
+    - "financiamiento educativo provincias Argentina"
+    - "infraestructura escolar conectividad Argentina"
+  adjacent:
+    - "caída natalidad Argentina matrícula escolar"
+    - "inteligencia artificial docentes aula"
+    - "prohibición celulares escuelas"
+    - "pobreza infantil Argentina indicadores"
+    - "escuelas rurales cierre despoblamiento"
+    - "olas de calor suspensión de clases escuelas"
+    - "migración escuela privada Argentina matrícula"
+    - "privacidad datos niños plataformas educativas"
+    - "homeschooling educación en casa regulación"
+    - "primera infancia desarrollo cognitivo políticas"

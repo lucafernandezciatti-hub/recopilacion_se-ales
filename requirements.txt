@@ -1,0 +1,29 @@
+# Núcleo — necesario para correr la app y el pipeline
+streamlit==1.42.0
+pandas>=2.2
+SQLAlchemy>=2.0
+pydantic>=2.7
+pydantic-settings>=2.2
+PyYAML>=6.0
+python-dotenv>=1.0
+httpx>=0.27
+beautifulsoup4>=4.12
+trafilatura>=1.12
+feedparser>=6.0
+python-dateutil>=2.9
+plotly>=5.22
+openpyxl>=3.1
+
+# Semántica — embeddings, similitud y clustering
+sentence-transformers>=3.0
+scikit-learn>=1.5
+umap-learn>=0.5
+hdbscan>=0.8.38
+numpy>=1.26
+
+# Proveedores de IA (opcionales: la app corre en modo mock sin ninguno)
+anthropic>=0.40 ; extra == "anthropic"
+openai>=1.40 ; extra == "openai"
+
+# Desarrollo
+pytest>=8.0

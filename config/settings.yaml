@@ -1,0 +1,58 @@
+# Parámetros operativos del sistema. Todo configurable sin tocar código.
+
+scraping:
+  timeout_seconds: 25
+  max_retries: 2
+  delay_between_requests_seconds: 1.5
+  user_agent: "SenalesBot/0.1 (proyecto académico UTDT DI; contacto via repo)"
+  respect_robots: true
+  min_text_chars: 400          # por debajo de esto se considera extracción fallida
+
+quote:
+  min_chars: 80
+  max_chars: 600
+  # Tolerancia de normalización al validar la cita contra el texto del artículo.
+  normalize_whitespace: true
+  normalize_quotes: true
+  normalize_dashes: true
+  strict: true                 # si falla la validación literal, se rechaza la salida
+
+embeddings:
+  model: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  batch_size: 32
+  normalize: true
+
+duplicates:
+  semantic_threshold: 0.90
+  title_similarity_threshold: 0.95
+
+clustering:
+  umap_for_clustering:
+    n_neighbors: 15
+    min_dist: 0.0
+    n_components: 10
+    metric: "cosine"
+  umap_for_visualization:
+    n_neighbors: 15
+    min_dist: 0.1
+    n_components: 2
+    metric: "cosine"
+  hdbscan:
+    min_cluster_size: 8
+    min_samples: 3
+    metric: "euclidean"
+    cluster_selection_method: "eom"
+  random_state: 42
+
+quality_alerts:
+  max_share_top_source: 0.25          # una sola fuente no debería superar esto
+  max_share_top3_sources: 0.45
+  min_share_per_steep: 0.08           # cada cuadrante STEEP debería tener al menos esto
+  max_share_missing_publication_date: 0.10
+  max_share_relevance_8_10: 0.55      # concentración sospechosa del clasificador
+  min_share_adjacent: 0.30            # la consigna exige señales periféricas reales
+  novelty_windows_days: [30, 90, 180, 365]
+
+audit:
+  sample_size: 10                     # auditoría de 10 al azar (guía Clase 3)
+  random_seed: null                   # null = azar real en cada corrida

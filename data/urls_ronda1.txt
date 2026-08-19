@@ -1,0 +1,74 @@
+# Ronda 1 — relevamiento inicial. Educación primaria en Argentina, horizonte 2050.
+# Fuentes obtenidas por búsqueda dirigida sobre las temáticas núcleo y adyacentes.
+
+# --- Evaluación y datos del sistema
+https://www.argentina.gob.ar/noticias/segun-las-pruebas-aprender-2025-la-escuela-primaria-alcanzo-los-mejores-resultados-en
+https://www.infobae.com/educacion/2026/07/06/como-entender-los-resultados-de-las-pruebas-aprender-mejoraron-los-resultados-pero-persisten-fuertemente-las-brechas-sociales/
+https://abc.gob.ar/noticias/pruebas-aprender-2025-mejoraron-los-resultados-en-lengua-y-matematica
+https://www.infoban.com.ar/05/07/2026/pruebas-aprender-2025-la-provincia-de-buenos-aires-mejoro-en-lengua-y-matematica-y-cuestiono-la-interpretacion-del-gobierno-nacional/
+
+# --- Demografía y matrícula
+https://www.lanacion.com.ar/sociedad/por-la-baja-matriculacion-empiezan-los-cierres-de-grados-en-escuelas-publicas-portenas-y-hay-quejas-nid25122025/
+https://www.lanacion.com.ar/sociedad/cambio-demografico-preven-una-caida-de-la-matricula-de-la-escuela-primaria-y-plantean-un-desafio-nid28012026/
+https://www.ambito.com/politica/caba-bajan-las-inscripciones-escuelas-y-jardines-portenos-la-fuerte-caida-la-natalidad-n6228309
+https://www.infobae.com/educacion/2026/02/06/desde-diciembre-cerraron-cinco-escuelas-privadas-en-caba-la-economia-y-la-natalidad-dos-factores-clave/
+https://revistacrisis.com.ar/notas/una-escuela-para-la-baja-natalidad-argentina/
+https://www.infobae.com/sociedad/2025/10/15/baja-de-natalidad-y-educacion-las-escuelas-portenas-cierran-grados-y-docentes-y-familias-toman-medidas-para-evitarlo/
+https://www.0223.com.ar/nota/2026-5-30-19-1-0-crisis-educativa-por-la-baja-natalidad-menos-alumnos-y-mas-incertidumbre-en-las-escuelas
+https://www.gentedesalta.com/sociedad/la-argentina-perdio-205000-alumnos-1500-divisiones-ano-mapa-nacional-aulas-vacias-mas-chicos-n10957
+
+# --- IA y tecnologías de aprendizaje
+https://www.infobae.com/educacion/2026/08/18/caba-incorpora-la-inteligencia-artificial-como-contenido-obligatorio-en-las-escuelas-primarias-y-secundarias/
+https://www.mdzol.com/sociedad/inteligencia-artificial-el-aula-2026-prohibir-gobernar-n1456761
+https://www.iproup.com/startups/67397-startup-argentina-mejora-el-uso-de-ia-en-escuelas-y-avanza-en-la-region
+https://www.sobretiza.com.ar/2026/08/12/la-inteligencia-artificial-ya-entro-al-sistema-educativo-como-se-esta-implementando/
+https://www.educ.ar/noticias/200709/cursos-educar-2026-formacioacuten-docente-en-ia-y-alfabetizacioacuten-nbsp
+https://www.infobae.com/opinion/2026/02/11/ia-en-el-aula-en-2026-vamos-bien/
+https://thirdspacelearning.com/blog/ai-tutoring-evidence/
+
+# --- Pantallas, atención y salud mental
+https://www.infobae.com/educacion/2026/03/04/rige-por-ley-la-prohibicion-de-usar-celulares-en-las-escuelas-primarias-de-provincia-de-buenos-aires/
+https://www.infobae.com/estados-unidos/2026/05/30/el-primer-estudio-nacional-confirma-el-impacto-de-la-prohibicion-de-celulares-en-escuelas-de-estados-unidos/
+https://argentinosporlaeducacion.org/informe/celulares-prohibir-o-no-prohibir/
+https://www.infobae.com/educacion/2026/07/17/6-de-cada-10-chicos-de-8-anos-tienen-celular-afirman-que-la-prohibicion-escolar-no-garantiza-mejores-aprendizajes/
+https://hoydia.com.ar/sociedad/la-prohibicion-del-celular-en-la-escuela-muestra-resultados-dispares/
+https://www.mdzol.com/sociedad/prohibir-o-integrar-celulares-las-aulas-argentinas-n1579326
+
+# --- Clima y ambiente en la escuela
+https://www.pagina12.com.ar/531381-de-la-suspension-al-manguerazo-y-cambio-de-uniforme-la-ola-d
+https://ute.org.ar/desinversion-escuelas-de-la-ciudad-suspendieron-clases-por-ola-de-calor/
+https://www.lanacion.com.ar/sociedad/provincia-de-buenos-aires-suspenden-las-clases-en-varias-escuelas-por-la-ola-de-calor-hay-quejas-de-nid07032023/
+https://www.eldiarioar.com/sociedad/medio-ambiente/ley-yolanda-lucha-mantener-viva-ley-formacion-ambiental_1_12094865.html
+https://www.argentina.gob.ar/ambiente/educacion-ambiental/ley-de-educacion-ambiental
+
+# --- Financiamiento educativo
+https://chequeado.com/el-explicador/presupuesto-2026-el-gasto-en-educacion-crece-pero-la-participacion-dentro-del-pbi-continua-en-valores-minimos-historicos/
+https://www.ambito.com/economia/presupuesto-2026-el-gobierno-busca-eliminar-los-pisos-inversion-del-6-del-pbi-educacion-y-el-1-ciencia-y-tecnologia-n6191033
+https://argentinosporlaeducacion.org/informe/presupuesto-educativo-nacional-2026/
+https://www.infobae.com/educacion/2025/10/30/en-2026-el-estado-nacional-invertira-el-075-del-pbi-en-educacion-es-la-mitad-que-hace-10-anos/
+https://ctera.org.ar/rechazo-al-proyecto-de-ley-de-presupuesto-2026-un-nuevo-ajuste-y-ataque-a-la-educacion-publica/
+https://noticiasdel6.com/el-presupuesto-educativo-nacional-cayo-casi-50-en-dos-anos-y-reabre-el-debate-por-el-financiamiento-del-sistema/
+
+# --- Trabajo y formación docente
+https://www.ellitoral.com/educacion/docencia-educacion-matricula-escuelas-cargos-docentes-escuelas-privadas-egresos-matricula-educativo-argentino_0_Mc2Z6wHqI3.html
+https://www.cippec.org/textual/mejorar-la-formacion-docente-inicial-exige-la-voluntad-de-actuar-a-largo-plazo/
+https://www.tiempoar.com.ar/ta_article/maestros-quemados-la-crisis-de-la-profesion-docente/
+https://gestioneducativa.net/reforma-de-la-carrera-docente-en-buenos-aires-el-plan-ser-docente-busca-frenar-la-crisis-de-ingresantes-con-evaluacion-residencias-pagas-y-virtualidad/
+http://www.identidadcorrentina.com.ar/noticia/21799_cambios-en-la-formacin-docente-permiten-50-de-clases-virtuales-y-buscan-evaluar-los-institutos.htm
+
+# --- Educación privada y segregación
+https://argentinosporlaeducacion.org/informe/matricula-y-segregacion-escolar-en-america-latina-una-mirada-a-la-ultima-decada/
+https://www.infobae.com/educacion/2025/11/22/crece-la-educacion-privada-un-nuevo-estudio-cuestiona-que-haya-una-fuga-desde-la-escuela-publica/
+https://www.primeraedicion.com.ar/nota/101115703/matricula-colegios-gestion-privada-misiones-crecimiento/
+https://www.elancasti.com.ar/informacion-general/argentina-es-el-unico-pais-la-region-que-profundizo-la-brecha-escuelas-publicas-y-privadas-n579990
+
+# --- Pobreza infantil y protección social
+https://www.unicef.org/argentina/comunicados-prensa/informe-pobreza-monetaria-2026
+https://chequeado.com/el-explicador/pobreza-infantil-segun-unicef-cayo-al-423-en-2025-pero-podria-aumentar-en-2026/
+https://www.eldestapeweb.com/politica/unicef-alerto-pobreza-infantil-crecera-primer-semestre-2026-fragil-202669191043
+
+# --- Territorio: escuelas rurales
+https://www.analisisdigital.com.ar/provinciales/2026/05/14/en-dos-anos-cerraron-21-escuelas-rurales-en-entre-rios
+https://redaccionrosario.com/2026/05/29/que-pasa-cuando-se-cierra-una-escuela-rural/
+https://www.casarosada.gob.ar/haciendo/plan-de-conectividad-de-escuelas-rurales.html
+https://www.sepernoticias.com.ar/noticias/2026/04/23/cierre-escuelas-rurales-muestra-legislatura-santa-fe.html
