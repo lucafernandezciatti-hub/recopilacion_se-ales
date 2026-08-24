@@ -1,0 +1,152 @@
+# Ronda 2 — URLs curadas manualmente vía búsqueda, apuntando a cuadrantes STEEP flacos
+# (Tecnológico núcleo, Ambiental) y a las 22 temáticas de config/themes.yaml.
+# Se excluyen dominios que ya dieron HTTP 403 consistente en ronda 1: ambito.com, unicef.org,
+# mdzol.com, thirdspacelearning.com, sitioandino.com.ar, elancasti.com.ar.
+
+# --- Clima / Ambiental ---
+https://www.cronista.com/informacion-gral/se-suspenden-las-clases-por-la-ola-de-calor-que-va-a-pasar-en-caba-y-la-provincia-de-buenos-aires/
+https://www.cronista.com/economia-politica/confirmado-suspenden-las-clases-por-la-ola-de-calor/
+https://www.infocielo.com/politica-y-economia/ola-calor-suspenden-clases-algunas-escuelas-y-juntos-vuelve-la-carga-contra-axel-kicillof-n757636
+https://www.pagina12.com.ar/2026/03/17/tucuman-mas-de-100-escuelas-siguen-sin-clases-por-las-inundaciones-tras-el-temporal/
+https://dialogue.earth/es/clima/ley-yolanda-la-lucha-por-mantener-viva-ley-argentina-educacion-ambiental/
+https://www.resumenlatinoamericano.org/2025/03/04/argentina-ley-yolanda-la-lucha-por-mantener-viva-la-ley-de-formacion-ambiental/
+
+# --- IA y tecnologías de aprendizaje (Tecnológico núcleo/adyacente) ---
+https://www.resumenlatinoamericano.org/2026/08/21/argentina-la-paradoja-portena-escuelas-con-falta-de-docentes-pero-con-inteligencia-artificial
+https://www.infobae.com/sociedad/2026/02/26/el-gobierno-porteno-habilito-cuentas-para-que-alumnos-de-primaria-usen-inteligencia-artificial/
+https://www.lanacion.com.ar/sociedad/ciudad-incorporan-la-ia-como-contenido-obligatorio-en-las-escuelas-primarias-y-secundarias-nid18082026/
+https://www.infobae.com/educacion/2026/08/18/caba-incorpora-la-inteligencia-artificial-como-contenido-obligatorio-en-las-escuelas-primarias-y-secundarias/
+https://chequeado.com/el-explicador/ia-en-la-escuela-primaria-que-dice-la-evidencia-sobre-su-impacto-en-el-aprendizaje-y-como-se-esta-implementando-en-caba/
+https://www.espaciotech.net/2026/08/20/buenos-aires-incorpora-alfabetizacion-en-inteligencia-artificial-y-proteccion-digital-como-contenido-obligatorio-en-primaria-y-secundaria/
+https://camaraargentina.com.ar/2026/02/10/educacion-y-tecnologia-el-impacto-de-la-automatizacion-en-el-empleo/
+https://www.eldia.com/la-ciudad/el-futuro-del-trabajo-ya-empezo-colegios-de-educacion-tecnica-de-la-region-ante-el-avance-de-la-ia-la-ciudad_1780983204
+https://hoydiario.es/noticias/argentina/buenos-aires/buenos-aires-capacitacion-inteligencia-artificial-futuro-laboral.html
+
+# --- Infraestructura y conectividad escolar (núcleo) ---
+https://chequeado.com/el-explicador/infraestructura-escolar-5-datos-para-conocer-cual-es-la-situacion-en-las-provincias-argentinas/
+https://noticias.chubut.gob.ar/notas/obras/4161/el_gobierno_del_chubut_avanza_con_obras_de_infraestructura_en_escuelas_de_toda_la_provincia.html
+https://www.mec.gob.ar/con-obras-en-escuelas-de-toda-la-provincia-el-gobierno-prepara-el-inicio-del-ciclo-lectivo-2026/
+https://argentinosporlaeducacion.org/informe/conectividad-y-sistemas-de-gestion-escolar/
+https://abc.gob.ar/secretarias/areas/subsecretaria-de-educacion/tecnologia-educativa/tecnologia-educativa/conectividad-escolar
+https://elfederalonline.com/2026/08/14/el-gobierno-riojano-salio-al-cruce-de-starlink-en-las-escuelas-y-defendio-la-conectividad-estatal-y-la-soberania-tecnologica/
+
+# --- Financiamiento educativo (núcleo) ---
+https://abc.gob.ar/noticias/el-proyecto-de-presupuesto-nacional-2026-pone-en-riesgo-la-educacion-y-el-sistema-de-cyt
+https://www.somosjujuy.com.ar/politica/presupuesto-2026-gobierno-recorto-casi-25-billones-fuerte-ajuste-educacion-universidades-n117761
+https://ctera.org.ar/rechazo-al-proyecto-de-ley-de-presupuesto-2026-un-nuevo-ajuste-y-ataque-a-la-educacion-publica/
+https://www.canal12misiones.com/aaa-modulo-b/nacion-recorto-fondos-clave-en-educacion-las-provincias-y-universidades-pierden-mas-de-78-000-millones
+https://argentinosporlaeducacion.org/informe/presupuesto-educativo-nacional-2026/
+https://hoydia.com.ar/economia/recorte-presupuesto-educacion-defensa/
+https://www.perfil.com/noticias/economia/el-presupuesto-universitario-para-2026-sera-el-mas-bajo-en-dos-decadas.phtml
+
+# --- Alfabetización y comprensión lectora (núcleo) ---
+https://docente.com.ar/blog/plan-nacional-de-alfabetizacion-2026-docentes
+https://www.mendoza.edu.ar/mendoza-registra-avances-significativos-en-comprension-lectora-y-consolida-la-reduccion-de-niveles-criticos-en-alfabetizacion/
+https://www.argentina.gob.ar/capital-humano/educacion/plan-nacional-de-alfabetizacion
+https://www.infobae.com/educacion/2025/06/05/caen-los-niveles-de-alfabetizacion-y-comprension-lectora-a-nivel-mundial-como-es-la-situacion-de-la-argentina/
+https://www.argentina.gob.ar/noticias/solo-el-45-de-los-alumnos-alcanza-los-niveles-de-lectura-esperados-tras-anos-de-retroceso
+https://agenciasanluis.com/2026/06/03/1173599-el-86-de-los-alumnos-del-primer-ciclo-de-primaria-alcanzan-competencias-minimas-de-lectoescritura/
+https://www.diariodecuyo.com.ar/edicionimpresa/para-mejorar-la-lectura-en-ninos-pidieron-trabajar-textos-a-diario-en-las-aulas-1719668.html
+
+# --- Evaluación y datos del sistema: pruebas Aprender (núcleo) ---
+https://www.argentina.gob.ar/noticias/segun-las-pruebas-aprender-2025-la-escuela-primaria-alcanzo-los-mejores-resultados-en
+https://www.infobae.com/educacion/2026/05/03/cambios-en-las-pruebas-aprender-buscan-menos-sobrecarga-de-evaluaciones-y-mas-foco-en-el-uso-de-los-datos/
+https://www.infobae.com/educacion/2026/06/30/pruebas-aprender-hubo-mejoras-en-lengua-pero-en-matematica-la-mitad-de-los-alumnos-de-escuela-primaria-no-alcanza-el-nivel-esperado/
+https://www.infobae.com/educacion/2025/05/06/prueba-aprender-solo-el-45-de-los-alumnos-de-tercer-grado-alcanza-el-nivel-esperado-en-lectura/
+https://www.lanacion.com.ar/sociedad/aprobaron-cambios-en-las-pruebas-aprender-cuales-son-las-novedades-y-cuando-se-implementan-nid03052026/
+
+# --- Trabajo y formación docente (núcleo) ---
+https://www.cippec.org/textual/mejorar-la-formacion-docente-inicial-exige-la-voluntad-de-actuar-a-largo-plazo/
+https://www.aporrea.org/educacion/n385817.html
+https://www.fundacioncolsecor.org.ar/informes/docentes-tiempos-crisis-n13269
+https://buenosaires.gob.ar/educacion/buenos-aires-aprende/formacion-y-carrera-docente
+http://www.identidadcorrentina.com.ar/noticia/21799_cambios-en-la-formacin-docente-permiten-50-de-clases-virtuales-y-buscan-evaluar-los-institutos.htm
+
+# --- Trayectorias escolares: jornada extendida (núcleo) ---
+https://argentinosporlaeducacion.org/informe/extension-de-la-jornada-escolar-en-el-nivel-primario/
+https://www.argentina.gob.ar/educacion/unahoramas
+https://buenosaires.gob.ar/escuela-abierta-la-comunidad/jornada-extendida-aprende
+
+# --- Demografía y natalidad (adyacente) ---
+https://www.todojujuy.com/sociedad/la-natalidad-cae-y-la-cobertura-escolar-podria-alcanzar-niveles-historicos-n291815
+https://www.utdt.edu/ver_nota_prensa.php?id_nota_prensa=22606&id_item_menu=6
+https://www.labrujula24.com/notas/2026/08/23/la-caida-de-la-tasa-de-natalidad-golpea-a-las-escuelas-y-tiene-su-impacto-n516704/
+https://aulica.com.ar/descenso-de-la-natalidad-y-matricula-escolar/
+https://misionpolitica.com/2026/01/30/argentina-tiene-una-fuerte-baja-en-la-tasa-de-natalidad-que-puede-esperar-hacia-2030/
+https://www.lagaceta.com.ar/nota/1122993/sociedad/caida-natalidad-estiman-para-2030-caera-27porciento-matricula-primaria.html
+https://aulagix.com/recursos-para-colegios/blog/estudio-2025-2035-el-impacto-de-la-baja-natalidad-en-los-colegios-privados-de-argentina/
+
+# --- Pobreza infantil y protección social (adyacente) ---
+https://chequeado.com/el-explicador/pobreza-infantil-segun-unicef-cayo-al-423-en-2025-pero-podria-aumentar-en-2026/
+https://www.cadena3.com/noticia/sociedad/para-unicef-la-pobreza-infantil-cayo-a-423-advierten-sobre-un-rebote-en-2026_560554
+https://www.inforegion.com.ar/2026/06/09/pobreza-infantil-en-argentina-unicef-informo-una-baja-en-2025-pero-alerta-por-un-posible-aumento-en-2026/
+https://canal12web.com/la-pobreza-infantil-bajo-al-423-en-argentina-pero-unicef-adelanta-un-posible-repunte-en-2026/
+https://tendenciadenoticias.com.ar/tendencias/para-unicef-la-pobreza-infantil-cayo-al-nivel-mas-bajo-en-siete-anos-pero-podria-repuntar-en-el-primer-semestre-de-2026
+https://www.tercertiempo.news/destacada/pobreza-infantil-unicef-2026/
+
+# --- Primera infancia y cuidados (adyacente) ---
+https://nortemisionero.com.ar/educacion/simposio-de-primera-infancia-se-elaborara-el-diseno-jurisdiccional-para-jardines-maternales/
+https://www.cippec.org/textual/la-oferta-de-jardines-maternales-y-de-infantes-y-espacios-de-primera-infancia-es-escasa-e-inequitativa/
+https://www.tiempoar.com.ar/ta_article/educacion-pro-cierre-de-escuelas-jardines-maternales-y-grados-en-el-inicio-de-clases/
+https://elciudadanoweb.com/plan-mil65-el-municipio-amplia-la-red-de-cuidados-con-talleres-de-crianza-en-jardines-de-infantes/
+https://www.catamarcactual.com.ar/educacionales/2026/6/18/argentina-podria-alcanzar-la-cobertura-universal-en-el-nivel-inicial-sin-construir-nuevos-jardines-de-infantes-311358.html
+https://misionesonline.net/2026/06/01/actualizacion-en-pedagogia-para-jardines-maternales/
+
+# --- Pantallas, atención y salud mental infantil (adyacente) ---
+https://www.elonce.com/sociedad/uso-de-celulares-en-las-escuelas-11-jurisdicciones-argentinas-avanzan-con-regulaciones.htm
+https://hoydia.com.ar/sociedad/la-prohibicion-del-celular-en-la-escuela-muestra-resultados-dispares/
+https://www.diariodecultura.com.ar/costumbres-y-tendencias/6-de-cada-10-chicos-de-8-anos-tienen-celular-propio-pero-la-prohibicion-en-la-escuela-muestra-resultados-dispares/
+https://www.eldiariodelarepublica.com/nota/2026-7-17-19-39-0-celulares-en-las-escuelas-11-jurisdicciones-argentinas-avanzan-con-regulaciones
+https://www.cadena3.com/noticia/sociedad/crecen-las-regulaciones-sobre-celulares-en-escuelas-11-provincias-argentinas-avanzan-en-restricciones_574149
+https://noticiasdel6.com/6-de-cada-10-chicos-de-8-anos-tienen-celular-propio-pero-la-prohibicion-en-la-escuela-muestra-resultados-dispares/
+https://www.educrear.com.ar/es/investigaciones/celulares-prohibir-o-no-prohibir-la-evidencia-detras-del-debate-24-7-2026/
+https://www.hola.com/padres/20260716913161/beneficios-lectura-papel-ninos-frente-lectura-pantallas-entrevista-neuropediatra-raquel-buenache/
+https://oes.fundacion-sm.org/eduforics/reimaginar-juntos-los-futuros/tecnologias-y-aprendizaje/pantallas-en-la-infancia-si-o-no-lo-que-dice-la-ciencia/
+
+# --- Migraciones internas / escuelas rurales (adyacente) ---
+https://www.analisisdigital.com.ar/provinciales/2026/05/14/en-dos-anos-cerraron-21-escuelas-rurales-en-entre-rios
+https://estamosentrerios.com/2026/05/15/en-dos-anos-cerraron-21-escuelas-rurales-en-entre-rios/
+https://www.sepernoticias.com.ar/noticias/2026/04/23/cierre-escuelas-rurales-muestra-legislatura-santa-fe.html
+https://infovera.com.ar/web/2026/05/30/que-pasa-cuando-se-cierra-una-escuela-rural/
+https://www.pregon.com.ar/nota/29787/2026/05/educacion--afirman-que-no-hay-cierre-de-escuelas-hay-despoblamiento-en-parajes
+
+# --- Educación privada y mercado edtech (adyacente) ---
+https://www.lanacion.com.ar/sociedad/que-es-el-homeschooling-el-modelo-escolar-que-evalua-el-gobierno-en-su-proyecto-de-libertad-nid21112025/
+https://canalc.com.ar/educacion-en-casa-el-proyecto-oficial-que-cambia-la-escuela/
+https://alteredu.com.ar/hay-un-proyecto-de-ley-para-regular-la-educacion-en-casa-y-crear-escuelas-publicas-autonomas-en-la-ciudad-de-buenos-aires/
+https://www.cronista.com/negocios/cuanto-cuesta-la-cuota-de-los-colegios-privados-mas-top-de-la-argentina/
+https://www.primeraedicion.com.ar/nota/101115703/matricula-colegios-gestion-privada-misiones-crecimiento/
+https://www.lacapital.com.ar/la-ciudad/los-colegios-privados-la-provincia-admiten-una-migracion-del-10-la-matricula-alumnos-n10125346.html
+https://chequeado.com/el-explicador/crecio-la-matricula-en-las-escuelas-estatales-y-cayo-en-las-privadas-durante-la-pandemia/
+https://noticiasdel6.com/advierten-una-migracion-de-alumnos-hacia-escuelas-privadas-y-alertan-por-el-impacto-en-la-matricula-publica/
+
+# --- Datos, privacidad y vigilancia de menores (adyacente) ---
+https://www.argentina.gob.ar/noticias/proteccion-de-datos-y-privacidad-de-ninos-ninas-y-adolescentes-en-entornos-digitales
+https://www.argentina.gob.ar/noticias/cuidar-la-privacidad-en-la-ninez
+https://www.colegium.com.ar/seguridad-datos-instituciones-educativas/
+
+# --- Lenguas, diversidad y pueblos originarios (adyacente) ---
+https://argentina.indymedia.org/2026/05/27/una-vez-mas-la-educacion-intercultural-bilingue-tuvo-su-encuentro-en-la-provincia-de-salta/
+https://www.argentina.gob.ar/modalidad-de-educacion-intercultural-bilingue
+https://www.educ.ar/recursos/152588/educaci%C3%B3n-intercultural-biling%C3%BCe
+
+# --- Salud y nutrición infantil (adyacente) ---
+https://www.edusalta.gov.ar/index.php/informacion/partes-de-prensa/9976-educacion-coordina-acciones-para-fortalecer-el-funcionamiento-de-los-comedores-escolares-en-2026
+https://www.suteba.org.ar/la-grave-situacion-de-los-comedores-escolares-de-la-provincia-llego-al-global-press-journal-15370.html
+
+# --- Economía argentina y empleo futuro (adyacente) ---
+https://www.argentina.gob.ar/noticias/el-futuro-del-trabajo-y-la-transformacion-tecnologica
+https://www.argentina.gob.ar/consejo/educacion-trabajos-futuro
+
+# --- Federalismo y gobernanza educativa (adyacente) ---
+https://ucema.edu.ar/investigacion/clarin-170625
+https://revista.elarcondeclio.com.ar/va-de-nuevo-nuevo-proyecto-de-modificacion-de-la-ley-de-educacion-en-argentina/
+
+# --- Credenciales y futuro de la certificación (adyacente) ---
+https://blog.pearsonlatam.com/educacion-del-futuro/complementa-tu-oferta-universitaria-con-credenciales-alternativas
+https://observatorio.tec.mx/credenciales-alternativas/
+https://blog.pearsonlatam.com/credenciales-alternativas-el-nuevo-lenguaje-del-mercado-laboral
+https://blogs.iadb.org/educacion/es/universidades-credenciales-alternativas/
+
+# --- Currículum: ciudadanía digital (núcleo) ---
+https://continuemosestudiando.abc.gob.ar/contenido/ciudadania-digital/

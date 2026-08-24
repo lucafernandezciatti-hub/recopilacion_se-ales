@@ -105,7 +105,7 @@ def main() -> int:
         json.dumps({"candidates": results, "failures": failures}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    print(f"\n{len(results)} extraídos, {len(failures)} fallidos → {args.out}")
+    print(f"\n{len(results)} extraidos, {len(failures)} fallidos -> {args.out}")
     return 0
 
 

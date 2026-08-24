@@ -1,0 +1,21 @@
+.env
+.claude/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Base de datos y artefactos locales
+data/*.db
+data/*.db-journal
+data/backups/
+data/candidates*.json
+data/exports/
+data/batches/
+
+# El corpus curado SÍ se versiona: data/signals_*.json y data/urls_*.txt
+!data/signals_*.json
+!data/urls_*.txt

@@ -23,7 +23,7 @@ El objetivo no es un scraper de noticias ni un dashboard genérico. Es un corpus
 | 8 · Diagnóstico de calidad | ✅ (spiderweb, procedencia, novedad, completitud, alertas) |
 | 9 · Tests y documentación | ✅ parcial (41 tests) |
 
-**Corpus actual: 49 señales** (ronda 1). Ver *Advertencia sobre las citas* más abajo.
+**Corpus actual: 130 señales** (ronda 1: 49, ronda 2: 59, ronda 3: 22). Rondas 2 y 3 se recolectaron con el scraper real (`harvest.py`) y clasificación de IA en sesión (sin API paga), con cita verificada automáticamente contra el texto extraído — no tienen el problema de la ronda 1. Ver *Advertencia sobre las citas* más abajo (aplica sólo a ronda 1).
 
 ---
 
@@ -83,6 +83,9 @@ DATABASE_URL=           # vacío = SQLite en data/senales.db
 ```bash
 python -c "from src.database.session import init_db; init_db()"
 python scripts/load_signals.py data/signals_ronda1.json
+python scripts/load_signals.py data/signals_ronda2.json
+python scripts/load_signals.py data/signals_ronda3.json
+python scripts/verify_quotes.py
 streamlit run app.py
 ```
 

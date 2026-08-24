@@ -1,0 +1,63 @@
+# Ronda 3 — refuerzo de cuadrantes flacos: Ambiental (clima+escuela) y Tecnológico núcleo
+# (robótica, pensamiento computacional, IA, brecha digital), + evaluación Aprender.
+
+# --- Ambiental: calor / infraestructura edilicia ---
+https://www.eldiarioar.com/sociedad/escuelas-argentinas-buscan-combatir-calor-extremo_1_12636958.html
+https://dialogue.earth/es/clima/como-escuelas-argentina-buscan-combatir-calor-extremo/
+https://www.iadb.org/es/blog/educacion/disenar-escuelas-resilientes-al-calor-una-apuesta-para-garantizar-los-aprendizajes
+https://www.laizquierdadiario.com/La-Plata-Berisso-y-Ensenada-las-escuelas-se-organizan-frente-a-la-ola-de-calor-y-la-falta-de
+https://www.uoc.edu/es/news/2026/el-calor-amenaza-el-aprendizaje-en-escuelas-no-adaptadas-al-clima
+https://www.argentina.gob.ar/ambiente/cambio-climatico/adaptacion
+
+# --- Ambiental: inundaciones / temporales ---
+https://www.lagaceta.com.ar/nota/1128617/sociedad/mas-100-escuelas-siguen-sin-clases-tucuman-tras-inundaciones.html
+https://www.infobae.com/sociedad/2026/08/06/con-lluvia-o-nieve-un-temporal-provoco-inundaciones-y-la-suspension-de-clases-en-varias-ciudades-de-la-patagonia/
+https://www.eltribuno.com/nacionales/2026-3-11-9-17-0-inundaciones-en-el-sur-de-tucuman-evacuan-a-cientos-de-familias-y-suspenden-las-clases-en-toda-la-provincia
+https://lafolkargentina.com.ar/a-nota/220502/con-lluvia-y-nieve-un-temporal-provoco-inundaciones-y-la-suspension-de-clases-en-varias-ciudades-de-la-patagonia
+https://tendenciadenoticias.com.ar/politica/las-inundaciones-impiden-el-regreso-a-clases-en-212-escuelas-de-14-de-los-17-departamentos-de-la-provincia
+https://www.infobae.com/sociedad/2026/03/14/inundaciones-en-el-norte-del-pais-alerta-roja-evacuaciones-rios-desbordados-y-suspension-de-clases/
+https://tendenciadenoticias.com.ar/tendencias/suspenden-las-clases-en-seis-departamentos-por-las-intensas-lluvias
+https://www.infobae.com/sociedad/2026/04/17/temporal-en-la-pampa-intensas-lluvias-y-fuertes-rafagas-de-viento-causaron-anegaciones-destrozos-y-evacuaciones/
+
+# --- Ambiental: currículum / huerta / sustentabilidad ---
+https://www.educ.ar/recursos/158308/actividades-para-abordar-el-ambiente-en-la-escuela-niveles-i
+https://infod.educacion.gob.ar/cursos/1406
+https://www.educ.ar/recursos/150016/educacion-ambiental-integral
+https://www.cronista.com/apertura/empresas/huertas-escolares-sustentabilidad-a-futuro/
+https://mascomunidad.org.ar/huertas-escolares-un-esfuerzo-alimentario-y-un-aula-a-cielo-abierto/
+https://germinar.org.ar/programa-educacion-para-la-sustentabilidad/
+https://campuseducativo.santafe.edu.ar/la-huerta-ecologica-escolar-y-con-sentido/
+https://buenosaires.gob.ar/gcaba_historico/noticias/programa-escuelas-verdes-cuidar-el-ambiente-desde-el-aula-y-hacia-la
+
+# --- Tecnológico núcleo: IA generativa / evaluación automatizada ---
+https://educacion.bilateria.org/marco-para-la-integracion-etica-de-la-ia-generativa-en-las-tareas-educativas
+https://www.esade.edu/ecpol/es/publicaciones/ia-educacion/
+
+# --- Tecnológico núcleo: robótica / pensamiento computacional ---
+https://www.sanisidro.gob.ar/novedades/programa-de-rob%C3%B3tica-y-pensamiento-computacional-desde-educaci%C3%B3n-inicial
+https://www.fundaciontelefonica.com.ar/noticias/como-trabajar-el-pensamiento-computacional-y-a-la-programacion-en-la-escuela/
+https://abc2.abc.gob.ar/el-nuevo-desafio-de-la-escuela
+https://abc2.abc.gob.ar/la-robotica-ya-es-parte-de-la-escuela-primaria
+https://abc2.abc.gob.ar/Mas-alumnos-de-primaria-aprenden-robotica-y-programaci%C3%B3n
+https://educaciondigital.mec.gob.ar/index.php/2023/05/18/robotica-para-aprender-y-jugar-un-proyecto-para-alumnos-de-primaria/
+
+# --- Tecnológico núcleo: plataformas edtech / adopción ---
+https://cuyonoticias.com/contenido/18471/san-juan-eduge-plataforma-educativa-ia
+https://www.argentina.gob.ar/noticias/hub-tecnoeducativo-7-proyectos-para-potenciar-los-procesos-educativos
+https://es.editorialge.com/startups-edtech-argentina/
+
+# --- Tecnológico núcleo: brecha digital / conectividad rural ---
+https://congresos.fahce.unlp.edu.ar/seminarioredestrado/xiii-seminario/actas/ponencia-241203114036943801
+https://www.lanacion.com.ar/tecnologia/como-la-firma-argentina-orbith-logra-reducir-la-brecha-digital-y-brindar-conectividad-satelital-a-nid04082022/
+https://www.argentina.gob.ar/noticias/un-total-de-156-escuelas-rurales-acceden-por-primera-vez-internet-traves-de-arsat
+https://www.casarosada.gob.ar/haciendo/plan-de-conectividad-de-escuelas-rurales.html
+https://www.lanacion.com.ar/sociedad/informe-de-dos-ong-el-ano-pasado-el-435-de-las-escuelas-argentinas-no-tuvieron-acceso-a-internet-nid17052023/
+https://www.iproup.com/innovacion/52685-de-la-brecha-digital-al-acceso-total-el-impacto-de-orbith-en-la-educacion-rural
+https://inteligenciaargentina.ar/educaci%C3%B3n/argentina-y-la-brecha-digital-educativa-conectados-al-wifi-desconectados-del-conocimiento
+
+# --- Evaluación y datos: Aprender 2025/2026 ---
+https://abc.gob.ar/noticias/pruebas-aprender-2025-mejoraron-los-resultados-en-lengua-y-matematica
+https://www.conurbanodigital.com/pruebas-aprender-en-la-edicion-2025-mejoraron-los-resultados-en-lengua-y-matematica-en-la-provincia-de-buenos-aires/
+https://diputadosbsas.com.ar/pruebas-aprender-resultados-tercer-grado/
+https://misionescuatro.com/politica/matematica-el-desafio-educativo-las-provincias-impulsan-un-plan-para-mejorar-el-aprendizaje/
+https://www.diarioderivera.com.ar/2026/07/03/la-provincia-supero-el-promedio-nacional-en-lengua-y-matematica-en-la-prueba-aprender/
