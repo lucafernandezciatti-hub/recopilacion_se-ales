@@ -74,4 +74,4 @@ def source_registry() -> dict[str, dict[str, Any]]:
 
 def database_url() -> str:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    return os.getenv("DATABASE_URL", f"sqlite:///{DATA_DIR / 'senales.db'}")
+    return os.getenv("DATABASE_URL") or f"sqlite:///{DATA_DIR / 'senales.db'}"
