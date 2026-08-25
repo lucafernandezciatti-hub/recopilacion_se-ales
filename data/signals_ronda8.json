@@ -1,0 +1,51 @@
+{
+  "round": "ronda8",
+  "collected_via": "harvest.py real + clasificacion Claude via Claude Code (sin API)",
+  "signals": [
+    {
+      "url": "https://infobae.com/educacion/2025/02/14/plan-de-alfabetizacion-las-provincias-adoptaron-distintos-metodos-para-ensenar-a-leer-y-escribir",
+      "original_title": "Plan de alfabetización: las provincias adoptaron distintos métodos para enseñar a leer y escribir",
+      "source_name": "Infobae — Educación",
+      "publication_date": "2025-02-14",
+      "quote": "Hay un punto de acuerdo: es urgente fortalecer la alfabetización en el sistema educativo argentino, sobre todo en los primeros grados de primaria. Ese acuerdo se expresó en el Compromiso Federal por la Alfabetización, que suscribieron los 24 ministerios y la Secretaría",
+      "title": "Las 24 provincias firman un compromiso federal de alfabetizacion pero divergen en el metodo elegido",
+      "theme": "Alfabetización y comprensión lectora",
+      "thematic_relation": "core",
+      "steep": "Political",
+      "relevance": 8,
+      "ai_suggested_utility": "very_useful",
+      "ai_why_it_matters": "Que las 24 jurisdicciones coincidan en el diagnostico pero elijan metodos distintos anticipa un experimento natural: en unos anos se podra comparar que enfoque funciono mejor, provincia por provincia.",
+      "ai_reasoning_short": "Pertinencia maxima: alfabetizacion inicial, nucleo del tema. Utilidad muy alta: el desacuerdo metodologico es en si mismo el dato interesante para el futuro."
+    },
+    {
+      "url": "https://infobae.com/educacion/2026/03/11/divulgador-cientifico-propone-revisar-como-se-ensena-a-leer-y-plantea-un-enfoque-distinto-para-enfrentar-la-crisis-educativa",
+      "original_title": "Divulgador científico propone revisar cómo se enseña a leer y plantea un enfoque distinto para enfrentar la crisis educativa",
+      "source_name": "Infobae — Educación",
+      "publication_date": "2026-03-11",
+      "quote": "La crisis en la alfabetización y comprensión lectora en Argentina enfrenta al país con el reto de revertir años de retroceso en los estándares educativos. El doctor en física y divulgador científico Andrés Rieznik sostuvo en Infobae en Vivo A las Nueve que la",
+      "title": "Un divulgador cientifico instala en medios masivos el metodo fonologico como solucion a la crisis lectora",
+      "theme": "Alfabetización y comprensión lectora",
+      "thematic_relation": "core",
+      "steep": "Social",
+      "relevance": 6,
+      "ai_suggested_utility": "useful",
+      "ai_why_it_matters": "Que el debate tecnico sobre metodos de lectura salga de la academia y entre en medios masivos de audiencia general acelera la presion social sobre las provincias que todavia no adoptaron metodos explicitos.",
+      "ai_reasoning_short": "Pertinencia alta: metodo de alfabetizacion inicial. Utilidad util: mas un termometro de instalacion publica que un dato nuevo."
+    },
+    {
+      "url": "https://ipehcs.conicet.gov.ar/alfabetizarse-es-mucho-mas-que-aprender-letras-el-reduccionismo-del-nuevo-metodo-de-alfabetizacion-en-argentina-nora-scheuer",
+      "original_title": "Alfabetizarse es mucho más que aprender letras",
+      "source_name": "ipehcs.conicet.gov.ar",
+      "publication_date": "2026-06-08",
+      "quote": "Como investigadora en psicología del desarrollo cognitivo y el aprendizaje, dedicada al estudio de cómo las personas se implican en la alfabetización a lo largo de su vida y cómo la alfabetización transforma sus modos de pensar, participar, hacer e incluso de ser, considero impre",
+      "title": "Una investigadora en psicologia del desarrollo cuestiona que el nuevo metodo de alfabetizacion reduzca leer a decodificar",
+      "theme": "Alfabetización y comprensión lectora",
+      "thematic_relation": "core",
+      "steep": "Social",
+      "relevance": 7,
+      "ai_suggested_utility": "very_useful",
+      "ai_why_it_matters": "La contracara critica al consenso fonologico anticipa que la reforma de alfabetizacion no va a cerrarse sin disputa academica, lo que puede demorar o fragmentar la implementacion entre provincias.",
+      "ai_reasoning_short": "Pertinencia alta: discute directamente el metodo de alfabetizacion nucleo. Utilidad muy alta: aporta el contrapeso que evita que el corpus solo confirme el mapa mental del consenso fonologico."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "round": "ronda7",
+  "collected_via": "harvest.py real + clasificacion Claude via Claude Code (sin API)",
+  "signals": [
+    {
+      "url": "https://ellitoral.com/politica/pobreza-ninez-tareas-cuidado-alimentacion-auh-argentina-unicef_0_ei1TUVu0oj.html",
+      "original_title": "Bajó la pobreza infantil en Argentina durante el segundo tramo de 2025, pero temen que se revierta",
+      "source_name": "El Litoral",
+      "publication_date": "2026-06-09",
+      "quote": "rían modificar esa tendencia: la aceleración de la inflación, la caída en los ingresos y el ajuste fiscal, que afectó la capacidad de compra de la Prestación Alimentar.\nAquí cabe una aclaración: un tema es la pobreza por ingresos y otra, la privación no monetaria. Ambas tienen di",
+      "title": "UNICEF distingue la pobreza infantil por ingresos de la privacion estructural y advierte que ambas pueden divergir",
+      "theme": "Pobreza infantil y protección social",
+      "thematic_relation": "adjacent",
+      "steep": "Economic",
+      "relevance": 6,
+      "ai_suggested_utility": "useful",
+      "ai_why_it_matters": "Separar pobreza monetaria de privacion no monetaria (vivienda, agua, educacion) anticipa que una mejora del ingreso no necesariamente se traduce en mejor acceso educativo real.",
+      "ai_reasoning_short": "Pertinencia media: da matiz metodologico util para leer el resto de los datos de pobreza infantil del corpus. Utilidad util, no central."
+    },
+    {
+      "url": "https://infobae.com/salud/2026/05/20/infancia-en-argentina-presentaron-un-programa-para-ampliar-derechos-y-reducir-la-pobreza-hasta-2030",
+      "original_title": "Infancia en Argentina: presentaron un programa para ampliar derechos y reducir la pobreza",
+      "source_name": "Infobae — Educación",
+      "publication_date": "2026-05-20",
+      "quote": "El nuevo programa de UNICEF Argentina para el periodo 2026-2030 fijó como prioridad que cada niña, niño y adolescente del país pueda crecer sano, aprender, vivir protegido y alcanzar su máximo potencial. Frente a un contexto en el que más de 5 millones de meno",
+      "title": "UNICEF fija una agenda 2026-2030 para la ninez argentina centrada en aprendizaje y proteccion",
+      "theme": "Primera infancia y cuidados",
+      "thematic_relation": "adjacent",
+      "steep": "Political",
+      "relevance": 6,
+      "ai_suggested_utility": "useful",
+      "ai_why_it_matters": "Una agenda formal a cinco anos de un organismo internacional funciona como ancla de politica publica: marca que prioridades van a tener financiamiento y presion externa en la proxima decada.",
+      "ai_reasoning_short": "Pertinencia media: es agenda declarativa, no politica ejecutada. Utilidad util: sirve como referencia de hacia donde se orienta el consenso internacional sobre infancia."
+    },
+    {
+      "url": "https://lanacion.com.ar/economia/unicef-sostiene-que-la-pobreza-infantil-bajo-al-423-en-2025-pero-advierte-por-una-suba-en-el-primer-nid09062026",
+      "original_title": "Unicef sostiene que la pobreza infantil bajó al 42,3% en 2025, el nivel más bajo desde 2018",
+      "source_name": "La Nación — Educación",
+      "publication_date": "2026-06-09",
+      "quote": "Unicef destacó una baja en la incidencia de la pobreza y la indigencia infantil en el país durante 2025, pero advirtió por una posible “reversión” parcial de esa caída en el primer semestre del año, que interrumpirá la tendencia descendente que muestran los indicadores desde 2024",
+      "title": "La pobreza infantil toca su nivel mas bajo desde 2018 pero UNICEF anticipa un rebote",
+      "theme": "Pobreza infantil y protección social",
+      "thematic_relation": "adjacent",
+      "steep": "Economic",
+      "relevance": 7,
+      "ai_suggested_utility": "very_useful",
+      "ai_why_it_matters": "Un piso historico de pobreza infantil que la propia fuente da por fragil y reversible es una senal de ventana de oportunidad corta: cualquier politica educativa que dependa de esa mejora deberia anticipar el rebote.",
+      "ai_reasoning_short": "Pertinencia media-alta: dato reciente, con proyeccion a futuro explicita de la fuente. Utilidad muy alta: el aviso de reversion es el dato mas accionable del lote."
+    }
+  ]
+}

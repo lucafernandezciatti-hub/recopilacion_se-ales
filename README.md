@@ -23,7 +23,7 @@ El objetivo no es un scraper de noticias ni un dashboard genérico. Es un corpus
 | 8 · Diagnóstico de calidad | ✅ (spiderweb, procedencia, novedad, completitud, alertas) |
 | 9 · Tests y documentación | ✅ parcial (41 tests) |
 
-**Corpus actual: 130 señales** (ronda 1: 49, ronda 2: 59, ronda 3: 22). Rondas 2 y 3 se recolectaron con el scraper real (`harvest.py`) y clasificación de IA en sesión (sin API paga), con cita verificada automáticamente contra el texto extraído — no tienen el problema de la ronda 1. Ver *Advertencia sobre las citas* más abajo (aplica sólo a ronda 1).
+**Corpus actual: 200 señales** (ronda 1: 49, rondas 2-8: 151). Desde la ronda 2 en adelante se recolectó con el scraper real (`harvest.py`) y clasificación de IA en sesión (sin API paga), con cita verificada automáticamente contra el texto extraído — no tienen el problema de la ronda 1. De las 151 señales nuevas, el 100% pasó `verify_quotes.py` en el primer intento. Ver *Advertencia sobre las citas* más abajo (aplica sólo a ronda 1: 33/49 verificadas).
 
 ---
 
@@ -85,6 +85,11 @@ python -c "from src.database.session import init_db; init_db()"
 python scripts/load_signals.py data/signals_ronda1.json
 python scripts/load_signals.py data/signals_ronda2.json
 python scripts/load_signals.py data/signals_ronda3.json
+python scripts/load_signals.py data/signals_ronda4.json
+python scripts/load_signals.py data/signals_ronda5.json
+python scripts/load_signals.py data/signals_ronda6.json
+python scripts/load_signals.py data/signals_ronda7.json
+python scripts/load_signals.py data/signals_ronda8.json
 python scripts/verify_quotes.py
 streamlit run app.py
 ```

@@ -1,0 +1,99 @@
+# Ronda 4 — hacia 200 señales. Cobertura amplia: infraestructura edilicia,
+# agua/saneamiento, energía renovable (Ambiental núcleo), salario/ausentismo
+# docente, repitencia, currículum, Ley de Libertad Educativa, vouchers,
+# Conectar Igualdad, salud infantil, licencias parentales, EIB.
+
+# --- Infraestructura edilicia (núcleo) ---
+https://sisanjuan.gob.ar/23-infraestructura/2025-12-29/65637-mas-de-600-aires-instalados-y-mejoras-integrales-en-edificios-escolares-durante-2025
+https://www.argentina.gob.ar/noticias/trotta-y-kicillof-presentaron-un-plan-de-mejora-de-la-infraestructura-escolar
+https://diariondi.com/infraestructura-escolar-la-millonaria-licitacion-que-encara-la-gestion-educativa/
+https://abc2.abc.gob.ar/se-presento-el-programa-escuelas-a-la-obra
+https://codigodocente.com.ar/2026/01/07/realizaron-mejoras-integrales-en-mas-de-450-edificios-escolares-durante-2025/
+https://www.codigobaires.com.ar/2026-02-26/trenque-lauquen-mejora-la-infraestructura-escolar-246732/
+https://agenciasanluis.com/2026/08/20/1200254-la-provincia-refaccionara-y-dara-mantenimiento-a-cuatro-escuelas/
+
+# --- Agua y saneamiento escolar (ambiental/social núcleo) ---
+https://blogs.iadb.org/agua/es/acceso-a-agua-y-saneamiento-un-servicio-esencial-en-los-centros-educativos/
+https://www.fundacionaquae.org/acceso-al-agua-potable-y-aseos-en-argentina/
+https://eltribuno.com/salta/nota/2022-2-1-0-0-0-las-escuelas-sin-agua-no-pueden-educar
+https://www.argentina.gob.ar/obras-publicas/agua-potable-y-saneamiento/programa-de-acceso-al-agua-el-saneamiento-y-la-higiene-en
+https://naturaleza.ar/contenido/4037/agua-que-no-has-de-beber-el-derecho-humano-al-agua-en-las-escuelas-bonaerenses
+
+# --- Energía renovable en escuelas (ambiental núcleo) ---
+https://buenosaires.gob.ar/gcaba_historico/noticias/las-escuelas-portenas-apuestan-por-las-energias-renovables
+https://www.gba.gob.ar/gobierno/noticias/avanza_el_proyecto_de_paneles_solares_en_escuelas_del_delta
+https://www.gba.gob.ar/infraestructura/noticias/se_instalaron_paneles_solares_en_11_escuelas_rurales_de_la_provincia_de
+https://www.argentina.gob.ar/noticias/permer-avanza-en-la-repotenciacion-de-energia-solar-para-260-escuelas-rurales-de-salta
+https://www.ambiente.gba.gob.ar/noticias/la_provincia_de_buenos_aires_instalar%C3%A1_termotanques_solares_en_escuelas_rurales
+https://www.salta.gob.ar/prensa/noticias/se-dotara-de-energia-solar-a-260-escuelas-rurales-saltenias-78597
+https://www.diariouno.com.ar/sociedad/plan-energia-solar-colegios-20-escuelas-tecnicas-paneles-y-un-ahorro-117-millones-n1502824
+
+# --- Trabajo y formación docente: salario / ausentismo / suplencias (núcleo) ---
+https://www.iprofesional.com/finanzas/451505-cuanto-gana-un-maestro-en-2026-con-una-brecha-entre-provincias-que-llega-al-100-por-ciento
+https://www.suteba.org.ar/el-plenario-de-secretarixs-generales-aprobo-por-amplisima-mayoria-la-propuesta-salarial-provincial-24419.html
+https://www.seduca.org.ar/paritaria-docente-caba-abril-2026/
+https://www.infobae.com/educacion/2024/08/08/en-las-escuelas-mas-pobres-3-de-cada-10-docentes-son-suplentes-advierten-que-impacta-en-el-aprendizaje/
+https://www.lanacion.com.ar/opinion/el-gran-ausentismo-docente-tiene-solucion-nid28032024/
+https://revista.elarcondeclio.com.ar/en-las-escuelas-mas-pobres-3-de-cada-10-maestros-son-suplentes/
+https://argentinosporlaeducacion.org/informe/cargos-y-suplencias-docentes-en-el-nivel-primario/
+
+# --- Trayectorias escolares: repitencia / sobreedad (núcleo) ---
+https://www.canal26.com/general/2026/08/13/educacion-en-argentina-mas-chicos-terminan-la-primaria-pero-solo-la-mitad-alcanza-los-niveles-de-aprendizaje-esperados/
+https://cuadernodetrabajo.wordpress.com/2026/08/24/solo-la-mitad-de-los-alumnos-argentinos-llega-a-sexto-grado-a-tiempo-y-con-los-aprendizajes-esperados/
+https://www.revistasalvador.com.ar/la-educacion-argentina-se-encuentra-en-estado-terminal/
+
+# --- Currículum: matemática / diseño curricular (núcleo) ---
+https://www.infobae.com/educacion/2026/07/12/matematica-la-gran-deuda-de-aprendizaje-que-estan-haciendo-las-provincias-para-mejorar-la-ensenanza/
+https://buenosaires.gob.ar/gcaba_historico/educacion/nuevo-diseno-curricular-para-la-educacion-primaria
+https://www.infobae.com/educacion/2024/10/06/en-2025-cambia-la-forma-de-ensenar-lengua-y-matematica-en-las-escuelas-primarias-de-caba/
+
+# --- Educación emocional (núcleo) ---
+https://escuelademaestros.bue.edu.ar/bienestar-socioemocional/
+https://www.infobae.com/opinion/2025/05/01/el-bienestar-emocional-es-aprendizaje/
+
+# --- Migraciones internas (adyacente) ---
+https://www.iprofesional.com/management/450382-la-matricula-escolar-en-argentina-entra-en-una-fase-de-caida-historica
+
+# --- Lenguas, diversidad y pueblos originarios (adyacente) ---
+https://poblaciones.org/2025/05/28/mapa-de-pueblos-indigenas-lenguas-y-educacion-intercultural-en-argentina/
+
+# --- Federalismo / Ley de Libertad Educativa (político núcleo) ---
+https://www.infobae.com/politica/2026/02/24/que-reformas-buscara-impulsar-milei-en-el-congreso-ley-de-estabilidad-reforma-educativa-y-boleta-unica/
+https://www.eldiarioar.com/opinion/tribuna/proyecto-ley-libertad-educativa-milei_129_13409685.html
+https://www.lanacion.com.ar/politica/que-dice-el-proyecto-de-ley-de-libertad-educativa-nid09122025/
+https://redaccionrosario.com/2026/08/11/una-ley-para-entregar-la-soberania-educativa/
+https://www.lareforma.com.ar/Ley-de-libertad-educativa-en-que-consiste-esta-reforma-del-gobierno-y-cuales-son-los-puntos-mas-conflictivos.html
+https://latfem.org/eso-que-llaman-libertad-educativa/
+https://www.laizquierdadiario.com/Analisis-del-documento-Ley-de-libertad-educativa
+https://www.diariodecuyo.com.ar/argentina/el-gobierno-de-milei-busca-derogar-la-ley-de-educacion-nacional-prepara-un-proyecto-de-libertad-educativa-1800378.html
+
+# --- Salud infantil: vacunación / obesidad (adyacente) ---
+https://www.osde.com.ar/salud-y-bienestar/calendario-de-vacunaci%C3%B3n-qu%C3%A9-dosis-son-obligatorias-y-a-qu%C3%A9-edad-se-aplican-1
+https://www.argentina.gob.ar/salud/vacunas/ingresoescolar
+https://accion.coop/2026/08/03/pais/sociedad/obesidad-infantil-etiquetado-frontal-desigualdad-pobreza-nutricion/
+https://www.infobae.com/salud/2026/03/04/obesidad-infantil-12-recomendaciones-de-los-especialistas-para-prevenir-el-sobrepeso-en-ninos/
+https://www.infobae.com/salud/2026/04/20/por-que-preocupa-la-obesidad-infantil-en-argentina-riesgos-y-el-rol-de-los-alimentos-ultraprocesados/
+https://cesni-biblioteca.org/sobrepeso-y-obesidad-en-ninos/
+
+# --- Primera infancia: licencias parentales (adyacente) ---
+https://www.cadena3.com/noticia/sociedad/estudio-revela-el-estado-actual-del-cuidado-infantil-y-las-licencias-en-argentina_581094
+https://www.iprofesional.com/management/447673-reforma-laboral-2026-que-pasaria-con-las-licencias-por-maternidad-paternidad-y-cuidado
+https://www.perfil.com/noticias/sociedad/licencias-por-paternidad-presentan-un-proyecto-de-ley-para-extenderlas-a-30-dias-e-incluir-a-monotributistas.phtml
+https://economis.com.ar/lactancia-y-licencias-por-maternidad-y-paternidad-como-esta-argentina/
+
+# --- Financiamiento educativo: vouchers (económico núcleo) ---
+https://chequeado.com/el-explicador/vouchers-educativos-2026-quienes-pueden-acceder-a-este-beneficio-y-hasta-cuando-hay-tiempo-para-inscribirse/
+https://www.argentina.gob.ar/vouchers-educativos
+https://www.elsol.com.ar/el-pais/cuales-son-los-requisitos-para-recibir-el-voucher-educativo-y-para-quien-esta-destinado/
+https://www.lagaceta.com.ar/nota/1136469/sociedad/vouchers-educativos-2026-cuanto-dinero-se-paga-beneficiario.html
+
+# --- Ministerio de Capital Humano / calendario escolar (político núcleo) ---
+https://www.ellitoral.com/educacion/calendario2026-educacion-argentina-clases-consejofederal-horasreloj-sistemaeducativo-monitoreo-ensenanza_0_3Z9zlaBkvJ.html
+https://www.inforegion.com.ar/2025/11/11/ciclo-lectivo-2026-el-gobierno-y-las-provincias-acordaron-190-dias-de-clases/
+
+# --- Conectar Igualdad (tecnológico núcleo) ---
+https://www.cronista.com/economia-politica/computadoras-gratis-el-gobierno-confirmo-que-reactivaran-un-plan-de-entrega-cuando-comienza/
+https://www.udesa.edu.ar/noticias/conectar-igualdad-que-impacto-tuvo-en-la-educacion-el-megaproyecto-del-kirchnerismo-cuyo-presupuesto
+
+# --- Credenciales y futuro de la certificación (adyacente) ---
+https://buenosaires.gob.ar/educacion/agencia-de-habilidades-para-el-futuro/microcredenciales-certificacion-de-habilidades-para
