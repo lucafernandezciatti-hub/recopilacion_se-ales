@@ -23,6 +23,7 @@ logger = logging.getLogger(__name__)
 
 _WS = re.compile(r"[ \t]+")
 _BLANKS = re.compile(r"\n{3,}")
+_EUROPE_PMC_MED = re.compile(r"^https?://(?:www\.)?europepmc\.org/article/MED/(\d+)/?$", re.I)
 
 
 @dataclass(slots=True)
@@ -109,12 +110,94 @@ def fetch(url: str, client: httpx.Client | None = None) -> tuple[str | None, str
             client.close()
 
 
+def _extract_europe_pmc(
+    normalized: str, pmid: str, client: httpx.Client | None = None
+) -> ExtractionResult:
+    """Extrae metadatos y resumen mediante la API pública de Europe PMC.
+
+    Las páginas ``/article/MED/`` renderizan el registro con JavaScript y su HTML
+    inicial sólo contiene la navegación. La API es la representación estable del
+    mismo registro y permite verificar literalmente las citas del resumen.
+    """
+    cfg = settings()["scraping"]
+    result = ExtractionResult(
+        url=normalized,
+        canonical_url=normalized,
+        url_hash=url_hash(normalized),
+        domain=domain_of(normalized),
+        method="europepmc_api",
+    )
+    owns_client = client is None
+    if owns_client:
+        client = httpx.Client(follow_redirects=True, timeout=cfg["timeout_seconds"])
+    try:
+        response = client.get(
+            "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+            params={
+                "query": f"EXT_ID:{pmid} AND SRC:MED",
+                "format": "json",
+                "resultType": "core",
+                "pageSize": 1,
+            },
+        )
+        if response.status_code >= 400:
+            result.error = f"Europe PMC API HTTP {response.status_code}"
+            return result
+        records = response.json().get("resultList", {}).get("result", [])
+        if not records:
+            result.error = f"Europe PMC sin registro para PMID {pmid}"
+            return result
+        record = records[0]
+    except (httpx.HTTPError, ValueError) as exc:
+        result.error = f"Europe PMC API {type(exc).__name__}: {exc}"
+        return result
+    finally:
+        if owns_client:
+            client.close()
+
+    title = BeautifulSoup(record.get("title") or "", "html.parser").get_text(" ", strip=True)
+    abstract = BeautifulSoup(record.get("abstractText") or "", "html.parser").get_text(
+        " ", strip=True
+    )
+    cleaned = _clean("\n\n".join(part for part in (title, abstract) if part))
+    if len(cleaned) < cfg["min_text_chars"]:
+        result.error = (
+            f"texto insuficiente ({len(cleaned)} chars; "
+            f"mínimo {cfg['min_text_chars']}) — registro sin resumen"
+        )
+        return result
+
+    result.original_title = title or None
+    result.author = record.get("authorString")
+    result.language = record.get("language") or "eng"
+    result.cleaned_text = cleaned
+    result.paragraphs = _paragraphs(cleaned)
+    result.text_hash = text_hash(cleaned)
+
+    raw_date = record.get("firstPublicationDate") or record.get("electronicPublicationDate")
+    if raw_date:
+        try:
+            result.publication_date = date.fromisoformat(raw_date[:10])
+            result.publication_date_confidence = "high"
+            result.publication_date_method = "europepmc_api"
+        except ValueError:
+            pass
+
+    result.source_name, result.source_owner = _resolve_source(result.domain or "", None, None)
+    result.success = True
+    return result
+
+
 def extract(url: str, client: httpx.Client | None = None) -> ExtractionResult:
     cfg = settings()["scraping"]
     try:
         normalized = normalize_url(url)
     except ValueError as exc:
         return ExtractionResult(url=url, success=False, error=f"URL inválida: {exc}")
+
+    europe_pmc_match = _EUROPE_PMC_MED.match(normalized)
+    if europe_pmc_match:
+        return _extract_europe_pmc(normalized, europe_pmc_match.group(1), client=client)
 
     result = ExtractionResult(url=normalized, domain=domain_of(normalized))
     html, error = fetch(normalized, client=client)

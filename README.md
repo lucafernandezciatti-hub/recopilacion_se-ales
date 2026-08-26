@@ -23,11 +23,17 @@ El objetivo no es un scraper de noticias ni un dashboard genérico. Es un corpus
 | 8 · Diagnóstico de calidad | ✅ (spiderweb, procedencia, novedad, completitud, alertas) |
 | 9 · Tests y documentación | ✅ parcial (41 tests) |
 
-**Corpus actual: 300 señales** (ronda 1: 49, rondas 2-8: 151 y ronda 9: 100). Desde la ronda 2 en adelante se recolectó con el scraper real (`harvest.py`) y clasificación de IA en sesión (sin API paga), con cita verificada automáticamente contra el texto extraído — no tienen el problema de la ronda 1. Las 100 señales de ronda 9 pasaron `verify_quotes.py`: 100 verificadas, 0 citas fallidas y 0 fuentes inaccesibles.
+**Corpus actual: 400 señales** (ronda 1: 49, rondas 2-8: 151, ronda 9: 100 y ronda 10: 100). Desde la ronda 2 en adelante se recolectó con el scraper real (`harvest.py`) y clasificación de IA en sesión (sin API paga), con cita verificada automáticamente contra el texto extraído — no tienen el problema de la ronda 1. Las rondas 9 y 10 pasaron `verify_quotes.py`: 200 verificadas, 0 citas fallidas y 0 fuentes inaccesibles.
 
 **Ronda 9 cargada:** IDs 201-300, con 30 señales STEEP Ambiental y refuerzo de
 las temáticas débiles. Las citas están verificadas; las decisiones humanas de
 `Utilidad`, `Por qué importa` y estado final siguen pendientes de revisión.
+
+**Ronda 10 cargada:** IDs 301-400, con refuerzo de clima y ambiente,
+alfabetización, primera infancia, federalismo, pantallas y salud mental. Incluye
+fuentes oficiales, organismos internacionales y 42 registros científicos de
+Europe PMC. Las 100 citas están verificadas; `Utilidad`, `Por qué importa` y el
+estado final siguen pendientes de revisión humana.
 
 ---
 
@@ -95,6 +101,7 @@ python scripts/load_signals.py data/signals_ronda6.json
 python scripts/load_signals.py data/signals_ronda7.json
 python scripts/load_signals.py data/signals_ronda8.json
 python scripts/load_signals.py data/signals_ronda9.json
+python scripts/load_signals.py data/signals_ronda10.json
 python scripts/verify_quotes.py
 streamlit run app.py
 ```

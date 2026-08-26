@@ -285,6 +285,12 @@ sources:
     steep_primary: "Social"
     kind: "institucion_academica"
 
+  - name: "Europe PMC"
+    domain: "europepmc.org"
+    owner: "Europe PMC"
+    steep_primary: "Social"
+    kind: "repositorio_academico"
+
   - name: "Educ.ar"
     domain: "educ.ar"
     owner: "Estado Nacional Argentino"
