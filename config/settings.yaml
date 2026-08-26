@@ -4,7 +4,7 @@ scraping:
   timeout_seconds: 25
   max_retries: 2
   delay_between_requests_seconds: 1.5
-  user_agent: "SenalesBot/0.1 (proyecto académico UTDT DI; contacto via repo)"
+  user_agent: "SenalesBot/0.1 (proyecto academico UTDT DI; contacto via repo)"
   respect_robots: true
   min_text_chars: 400          # por debajo de esto se considera extracción fallida
 

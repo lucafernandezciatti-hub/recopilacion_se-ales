@@ -315,6 +315,79 @@ sources:
     steep_primary: "Environmental"
     kind: "medio_especializado"
 
+  # Fuentes incorporadas para ronda 11: prioridad a medios, academia y sociedad civil.
+  - name: "Climate Central"
+    domain: "climatecentral.org"
+    owner: "Climate Central"
+    steep_primary: "Environmental"
+    kind: "organizacion_cientifica"
+
+  - name: "Associated Press"
+    domain: "apnews.com"
+    owner: "Associated Press"
+    steep_primary: "Social"
+    kind: "agencia_noticias"
+
+  - name: "TIME"
+    domain: "time.com"
+    owner: "TIME"
+    steep_primary: "Environmental"
+    kind: "medio_generalista"
+
+  - name: "Repositorio CEPAL"
+    domain: "repositorio.cepal.org"
+    owner: "CEPAL"
+    steep_primary: "Economic"
+    kind: "repositorio_institucional"
+
+  - name: "CoSN"
+    domain: "cosn.org"
+    owner: "CoSN"
+    steep_primary: "Technological"
+    kind: "asociacion_profesional"
+
+  - name: "European School Education Platform"
+    domain: "school-education.ec.europa.eu"
+    owner: "Comisión Europea"
+    steep_primary: "Technological"
+    kind: "organismo_oficial"
+
+  - name: "Information Commissioner's Office"
+    domain: "ico.org.uk"
+    owner: "ICO"
+    steep_primary: "Political"
+    kind: "organismo_regulador"
+
+  - name: "Project Unicorn"
+    domain: "projectunicorn.org"
+    owner: "Project Unicorn"
+    steep_primary: "Technological"
+    kind: "organizacion_sectorial"
+
+  - name: "Mixed Migration Centre"
+    domain: "mixedmigration.org"
+    owner: "Mixed Migration Centre"
+    steep_primary: "Economic"
+    kind: "centro_investigacion"
+
+  - name: "Brookings Institution"
+    domain: "brookings.edu"
+    owner: "Brookings Institution"
+    steep_primary: "Economic"
+    kind: "think_tank"
+
+  - name: "The Hechinger Report"
+    domain: "hechingerreport.org"
+    owner: "The Hechinger Report"
+    steep_primary: "Technological"
+    kind: "medio_especializado"
+
+  - name: "New America"
+    domain: "newamerica.org"
+    owner: "New America"
+    steep_primary: "Political"
+    kind: "think_tank"
+
 # Términos de búsqueda para alimentar el relevamiento cuando no hay feed.
 search_queries:
   core:

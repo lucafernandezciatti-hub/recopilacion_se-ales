@@ -94,7 +94,13 @@ def fetch(url: str, client: httpx.Client | None = None) -> tuple[str | None, str
     try:
         for attempt in range(cfg["max_retries"] + 1):
             try:
-                response = client.get(url)
+                response = client.get(
+                    url,
+                    headers={
+                        "User-Agent": cfg["user_agent"],
+                        "Accept-Language": "es-AR,es;q=0.9,en;q=0.8",
+                    },
+                )
                 if response.status_code >= 400:
                     return None, f"HTTP {response.status_code}"
                 ctype = response.headers.get("content-type", "")
