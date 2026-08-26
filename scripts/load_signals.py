@@ -17,6 +17,14 @@ import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
+# En consolas Windows con codepage no-UTF-8 (cp1252), un título con un carácter
+# especial (guiones largos, espacios finos, etc.) hace crashear el print y,
+# como pasa dentro del `with get_session()`, revierte toda la carga. Forzamos
+# UTF-8 con reemplazo en vez de fallar.
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.collection.normalize import domain_of, normalize_url, url_hash  # noqa: E402

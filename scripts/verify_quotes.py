@@ -21,6 +21,10 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+
 import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
