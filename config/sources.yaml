@@ -234,6 +234,81 @@ sources:
     kind: "medio_generalista"
     rss: "https://cenital.com/feed/"
 
+  # Dominios adicionales usados en la ronda 9. El registro de fuentes
+  # compara el dominio de forma exacta, por eso se declaran por separado pero
+  # conservan el mismo `owner` que la institución principal.
+  - name: "OIT"
+    domain: "ilo.org"
+    owner: "OIT"
+    steep_primary: "Economic"
+    kind: "organismo_internacional"
+
+  - name: "Gobierno de Santa Fe"
+    domain: "santafe.gob.ar"
+    owner: "Gobierno de Santa Fe"
+    steep_primary: "Political"
+    kind: "organismo_oficial"
+
+  - name: "Ministerio de Educación de Santa Fe"
+    domain: "educacion.santafe.gob.ar"
+    owner: "Gobierno de Santa Fe"
+    steep_primary: "Political"
+    kind: "organismo_oficial"
+
+  - name: "Gobierno de Entre Ríos — Portal"
+    domain: "portal.entrerios.gov.ar"
+    owner: "Gobierno de Entre Ríos"
+    steep_primary: "Political"
+    kind: "organismo_oficial"
+
+  - name: "Gobierno de Entre Ríos"
+    domain: "entrerios.gov.ar"
+    owner: "Gobierno de Entre Ríos"
+    steep_primary: "Political"
+    kind: "organismo_oficial"
+
+  - name: "SEDICI — Universidad Nacional de La Plata"
+    domain: "sedici.unlp.edu.ar"
+    owner: "Universidad Nacional de La Plata"
+    steep_primary: "Social"
+    kind: "repositorio_academico"
+
+  - name: "Gobierno de Salta"
+    domain: "salta.gob.ar"
+    owner: "Gobierno de Salta"
+    steep_primary: "Political"
+    kind: "organismo_oficial"
+
+  - name: "CUI — Mapa de Lenguas Indígenas"
+    domain: "cui.edu.ar"
+    owner: "Centro Universitario de Idiomas"
+    steep_primary: "Social"
+    kind: "institucion_academica"
+
+  - name: "Educ.ar"
+    domain: "educ.ar"
+    owner: "Estado Nacional Argentino"
+    steep_primary: "Technological"
+    kind: "organismo_oficial"
+
+  - name: "El País"
+    domain: "elpais.com"
+    owner: "PRISA"
+    steep_primary: "Social"
+    kind: "medio_generalista"
+
+  - name: "Cadena SER"
+    domain: "cadenaser.com"
+    owner: "PRISA"
+    steep_primary: "Environmental"
+    kind: "medio_generalista"
+
+  - name: "Carbon Brief — Interactivos"
+    domain: "interactive.carbonbrief.org"
+    owner: "Carbon Brief"
+    steep_primary: "Environmental"
+    kind: "medio_especializado"
+
 # Términos de búsqueda para alimentar el relevamiento cuando no hay feed.
 search_queries:
   core:

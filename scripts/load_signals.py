@@ -94,7 +94,10 @@ def main() -> int:
                 continue
 
             hashed = url_hash(normalized)
-            if repo.find_by_url_hash(session, hashed):
+            effective_hash = entry.get("url_hash") or hashed
+            if repo.find_by_url_hash(session, effective_hash) or (
+                effective_hash != hashed and repo.find_by_url_hash(session, hashed)
+            ):
                 print(f"DUPLICADA: {url}")
                 skipped += 1
                 continue
@@ -102,18 +105,25 @@ def main() -> int:
             domain = domain_of(normalized)
             source_name, source_owner = resolve_source(domain, entry.get("source_name"))
 
+            publication_date = parse_date(entry.get("publication_date"))
             signal = Signal(
                 title=entry["title"],
                 link=normalized,
-                canonical_url=normalized,
-                url_hash=hashed,
+                canonical_url=entry.get("canonical_url") or normalized,
+                url_hash=effective_hash,
                 quote=quote,
                 quote_verified=False,
                 why_it_matters=None,          # decisión humana pendiente
                 utility=None,                 # decisión humana pendiente
-                publication_date=parse_date(entry.get("publication_date")),
-                publication_date_confidence=("medium" if entry.get("publication_date") else None),
-                publication_date_method=("remote_read" if entry.get("publication_date") else None),
+                publication_date=publication_date,
+                publication_date_confidence=(
+                    entry.get("publication_date_confidence")
+                    or ("medium" if publication_date else None)
+                ),
+                publication_date_method=(
+                    entry.get("publication_date_method")
+                    or ("remote_read" if publication_date else None)
+                ),
                 theme=entry["theme"],
                 thematic_relation=entry["thematic_relation"],
                 steep=entry["steep"],
@@ -124,8 +134,10 @@ def main() -> int:
                 original_title=entry.get("original_title"),
                 origin=args.origin,
                 status=Status.UNVERIFIED.value,
-                language="es",
-                scraping_method=collected_via,
+                language=entry.get("language") or "es",
+                cleaned_text=entry.get("cleaned_text"),
+                text_hash=entry.get("text_hash"),
+                scraping_method=entry.get("scraping_method") or collected_via,
                 scraping_success=True,
                 ai_generated_title=entry["title"],
                 ai_suggested_theme=entry["theme"],

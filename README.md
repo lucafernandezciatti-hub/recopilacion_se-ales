@@ -23,15 +23,19 @@ El objetivo no es un scraper de noticias ni un dashboard genérico. Es un corpus
 | 8 · Diagnóstico de calidad | ✅ (spiderweb, procedencia, novedad, completitud, alertas) |
 | 9 · Tests y documentación | ✅ parcial (41 tests) |
 
-**Corpus actual: 200 señales** (ronda 1: 49, rondas 2-8: 151). Desde la ronda 2 en adelante se recolectó con el scraper real (`harvest.py`) y clasificación de IA en sesión (sin API paga), con cita verificada automáticamente contra el texto extraído — no tienen el problema de la ronda 1. De las 151 señales nuevas, el 100% pasó `verify_quotes.py` en el primer intento. Ver *Advertencia sobre las citas* más abajo (aplica sólo a ronda 1: 33/49 verificadas).
+**Corpus actual: 300 señales** (ronda 1: 49, rondas 2-8: 151 y ronda 9: 100). Desde la ronda 2 en adelante se recolectó con el scraper real (`harvest.py`) y clasificación de IA en sesión (sin API paga), con cita verificada automáticamente contra el texto extraído — no tienen el problema de la ronda 1. Las 100 señales de ronda 9 pasaron `verify_quotes.py`: 100 verificadas, 0 citas fallidas y 0 fuentes inaccesibles.
+
+**Ronda 9 cargada:** IDs 201-300, con 30 señales STEEP Ambiental y refuerzo de
+las temáticas débiles. Las citas están verificadas; las decisiones humanas de
+`Utilidad`, `Por qué importa` y estado final siguen pendientes de revisión.
 
 ---
 
 ## ⚠️ Advertencia sobre las citas de la ronda 1
 
-Las 49 señales de `data/signals_ronda1.json` se recolectaron mediante **lectura remota** de las páginas, no con el scraper del repositorio. Eso significa que **las citas no fueron contrastadas carácter por carácter contra el HTML original**.
+Las 49 señales de `data/signals_ronda1.json` se recolectaron mediante **lectura remota** de las páginas, no con el scraper del repositorio. La verificación posterior encontró 32 citas literales, 9 no literales y 8 fuentes inaccesibles. Las 17 pendientes no deben usarse como evidencia hasta resolverlas.
 
-Todas están cargadas con `quote_verified = False`. Antes de usarlas para cualquier cosa —y sobre todo antes de que la cátedra las audite— hay que correr:
+Para repetir la auditoría:
 
 ```bash
 python scripts/verify_quotes.py
@@ -90,6 +94,7 @@ python scripts/load_signals.py data/signals_ronda5.json
 python scripts/load_signals.py data/signals_ronda6.json
 python scripts/load_signals.py data/signals_ronda7.json
 python scripts/load_signals.py data/signals_ronda8.json
+python scripts/load_signals.py data/signals_ronda9.json
 python scripts/verify_quotes.py
 streamlit run app.py
 ```
