@@ -7,7 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 from src.analytics.metrics import STEEP_ORDER
-from src.signals.enums import STEEP_ES, UTILITY_ES
+from src.signals.enums import STEEP_ES, UTILITY_ES, Steep
 
 PALETTE = {
     "core": "#1f6f6b",
@@ -16,6 +16,15 @@ PALETTE = {
     "text": "#2b3138",
 }
 SEQUENTIAL = "Teal"
+
+# Un color por cuadrante STEEP, para el gráfico de oportunidad (guía Clase 4).
+STEEP_COLORS = {
+    "Social": "#e8956b",
+    "Technological": "#2f7f7a",
+    "Economic": "#8d6bb8",
+    "Environmental": "#4f9d5d",
+    "Political": "#5b8ac4",
+}
 
 
 def _steep_labels() -> list[str]:
@@ -167,6 +176,71 @@ def relevance_vs_utility(df: pd.DataFrame, column: str = "utility") -> go.Figure
         margin={"l": 10, "r": 10, "t": 60, "b": 10},
         height=340,
         coloraxis_showscale=False,
+    )
+    return fig
+
+
+def opportunity_bubbles(frame: pd.DataFrame) -> go.Figure:
+    """Análisis de oportunidad (guía Clase 4): novedad × volumen.
+
+    X = volumen, Y = novedad (promedio de fecha de publicación),
+    tamaño = robustez (fuentes distintas), color = STEEP dominante.
+    Las líneas divisorias van en la mediana, no en un valor absoluto: los
+    cuadrantes son relativos a este corpus, no umbrales universales.
+    """
+    if frame.empty:
+        return go.Figure()
+
+    working = frame.copy()
+    working["STEEP"] = working["steep"].map(lambda s: STEEP_ES.get(Steep(s), s) if s else "—")
+    color_map = {STEEP_ES[Steep(k)]: v for k, v in STEEP_COLORS.items()}
+
+    fig = px.scatter(
+        working,
+        x="volumen",
+        y="novedad",
+        size="robustez",
+        color="STEEP",
+        color_discrete_map=color_map,
+        size_max=46,
+        custom_data=["etiqueta", "cluster_id", "robustez", "volumen"],
+    )
+    fig.update_traces(
+        marker={"line": {"width": 1, "color": "white"}, "sizemin": 6},
+        hovertemplate=(
+            "<b>%{customdata[0]}</b><br>"
+            "cluster #%{customdata[1]}<br>"
+            "volumen: %{customdata[3]} señales<br>"
+            "robustez: %{customdata[2]} fuentes distintas<br>"
+            "novedad media: %{y|%Y-%m-%d}<extra></extra>"
+        ),
+    )
+
+    x_split = working["volumen"].median()
+    y_split = working["novedad"].median()
+    fig.add_vline(x=x_split, line_width=1, line_dash="dash", line_color=PALETTE["grid"])
+    fig.add_hline(y=y_split, line_width=1, line_dash="dash", line_color=PALETTE["grid"])
+
+    quadrants = [
+        (0.02, 0.97, "Borde", "señal débil · mirá el tamaño", "left", "top"),
+        (0.98, 0.97, "Ola", "grande y ahora", "right", "top"),
+        (0.02, 0.03, "Residuo", "viejo y marginal", "left", "bottom"),
+        (0.98, 0.03, "Futuro oficial", "lo ya dado por hecho", "right", "bottom"),
+    ]
+    for x, y, title, subtitle, xanchor, yanchor in quadrants:
+        fig.add_annotation(
+            xref="paper", yref="paper", x=x, y=y,
+            text=f"<b>{title}</b><br><span style='font-size:11px'>{subtitle}</span>",
+            showarrow=False, xanchor=xanchor, yanchor=yanchor,
+            font={"size": 13, "color": PALETTE["text"]}, opacity=0.75, align=xanchor,
+        )
+
+    fig.update_layout(
+        margin={"l": 10, "r": 10, "t": 30, "b": 10},
+        height=560,
+        xaxis_title="volumen de señales →",
+        yaxis_title="novedad (fecha de publicación) →",
+        legend={"title": "STEEP dominante"},
     )
     return fig
 

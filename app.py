@@ -104,6 +104,7 @@ PAGES = [
     "Dashboard",
     "Señales",
     "Revisar",
+    "Clusters",
     "Calidad del corpus",
     "Auditoría",
     "Ingesta",
@@ -209,13 +210,27 @@ elif page == "Revisar":
     if "review_idx" not in st.session_state:
         st.session_state.review_idx = 0
     st.session_state.review_idx = min(st.session_state.review_idx, len(ids) - 1)
+    current_id = ids[st.session_state.review_idx]
 
-    nav = st.columns([1, 1, 6])
+    nav = st.columns([1, 1, 2, 3])
     if nav[0].button("← Anterior", use_container_width=True):
         st.session_state.review_idx = max(0, st.session_state.review_idx - 1)
     if nav[1].button("Siguiente →", use_container_width=True):
         st.session_state.review_idx = min(len(ids) - 1, st.session_state.review_idx + 1)
-    nav[2].caption(f"Señal {st.session_state.review_idx + 1} de {len(ids)}")
+    with nav[2].form("goto_signal_form", clear_on_submit=False, border=False):
+        goto_cols = st.columns([2, 1])
+        goto_id = goto_cols[0].number_input(
+            "Ir a señal #", min_value=1, step=1, value=current_id, label_visibility="collapsed"
+        )
+        goto_submitted = goto_cols[1].form_submit_button("Ir", use_container_width=True)
+    if goto_submitted:
+        if goto_id in ids:
+            st.session_state.review_idx = ids.index(goto_id)
+        else:
+            st.warning(
+                f"La señal #{goto_id} no existe, o quedó fuera de los filtros actuales de la barra lateral."
+            )
+    nav[3].caption(f"Señal {st.session_state.review_idx + 1} de {len(ids)}")
 
     signal_id = ids[st.session_state.review_idx]
     with get_session() as session:
@@ -326,6 +341,116 @@ elif page == "Revisar":
                 repo.touch_reviewed(signal, reviewer or None)
                 refresh()
                 st.success("Guardado.")
+
+
+# --------------------------------------------------------------------------
+# Clusters
+# --------------------------------------------------------------------------
+elif page == "Clusters":
+    st.title("Análisis de oportunidad")
+    st.caption(
+        "Clusters semánticos sobre un plano de novedad × volumen (guía Clase 4). "
+        "El gráfico ordena el corpus; la selección de qué mirar la hace el grupo."
+    )
+
+    with get_session() as session:
+        run = repo.active_run(session)
+        cluster_rows = repo.clusters_for_run(session, run.id) if run else []
+        labels = {c.cluster_index: c.label for c in cluster_rows if c.label}
+        pending_embeddings = len(repo.signals_without_embedding(session))
+
+    top = st.columns([2, 2, 3])
+    if run:
+        top[0].metric("Clusters", run.n_clusters)
+        top[1].metric("Sin cluster (ruido)", run.n_noise)
+        top[2].caption(
+            f"Corrida #{run.id} · {run.n_signals} señales · modelo `{run.embedding_model}`"
+        )
+    else:
+        top[0].info("Todavía no se corrió el clustering.")
+
+    if pending_embeddings:
+        st.warning(f"{pending_embeddings} señales sin embedding calculado.")
+
+    if st.button("Recalcular embeddings y clustering", type="primary"):
+        progress_bar = st.progress(0.0, text="Calculando embeddings...")
+        try:
+            with st.spinner("Esto puede tardar varios minutos la primera vez..."):
+                with get_session() as session:
+                    from src.embeddings.clustering import run_clustering
+                    from src.embeddings.model import compute_missing_embeddings
+
+                    compute_missing_embeddings(
+                        session,
+                        progress=lambda done, total: progress_bar.progress(
+                            done / total, text=f"Embeddings {done}/{total}"
+                        ),
+                    )
+                    progress_bar.progress(1.0, text="Clusterizando...")
+                    outcome = run_clustering(session)
+            progress_bar.empty()
+            refresh()
+            st.success(
+                f"{outcome.n_clusters} clusters sobre {outcome.n_signals} señales "
+                f"({outcome.n_noise} quedaron sin cluster)."
+            )
+            st.rerun()
+        except Exception as exc:  # noqa: BLE001
+            progress_bar.empty()
+            st.error(f"Falló el clustering: {exc}")
+
+    frame = metrics.cluster_opportunity_frame(df_all, labels)
+    if frame.empty:
+        st.info("Sin clusters todavía. Usá el botón de arriba para calcularlos.")
+        st.stop()
+
+    st.plotly_chart(charts.opportunity_bubbles(frame), use_container_width=True)
+    st.caption(
+        "**Tamaño = robustez** (fuentes distintas). En el cuadrante *Borde* leé primero el "
+        "tamaño y después la posición: una burbuja chica ahí puede ser una sola voz o una "
+        "campaña de prensa, no una señal débil válida."
+    )
+
+    st.divider()
+    st.subheader("Abrir un cluster")
+    st.caption("Requisito de trazabilidad: cada cluster abre sus señales, cada señal abre su URL.")
+
+    options = frame["cluster_id"].tolist()
+    chosen = st.selectbox(
+        "Cluster",
+        options,
+        format_func=lambda cid: (
+            f"{frame.loc[frame['cluster_id'] == cid, 'etiqueta'].iloc[0]} "
+            f"({frame.loc[frame['cluster_id'] == cid, 'volumen'].iloc[0]} señales)"
+        ),
+    )
+
+    row = frame[frame["cluster_id"] == chosen].iloc[0]
+    stats = st.columns(4)
+    stats[0].metric("Volumen", row["volumen"])
+    stats[1].metric("Robustez", f"{row['robustez']} fuentes")
+    stats[2].metric("Novedad media", f"{row['novedad']:%Y-%m-%d}")
+    stats[3].metric("STEEP dominante", STEEP_ES.get(Steep(row["steep"]), "—") if row["steep"] else "—")
+
+    members = df_all[df_all["cluster_id"] == chosen]
+    for _, signal_row in members.iterrows():
+        with st.expander(f"#{signal_row['id']} · {signal_row['title']}"):
+            st.caption(
+                f"{signal_row['source_name']} · "
+                f"{signal_row['publication_date']:%Y-%m-%d}"
+                if pd.notna(signal_row["publication_date"])
+                else f"{signal_row['source_name']} · sin fecha"
+            )
+            st.markdown(f"> {signal_row['quote'] or '— sin cita —'}")
+            st.markdown(f"[Abrir fuente ↗]({signal_row['link']})")
+
+    noise = df_all[df_all["cluster_id"].isna()]
+    if not noise.empty:
+        st.divider()
+        st.caption(
+            f"{len(noise)} señales quedaron fuera de todo cluster. HDBSCAN no fuerza a que "
+            "todo entre en un grupo: son señales sueltas que todavía no forman un fenómeno."
+        )
 
 
 # --------------------------------------------------------------------------

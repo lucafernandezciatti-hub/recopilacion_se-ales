@@ -101,6 +101,46 @@ def theme_by_steep(df: pd.DataFrame) -> pd.DataFrame:
     )
 
 
+# --- clusters -------------------------------------------------------------
+def cluster_opportunity_frame(
+    df: pd.DataFrame, labels: dict[int, str] | None = None
+) -> pd.DataFrame:
+    """Una fila por cluster, con los cuatro canales visuales de la guía Clase 4.
+
+    volumen  = cuántas señales lo componen        (eje X)
+    novedad  = promedio de la FECHA DE PUBLICACIÓN (eje Y; nunca collected_at)
+    robustez = cuántas fuentes distintas lo alimentan (tamaño de burbuja)
+    steep    = cuadrante STEEP dominante            (color)
+    """
+    if df.empty or "cluster_id" not in df.columns:
+        return pd.DataFrame()
+
+    clustered = df.dropna(subset=["cluster_id"]).copy()
+    if clustered.empty:
+        return pd.DataFrame()
+    clustered["cluster_id"] = clustered["cluster_id"].astype(int)
+
+    rows = []
+    for cluster_id, group in clustered.groupby("cluster_id"):
+        dated = group.dropna(subset=["publication_date"])
+        steep_mode = group["steep"].mode()
+        rows.append(
+            {
+                "cluster_id": cluster_id,
+                "etiqueta": (labels or {}).get(cluster_id) or f"Cluster {cluster_id}",
+                "volumen": len(group),
+                "novedad": dated["publication_date"].mean() if not dated.empty else pd.NaT,
+                "robustez": int(group["source_owner"].nunique()),
+                "steep": steep_mode.iloc[0] if not steep_mode.empty else None,
+                "n_steep": int(group["steep"].nunique()),
+                "sin_fecha": int(len(group) - len(dated)),
+            }
+        )
+
+    frame = pd.DataFrame(rows).dropna(subset=["novedad"])
+    return frame.sort_values("volumen", ascending=False).reset_index(drop=True)
+
+
 # --- diversidad de fuentes ------------------------------------------------
 def source_diversity(df: pd.DataFrame) -> dict[str, Any]:
     if df.empty:

@@ -15,10 +15,12 @@ plotly>=5.22
 openpyxl>=3.1
 
 # Semántica — embeddings, similitud y clustering
+# HDBSCAN se usa desde scikit-learn (sklearn.cluster.HDBSCAN, incluido desde 1.3):
+# es el mismo algoritmo que el paquete `hdbscan` standalone pero viaja en wheels ya
+# compiladas, sin necesitar toolchain de C++ en Windows.
 sentence-transformers>=3.0
 scikit-learn>=1.5
 umap-learn>=0.5
-hdbscan>=0.8.38
 numpy>=1.26
 
 # Proveedores de IA (opcionales: la app corre en modo mock sin ninguno)

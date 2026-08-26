@@ -17,9 +17,9 @@ El objetivo no es un scraper de noticias ni un dashboard genérico. Es un corpus
 | 2 · Ingesta y extracción web (scraper, RSS, fechas, dedupe) | ✅ |
 | 3 · Capa de IA con validación estructurada | ✅ |
 | 4 · Revisión humana | ✅ |
-| 5 · Embeddings, similitud y duplicados semánticos | ⏳ pendiente |
-| 6 · Clustering (UMAP + HDBSCAN) y etiquetado | ⏳ pendiente |
-| 7 · Mapa semántico | ⏳ pendiente |
+| 5 · Embeddings | ✅ (`src/embeddings/model.py`) |
+| 6 · Clustering (UMAP + HDBSCAN) y etiquetado | ✅ (23 clusters sobre 500 señales) |
+| 7 · Mapa semántico 2D | ⏳ pendiente |
 | 8 · Diagnóstico de calidad | ✅ (spiderweb, procedencia, novedad, completitud, alertas) |
 | 9 · Tests y documentación | ✅ parcial (41 tests) |
 
@@ -111,6 +111,7 @@ python scripts/load_signals.py data/signals_ronda9.json
 python scripts/load_signals.py data/signals_ronda10.json
 python scripts/load_signals.py data/signals_ronda11.json
 python scripts/verify_quotes.py
+python scripts/cluster_signals.py    # embeddings + clustering (la 1ra vez baja el modelo)
 streamlit run app.py
 ```
 
@@ -120,7 +121,8 @@ streamlit run app.py
 
 - **Dashboard** — tamaño del corpus, núcleo vs adyacente, diversidad de fuentes, alertas.
 - **Señales** — tabla filtrable y ordenable, buscador, exportación CSV.
-- **Revisar** — flujo señal por señal. La IA propone; el grupo corrige. `Utilidad` y `Por qué importa` sólo los escribe el grupo.
+- **Revisar** — flujo señal por señal, con salto directo por número de señal. La IA propone; el grupo corrige. `Utilidad` y `Por qué importa` sólo los escribe el grupo.
+- **Clusters** — análisis de oportunidad (guía Clase 4): novedad × volumen, tamaño = robustez, color = STEEP dominante. Cada cluster abre sus señales y cada señal su URL.
 - **Calidad del corpus** — spiderweb STEEP, procedencia, novedad, pertinencia × utilidad, completitud.
 - **Auditoría** — sorteo aleatorio real de 10 señales y registro de los tres chequeos.
 - **Ingesta** — URL manual, lotes, verificación de citas.
