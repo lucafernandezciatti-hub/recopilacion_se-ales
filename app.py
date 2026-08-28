@@ -357,6 +357,7 @@ elif page == "Clusters":
         run = repo.active_run(session)
         cluster_rows = repo.clusters_for_run(session, run.id) if run else []
         labels = {c.cluster_index: c.label for c in cluster_rows if c.label}
+        descriptions = {c.cluster_index: c.description for c in cluster_rows if c.description}
         pending_embeddings = len(repo.signals_without_embedding(session))
 
     top = st.columns([2, 2, 3])
@@ -404,12 +405,68 @@ elif page == "Clusters":
         st.info("Sin clusters todavía. Usá el botón de arriba para calcularlos.")
         st.stop()
 
-    st.plotly_chart(charts.opportunity_bubbles(frame), use_container_width=True)
-    st.caption(
-        "**Tamaño = robustez** (fuentes distintas). En el cuadrante *Borde* leé primero el "
-        "tamaño y después la posición: una burbuja chica ahí puede ser una sola voz o una "
-        "campaña de prensa, no una señal débil válida."
+    def render_cluster_detail(cluster_id: int) -> None:
+        """Ficha de un cluster: métricas, descripción y sus señales con link y cita.
+
+        La usan tanto el modal (click en la burbuja) como el listado de abajo,
+        para que las dos vías muestren exactamente lo mismo.
+        """
+        row = frame[frame["cluster_id"] == cluster_id].iloc[0]
+        stats = st.columns(4)
+        stats[0].metric("Volumen", row["volumen"])
+        stats[1].metric("Robustez", f"{row['robustez']} fuentes")
+        stats[2].metric("Novedad media", f"{row['novedad']:%Y-%m-%d}")
+        stats[3].metric(
+            "STEEP dominante",
+            STEEP_ES.get(Steep(row["steep"]), "—") if row["steep"] else "—",
+        )
+        if descriptions.get(cluster_id):
+            st.caption(descriptions[cluster_id])
+
+        members = df_all[df_all["cluster_id"] == cluster_id]
+        for _, signal_row in members.iterrows():
+            with st.expander(f"#{signal_row['id']} · {signal_row['title']}"):
+                fecha = (
+                    f"{signal_row['publication_date']:%Y-%m-%d}"
+                    if pd.notna(signal_row["publication_date"])
+                    else "sin fecha"
+                )
+                st.caption(f"{signal_row['source_name']} · {fecha}")
+                st.markdown(f"> {signal_row['quote'] or '— sin cita —'}")
+                st.markdown(f"[Abrir fuente ↗]({signal_row['link']})")
+
+    event = st.plotly_chart(
+        charts.opportunity_bubbles(frame),
+        use_container_width=True,
+        key="opportunity_chart",
+        on_select="rerun",
+        selection_mode="points",
     )
+    st.caption(
+        "**Tocá una burbuja** para abrir sus señales. **Tamaño = robustez** (fuentes "
+        "distintas): en el cuadrante *Borde* leé primero el tamaño y después la posición, "
+        "porque una burbuja chica ahí puede ser una sola voz o una campaña de prensa, no "
+        "una señal débil válida."
+    )
+
+    # El click devuelve el cluster_id embebido en el punto (custom_data del gráfico).
+    clicked_id = None
+    points = (getattr(event, "selection", None) or {}).get("points") or []
+    if points:
+        custom = points[0].get("customdata") or []
+        if len(custom) > 1:
+            clicked_id = int(custom[1])
+
+    # La selección queda persistida en el estado: sin este guard, el modal se
+    # reabriría solo en cada rerun y no habría forma de cerrarlo.
+    if clicked_id is not None and clicked_id != st.session_state.get("cluster_modal_open"):
+        st.session_state.cluster_modal_open = clicked_id
+
+        @st.dialog(labels.get(clicked_id) or f"Cluster {clicked_id}", width="large")
+        def cluster_dialog(cluster_id: int = clicked_id) -> None:
+            render_cluster_detail(cluster_id)
+
+        cluster_dialog()
 
     st.divider()
     st.subheader("Abrir un cluster")
@@ -425,24 +482,7 @@ elif page == "Clusters":
         ),
     )
 
-    row = frame[frame["cluster_id"] == chosen].iloc[0]
-    stats = st.columns(4)
-    stats[0].metric("Volumen", row["volumen"])
-    stats[1].metric("Robustez", f"{row['robustez']} fuentes")
-    stats[2].metric("Novedad media", f"{row['novedad']:%Y-%m-%d}")
-    stats[3].metric("STEEP dominante", STEEP_ES.get(Steep(row["steep"]), "—") if row["steep"] else "—")
-
-    members = df_all[df_all["cluster_id"] == chosen]
-    for _, signal_row in members.iterrows():
-        with st.expander(f"#{signal_row['id']} · {signal_row['title']}"):
-            st.caption(
-                f"{signal_row['source_name']} · "
-                f"{signal_row['publication_date']:%Y-%m-%d}"
-                if pd.notna(signal_row["publication_date"])
-                else f"{signal_row['source_name']} · sin fecha"
-            )
-            st.markdown(f"> {signal_row['quote'] or '— sin cita —'}")
-            st.markdown(f"[Abrir fuente ↗]({signal_row['link']})")
+    render_cluster_detail(chosen)
 
     noise = df_all[df_all["cluster_id"].isna()]
     if not noise.empty:

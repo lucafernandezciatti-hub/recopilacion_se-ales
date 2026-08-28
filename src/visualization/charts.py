@@ -241,6 +241,9 @@ def opportunity_bubbles(frame: pd.DataFrame) -> go.Figure:
         xaxis_title="volumen de señales →",
         yaxis_title="novedad (fecha de publicación) →",
         legend={"title": "STEEP dominante"},
+        # Sin "event+select" un click simple no entra en la selección que Streamlit
+        # lee, y el gráfico queda sólo para mirar: es lo que habilita abrir el cluster.
+        clickmode="event+select",
     )
     return fig
 
