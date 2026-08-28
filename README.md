@@ -168,6 +168,33 @@ python scripts/verify_quotes.py --all      # reverificar todo
 python scripts/verify_quotes.py --ids 3 7  # señales puntuales
 ```
 
+### Unificar las revisiones del equipo
+
+La base local no se versiona, así que las decisiones humanas (`utilidad`,
+`por qué importa`, estado) no viajan solas. Cada persona exporta a **su propio**
+archivo —un archivo por persona evita conflictos de git— y todas importan:
+
+```bash
+python scripts/export_reviews.py --autor luca   # -> data/reviews_luca.json
+git add data/reviews_luca.json && git commit -m "revisiones luca" && git push
+```
+
+```bash
+git pull
+python scripts/import_reviews.py --dry-run      # ver qué haría, sin tocar nada
+python scripts/import_reviews.py
+```
+
+Conviene **repartir los clusters sin superposición**: si nadie revisa las mismas
+señales, no hay desacuerdos posibles. Si igual dos personas califican distinto la
+misma señal, el import **no elige por su cuenta**: reporta el desacuerdo y deja
+esa señal intacta. Discutir si una señal es *muy útil* o *pobre* es el trabajo de
+la Clase 4, no un dato a resolver pisando el de otra. Una vez acordado:
+
+```bash
+python scripts/import_reviews.py --forzar luca
+```
+
 ### Tests
 ```bash
 python -m pytest tests/ -q
