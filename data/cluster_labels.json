@@ -1,0 +1,99 @@
+{
+  "_comentario": "Etiquetas de cluster escritas por el grupo. La clusterizacion las reaplica por cluster_index al terminar, para no perderlas al recalcular. Si cambia el corpus o los parametros los indices pueden correrse: revisar antes de confiar.",
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "n_clusters": 23,
+  "labels": {
+    "0": {
+      "label": "Educación intercultural bilingüe y lenguas indígenas",
+      "description": "La EIB pasa de programa focalizado a modalidad institucionalizada, con mapeos de lenguas y matrícula. Tensión entre reconocimiento formal y prácticas escolares cotidianas."
+    },
+    "1": {
+      "label": "La educación ambiental se vuelve contenido curricular obligatorio",
+      "description": "Leyes y estándares empujan el ambiente hacia contenido transversal en todos los niveles. La brecha está entre la norma vigente y su implementación efectiva en el aula."
+    },
+    "2": {
+      "label": "Formación para el trabajo frente a la transformación del empleo",
+      "description": "Competencias verdes y digitales, certificación de aprendizajes informales y precarización del empleo juvenil. Presiona sobre qué debe preparar la escuela básica."
+    },
+    "3": {
+      "label": "Pobreza infantil como condición material de la escolaridad",
+      "description": "Pobreza monetaria y multidimensional, comedores escolares, primera infancia y desigualdad de acceso. El cluster más grande del corpus: la escuela como amortiguador social."
+    },
+    "4": {
+      "label": "Calor extremo en el aula y caída de aprendizajes",
+      "description": "Evidencia que liga temperatura con desempeño medible, y diseños edilicios incompatibles con el clima emergente. Conecta infraestructura con resultados de aprendizaje."
+    },
+    "5": {
+      "label": "Exposición ambiental temprana y desarrollo cognitivo",
+      "description": "Literatura científica sobre contaminación prenatal, prematuridad y microbiota como determinantes cognitivos. ATENCIÓN: robustez 1 — todas las señales vienen de una sola fuente (Europe PMC)."
+    },
+    "6": {
+      "label": "Calidad del aire y salud respiratoria infantil",
+      "description": "Zonas de bajas emisiones, humo de incendios y polvo en jardines. Aparece como determinante de asistencia y salud escolar, no sólo como tema ambiental."
+    },
+    "7": {
+      "label": "Eventos climáticos extremos interrumpen el ciclo lectivo",
+      "description": "Olas de calor, inundaciones y temporales que suspenden clases sin protocolo común. El clima deja de ser contenido y pasa a ser una variable operativa del calendario."
+    },
+    "8": {
+      "label": "Agua e infraestructura básica como condición de escolaridad",
+      "description": "Agua potable, contaminación por agroquímicos, filtraciones y renovación edilicia. Lo material precede a lo pedagógico: sin agua no hay clase."
+    },
+    "9": {
+      "label": "Resultados de aprendizaje y brechas sociales persistentes",
+      "description": "Mejoras agregadas en Lengua conviven con estancamiento en Matemática y brechas socioeconómicas estables. La mejora promedio no cierra la desigualdad."
+    },
+    "10": {
+      "label": "Contracción demográfica y reconfiguración de la matrícula",
+      "description": "Caída de la natalidad, cierre de secciones, segregación escolar y crisis de ingresantes a la docencia. El problema deja de ser escolarizar a más y pasa a ser qué hacer con menos."
+    },
+    "11": {
+      "label": "Regulación del celular como política de bienestar emocional",
+      "description": "La restricción del celular escala de norma escolar a ley provincial y se reencuadra como salud mental, no como disciplina."
+    },
+    "12": {
+      "label": "Cierre de escuelas rurales y disputa por la conectividad",
+      "description": "Despoblamiento, cierres sistemáticos y brechas provinciales en servicios básicos. Starlink abre además un debate de soberanía tecnológica."
+    },
+    "13": {
+      "label": "Disputa por el currículum: alfabetización, matemática y medios",
+      "description": "Rotación del foco federal entre áreas, entrada de la alfabetización mediática y discusión sobre si la escuela forma ciudadanos críticos o usuarios de herramientas."
+    },
+    "14": {
+      "label": "Educación financiera y financiamiento por demanda",
+      "description": "Alfabetización financiera entrando al currículum sin ley nacional, junto a proyectos de vouchers. Cruza contenido escolar con modelo de financiamiento."
+    },
+    "15": {
+      "label": "Evaluación de IA educativa y privacidad juvenil",
+      "description": "Metodologías para evaluar chatbots y retroalimentación automática, más preocupaciones de privacidad. Campo académico emergente, todavía sin anclaje local."
+    },
+    "16": {
+      "label": "La adopción infantil de IA supera a sus marcos de protección",
+      "description": "El uso de IA generativa por chicos crece más rápido que la regulación y que la capacidad adulta de mediarlo. Incluye el uso como contención emocional."
+    },
+    "17": {
+      "label": "Protección de datos infantiles y ciudadanía digital",
+      "description": "Filtraciones, imágenes sintéticas y marcos de consentimiento que la IA vuelve insuficientes. La privacidad se instala como contenido y como derecho escolar."
+    },
+    "18": {
+      "label": "La IA entra al currículum obligatorio de primaria",
+      "description": "De herramienta a contenido: currículum obligatorio, cuentas de Gemini para alumnos estatales, formación docente masiva y un mercado privado de gobernanza escolar de IA."
+    },
+    "19": {
+      "label": "Ciencia del desarrollo infantil aplicada al aula",
+      "description": "Investigación experimental sobre perseverancia, sueño, actividad física, lenguaje y razonamiento. Base de evidencia para prácticas pedagógicas, mayormente no argentina."
+    },
+    "20": {
+      "label": "Disputa metodológica sobre cómo se enseña a leer",
+      "description": "Método fonológico versus constructivismo, y evidencia sobre papel frente a pantalla. Una reforma curricular en curso con contracara académica crítica."
+    },
+    "21": {
+      "label": "Crisis de la docencia y pérdida de secciones",
+      "description": "Caída del salario real, retracción de aspirantes a maestro, cargos sin cubrir y cierre de divisiones. La sostenibilidad del cuerpo docente como cuello de botella."
+    },
+    "22": {
+      "label": "Retracción del financiamiento educativo",
+      "description": "Inversión en mínimos históricos, derogación del piso del 6% del PBI y desregulación de aranceles privados. El marco económico que condiciona todo lo demás."
+    }
+  }
+}

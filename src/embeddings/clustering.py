@@ -14,15 +14,37 @@ from __future__ import annotations
 import json
 import logging
 from dataclasses import dataclass
+from pathlib import Path
+from typing import Any
 
 import numpy as np
 from sqlalchemy.orm import Session
 
-from src.config import settings
+from src.ai.prompts import CLUSTER_LABELER_VERSION
+from src.config import DATA_DIR, settings
 from src.database import repository as repo
 from src.database.models import Cluster, Signal
 
 logger = logging.getLogger(__name__)
+
+LABELS_PATH = Path(DATA_DIR) / "cluster_labels.json"
+
+
+def load_saved_labels() -> dict[str, dict[str, Any]]:
+    """Etiquetas escritas por el grupo, versionadas fuera de la base.
+
+    La base local (`data/senales.db`) no se versiona, así que sin esto cada
+    recálculo —y cada compañera que clona el repo— se quedaba con los clusters
+    numerados y sin descripción.
+    """
+    if not LABELS_PATH.exists():
+        return {}
+    try:
+        payload = json.loads(LABELS_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        logger.warning("no se pudieron leer las etiquetas de cluster: %s", exc)
+        return {}
+    return payload.get("labels", {})
 
 
 @dataclass(slots=True)
@@ -95,10 +117,20 @@ def run_clustering(session: Session) -> ClusteringOutcome:
         n_noise=n_noise,
     )
 
+    saved_labels = load_saved_labels()
     sizes = {index: int((labels == index).sum()) for index in cluster_indexes}
     for index in cluster_indexes:
+        saved = saved_labels.get(str(index), {})
         session.add(
-            Cluster(run_id=run.id, cluster_index=index, size=sizes[index])
+            Cluster(
+                run_id=run.id,
+                cluster_index=index,
+                size=sizes[index],
+                label=saved.get("label"),
+                description=saved.get("description"),
+                label_model=saved.get("label_model") if saved else None,
+                label_prompt_version=CLUSTER_LABELER_VERSION if saved else None,
+            )
         )
 
     for signal, label in zip(signals, labels):

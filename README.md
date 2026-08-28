@@ -194,6 +194,7 @@ src/
   visualization/          charts.py
 tests/                    41 tests
 data/                     corpus versionado + SQLite local (ignorado por git)
+  cluster_labels.json     etiquetas de cluster escritas por el grupo (SÍ versionado)
 ```
 
 Decisiones de diseño:
@@ -203,6 +204,7 @@ Decisiones de diseño:
 - **Prompts versionados** (`signal_classifier_v1`, `cluster_labeler_v1`, `driver_candidate_v1`) fuera del código de interfaz, para poder comparar corridas.
 - **Sin base vectorial**: para 500–5.000 señales la búsqueda por fuerza bruta alcanza.
 - **Embeddings guardados como JSON** en la tabla `signals`, con modelo y fecha, para poder regenerarlos.
+- **Etiquetas de cluster fuera de la base**, en `data/cluster_labels.json`. La base local no se versiona: si las etiquetas vivieran sólo ahí, cada recálculo y cada clon del repo dejaría los clusters numerados y sin descripción. El clustering las reaplica por `cluster_index` al terminar.
 
 ## Principios metodológicos que el código respeta
 
