@@ -43,12 +43,27 @@ def load_frame() -> pd.DataFrame:
         return metrics.signals_to_frame(repo.list_signals(session))
 
 
+@st.cache_data(ttl=30, show_spinner=False)
+def load_cluster_labels() -> dict[int, str]:
+    """Etiquetas de la corrida de clustering activa, para filtros y títulos."""
+    with get_session() as session:
+        run = repo.active_run(session)
+        if run is None:
+            return {}
+        return {
+            c.cluster_index: (c.label or f"Cluster {c.cluster_index}")
+            for c in repo.clusters_for_run(session, run.id)
+        }
+
+
 def refresh() -> None:
     load_frame.clear()
+    load_cluster_labels.clear()
 
 
 init_db()
 df_all = load_frame()
+cluster_labels = load_cluster_labels()
 
 
 # --------------------------------------------------------------------------
@@ -76,8 +91,15 @@ def sidebar_filters(df: pd.DataFrame) -> pd.DataFrame:
         statuses = st.multiselect(
             "Estado", [s.value for s in Status], format_func=lambda v: STATUS_ES[Status(v)]
         )
+        cluster_options = sorted(int(c) for c in df["cluster_id"].dropna().unique())
+        clusters = st.multiselect(
+            "Cluster",
+            cluster_options,
+            format_func=lambda c: cluster_labels.get(c, f"Cluster {c}"),
+        )
         rel_min, rel_max = st.slider("Pertinencia", 1, 10, (1, 10))
         only_unverified_quote = st.checkbox("Sólo con cita sin verificar")
+        only_without_utility = st.checkbox("Sólo sin utilidad asignada")
 
     out = df.copy()
     if themes:
@@ -90,9 +112,13 @@ def sidebar_filters(df: pd.DataFrame) -> pd.DataFrame:
         out = out[out["source_owner"].isin(sources)]
     if statuses:
         out = out[out["status"].isin(statuses)]
+    if clusters:
+        out = out[out["cluster_id"].isin(clusters)]
     out = out[out["relevance"].between(rel_min, rel_max) | out["relevance"].isna()]
     if only_unverified_quote:
         out = out[~out["quote_verified"]]
+    if only_without_utility:
+        out = out[out["utility"].isna()]
 
     st.sidebar.metric("Señales en vista", f"{len(out)} / {len(df)}")
     return out
@@ -124,12 +150,21 @@ if page == "Dashboard":
         st.stop()
 
     summary = metrics.corpus_summary(df)
-    cols = st.columns(5)
+    cols = st.columns(6)
     cols[0].metric("Señales", summary["total"])
     cols[1].metric("Núcleo / Adyacente", f"{summary['core']} / {summary['adjacent']}")
     cols[2].metric("Fuentes (grupos)", summary["diversity"]["n_owners"])
     cols[3].metric("Citas verificadas", f"{summary['verification']['quote_verified_share']:.0%}")
-    cols[4].metric("Revisadas", f"{summary['verification']['reviewed_share']:.0%}")
+    with_utility = int(df["utility"].notna().sum())
+    cols[4].metric(
+        "Con utilidad", f"{with_utility / len(df):.0%}" if len(df) else "—",
+        help="Juicio del grupo sobre potencia especulativa. Es lo que pide entregar la Clase 4.",
+    )
+    cols[5].metric(
+        "Revisadas", f"{summary['verification']['reviewed_share']:.0%}",
+        help="Señales con estado verificada o rechazada. Guardar cambios sin apretar "
+             "'Verificar ✓' no cuenta acá.",
+    )
 
     alerts = metrics.quality_alerts(df)
     if alerts:
@@ -405,11 +440,14 @@ elif page == "Clusters":
         st.info("Sin clusters todavía. Usá el botón de arriba para calcularlos.")
         st.stop()
 
-    def render_cluster_detail(cluster_id: int) -> None:
+    utility_values = [u.value for u in Utility]
+
+    def render_cluster_detail(cluster_id: int, *, editable: bool = False) -> None:
         """Ficha de un cluster: métricas, descripción y sus señales con link y cita.
 
         La usan tanto el modal (click en la burbuja) como el listado de abajo,
-        para que las dos vías muestren exactamente lo mismo.
+        para que las dos vías muestren exactamente lo mismo. Con `editable` suma
+        el juicio del grupo (utilidad y por qué importa) sin salir del recuadro.
         """
         row = frame[frame["cluster_id"] == cluster_id].iloc[0]
         stats = st.columns(4)
@@ -424,8 +462,21 @@ elif page == "Clusters":
             st.caption(descriptions[cluster_id])
 
         members = df_all[df_all["cluster_id"] == cluster_id]
+        if editable:
+            done = int(members["utility"].notna().sum())
+            st.progress(
+                done / len(members) if len(members) else 0.0,
+                text=f"Utilidad asignada: {done} de {len(members)}",
+            )
+            reviewer = st.text_input(
+                "Revisado por", key=f"reviewer_{cluster_id}",
+                placeholder="tu nombre — queda registrado en cada señal que guardes",
+            )
+
         for _, signal_row in members.iterrows():
-            with st.expander(f"#{signal_row['id']} · {signal_row['title']}"):
+            sid = int(signal_row["id"])
+            marca = "✓ " if pd.notna(signal_row["utility"]) else ""
+            with st.expander(f"{marca}#{sid} · {signal_row['title']}"):
                 fecha = (
                     f"{signal_row['publication_date']:%Y-%m-%d}"
                     if pd.notna(signal_row["publication_date"])
@@ -434,6 +485,34 @@ elif page == "Clusters":
                 st.caption(f"{signal_row['source_name']} · {fecha}")
                 st.markdown(f"> {signal_row['quote'] or '— sin cita —'}")
                 st.markdown(f"[Abrir fuente ↗]({signal_row['link']})")
+
+                if not editable:
+                    continue
+
+                if signal_row["ai_why_it_matters"]:
+                    st.caption(f"Sugerencia de la IA: *{signal_row['ai_why_it_matters']}*")
+                with st.form(f"quick_review_{cluster_id}_{sid}"):
+                    current = signal_row["utility"]
+                    new_utility = st.radio(
+                        "Utilidad (potencia especulativa) — decisión del grupo",
+                        utility_values,
+                        index=utility_values.index(current) if pd.notna(current) else None,
+                        format_func=lambda v: UTILITY_ES[Utility(v)],
+                        horizontal=True,
+                    )
+                    new_wim = st.text_area(
+                        "Por qué importa",
+                        value=signal_row["why_it_matters"] or "",
+                        height=80,
+                    )
+                    if st.form_submit_button("Guardar", use_container_width=True):
+                        with get_session() as session:
+                            signal = repo.get_signal(session, sid)
+                            signal.utility = new_utility
+                            signal.why_it_matters = new_wim.strip() or None
+                            repo.touch_reviewed(signal, reviewer or None)
+                        refresh()
+                        st.rerun()
 
     event = st.plotly_chart(
         charts.opportunity_bubbles(frame),
@@ -457,14 +536,26 @@ elif page == "Clusters":
         if len(custom) > 1:
             clicked_id = int(custom[1])
 
-    # La selección queda persistida en el estado: sin este guard, el modal se
-    # reabriría solo en cada rerun y no habría forma de cerrarlo.
-    if clicked_id is not None and clicked_id != st.session_state.get("cluster_modal_open"):
+    # La selección de Plotly persiste entre reruns. Distinguimos "click nuevo" de
+    # "selección vieja" para que al cerrar el modal no se reabra solo, pero sí siga
+    # abierto cuando el rerun lo dispara un guardado de adentro del propio modal.
+    if clicked_id is not None and clicked_id != st.session_state.get("cluster_last_click"):
+        st.session_state.cluster_last_click = clicked_id
         st.session_state.cluster_modal_open = clicked_id
 
-        @st.dialog(labels.get(clicked_id) or f"Cluster {clicked_id}", width="large")
-        def cluster_dialog(cluster_id: int = clicked_id) -> None:
-            render_cluster_detail(cluster_id)
+    open_id = st.session_state.get("cluster_modal_open")
+    if open_id is not None and open_id in set(frame["cluster_id"]):
+
+        def close_cluster_modal() -> None:
+            st.session_state.cluster_modal_open = None
+
+        @st.dialog(
+            labels.get(open_id) or f"Cluster {open_id}",
+            width="large",
+            on_dismiss=close_cluster_modal,
+        )
+        def cluster_dialog(cluster_id: int = open_id) -> None:
+            render_cluster_detail(cluster_id, editable=True)
 
         cluster_dialog()
 

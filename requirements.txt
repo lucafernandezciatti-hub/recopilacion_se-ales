@@ -1,5 +1,7 @@
 # Núcleo — necesario para correr la app y el pipeline
-streamlit==1.42.0
+# >=1.62 por `on_dismiss` en st.dialog: es lo que permite revisar señales dentro
+# del modal de un cluster sin que se cierre en cada guardado.
+streamlit>=1.62
 pandas>=2.2
 SQLAlchemy>=2.0
 pydantic>=2.7
