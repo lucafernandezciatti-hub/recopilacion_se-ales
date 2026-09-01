@@ -1,0 +1,116 @@
+{
+  "autor": "luca",
+  "_comentario": "Decisiones humanas sobre el corpus. Se aplica con scripts/import_reviews.py. Un archivo por persona.",
+  "reviews": [
+    {
+      "url_hash": "df7e51bbe9c427114eda2b7b1905af76b3652612b7aad8c8466c00c174589fc2",
+      "id": 20,
+      "link": "https://infobae.com/educacion/2026/03/04/rige-por-ley-la-prohibicion-de-usar-celulares-en-las-escuelas-primarias-de-provincia-de-buenos-aires",
+      "utility": "poor",
+      "why_it_matters": "Evidencia el conflicto actual que hay entre la tecnología y la escuela. Demuestra que actualmente los organismos están tomando decisiones que son soluciones sólo a corto plazo, no implementando cambios estructurales a largo plazo.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T22:41:25.380710"
+    },
+    {
+      "url_hash": "cec56b372b118cd299eba11ee56ebc08928e4e20239afb7cc96de39318bafaba",
+      "id": 21,
+      "link": "https://infobae.com/educacion/2026/07/17/6-de-cada-10-chicos-de-8-anos-tienen-celular-afirman-que-la-prohibicion-escolar-no-garantiza-mejores-aprendizajes",
+      "utility": "useful",
+      "why_it_matters": "Demuestra que la tecnología ya está en contacto pleno con las infancias y altera su forma de aprender.",
+      "status": "unverified",
+      "manual_notes": "cita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original",
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T22:42:19.216131"
+    },
+    {
+      "url_hash": "121f8b6bcc5a2b01b14ee1c2923db90acbd05de8c05bf71364cbf163536095b9",
+      "id": 22,
+      "link": "https://argentinosporlaeducacion.org/informe/celulares-prohibir-o-no-prohibir",
+      "utility": "useful",
+      "why_it_matters": "Demuestra que la tecnología ya está en contacto pleno con las infancias y altera su forma de aprender. Tambien muestra que la Educación está intentando lidiar con este nuevo agente y que no hay un consenso sobre la solución.",
+      "status": "unverified",
+      "manual_notes": "duplicado semántico esperado con la nota de Infobae del 17/07/2026\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original\ncita no encontrada literalmente en el original",
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T22:44:54.832491"
+    },
+    {
+      "url_hash": "565efd07cec461c5fa47c88b30589bf930e0a935a298b3e1027bdd36307881a4",
+      "id": 23,
+      "link": "https://infobae.com/estados-unidos/2026/05/30/el-primer-estudio-nacional-confirma-el-impacto-de-la-prohibicion-de-celulares-en-escuelas-de-estados-unidos",
+      "utility": "useful",
+      "why_it_matters": "\"más del 70% de los profesores de secundaria consideran que la restricción es necesaria, ya que identifican a los celulares como la principal fuente de distracción para los alumnos\". El estudio no pudo comprobar que la prohibicion mejorara el rendimiento, es decir, eliminar la tecnología de las aulas no parece ser la respuesta al problema, a pesar de que el sistema educativo apunte a que sí.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:19:32.583869"
+    },
+    {
+      "url_hash": "6411ae01f337498bfff413f04bb9c8bea7d2d0dbd2eea79fa8e5a6ab4a6c0cb6",
+      "id": 92,
+      "link": "https://hoydia.com.ar/sociedad/la-prohibicion-del-celular-en-la-escuela-muestra-resultados-dispares",
+      "utility": "not_useful",
+      "why_it_matters": "repite lo mismo que otras",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:20:32.836481"
+    },
+    {
+      "url_hash": "77ba0cbce6c62b6314f01c05a177be7c2ad65666e8c69e7184cb242414244b46",
+      "id": 144,
+      "link": "https://infobae.com/educacion/2024/10/06/en-2025-cambia-la-forma-de-ensenar-lengua-y-matematica-en-las-escuelas-primarias-de-caba",
+      "utility": "very_useful",
+      "why_it_matters": "Marca el impacto que tiene ahora la investigación científica en el diseño curricular y escolar.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:30:02.500602"
+    },
+    {
+      "url_hash": "28f75c263e72399cd23be51d9bc31c42661b50a9e9ce8d99931b07db3206589c",
+      "id": 145,
+      "link": "https://escuelademaestros.bue.edu.ar/bienestar-socioemocional",
+      "utility": "useful",
+      "why_it_matters": "demuestra la importancia que tiene el componente social y emocional en educación.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:22:43.840523"
+    },
+    {
+      "url_hash": "f6e73e03b0b4b0b8a99c55d5dc25b5fc6e9edd1f84189a3e4ab4558a2b6e7232",
+      "id": 146,
+      "link": "https://infobae.com/opinion/2025/05/01/el-bienestar-emocional-es-aprendizaje",
+      "utility": "useful",
+      "why_it_matters": "refuerza la importancia del componente emocional y cómo el sector educativo ve la prohibición de los celulares como una solución a ese componente",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:23:50.938538"
+    },
+    {
+      "url_hash": "06bfc1df2a1ff7f4ebe375d0daa7d2b62888cfd84abc17e223f28f51be600cc0",
+      "id": 190,
+      "link": "https://puntoconvergente.uca.edu.ar/violencia-escolar-en-argentina-del-tiroteo-en-san-cristobal-a-la-crisis-de-convivencia-en-las-aulas",
+      "utility": "useful",
+      "why_it_matters": "Marca la importancia de la escuela como agente conciliador y unificador de personas, y actualmente en ese rol está fallando. La culpa sigue estando puesta en la tecnología.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:26:23.875549"
+    },
+    {
+      "url_hash": "1a7efd120c5c06ab943da48c03ed4300529956730d88d6afa0bacaaf1ca54ab2",
+      "id": 191,
+      "link": "https://perfil.com/noticias/policia/aulas-bajo-amenaza-la-radiografia-de-una-violencia-escolar-que-ya-no-se-puede-ocultar.phtml",
+      "utility": "useful",
+      "why_it_matters": "remarca el crecimiento de la violencia y el bullying en las escuelas",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:27:24.215487"
+    }
+  ]
+}
