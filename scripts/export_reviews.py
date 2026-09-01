@@ -9,6 +9,10 @@ versionado en `data/signals_ronda*.json` y no se duplica acá.
 
 Un archivo por persona: así git nunca tiene que resolver un conflicto.
 
+La señal se identifica por `url_hash` —sale de la URL normalizada y vale lo mismo
+en cualquier máquina—, nunca por `id`: el id es el orden de inserción de cada base
+local, así que emparejar por id le aplicaría la revisión a otra señal.
+
     python scripts/export_reviews.py --autor luca
     python scripts/export_reviews.py --autor luca --solo-mias
 """
@@ -72,15 +76,20 @@ def main() -> int:
 
     init_db()
     entries = []
+    sin_hash = 0
     with get_session() as session:
         for signal in repo.list_signals(session):
             if not has_human_input(signal):
+                continue
+            if not signal.url_hash:
+                sin_hash += 1
                 continue
             if args.solo_mias and (signal.reviewed_by or "").strip().lower() != args.autor.strip().lower():
                 continue
             entries.append(
                 {
-                    "id": signal.id,
+                    "url_hash": signal.url_hash,
+                    "id": signal.id,  # informativo: no sirve para emparejar entre máquinas
                     "link": signal.link,  # para poder auditar a mano contra qué señal es
                     **{field: getattr(signal, field) for field in HUMAN_FIELDS},
                     "reviewed_by": signal.reviewed_by,
@@ -105,6 +114,11 @@ def main() -> int:
     except ValueError:
         shown = out_path.as_posix()
     print(f"{len(entries)} señales revisadas exportadas ({con_utilidad} con utilidad) -> {shown}")
+    if sin_hash:
+        print(
+            f"AVISO: {sin_hash} señales revisadas quedaron afuera por no tener url_hash "
+            "(sin él no se pueden emparejar en otra base sin riesgo de pisar otra señal)."
+        )
     print(f'Ahora: git add {shown} && git commit -m "revisiones {args.autor}" && git push')
     return 0
 

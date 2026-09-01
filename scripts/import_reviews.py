@@ -4,6 +4,11 @@
 Lee todos los `data/reviews_*.json` y escribe las decisiones humanas sobre el
 corpus local. Pensado para correr después de cada `git pull`.
 
+Las señales se emparejan por `url_hash`, que sale de la URL normalizada y vale lo
+mismo en cualquier máquina. Por `id` no: el id es el orden de inserción de cada
+base local, así que si alguien cargó las rondas en otro orden su señal 42 no es la
+misma que la tuya y la revisión terminaría aplicada a otra señal, sin error visible.
+
 Si dos personas revisaron la misma señal con distinto criterio, NO se resuelve
 en silencio: se reporta el desacuerdo y esa señal se deja como está, para que lo
 decida el grupo. Un desacuerdo sobre la utilidad de una señal es justamente el
@@ -59,8 +64,11 @@ def main() -> int:
         print("No hay archivos data/reviews_*.json. ¿Hiciste git pull?")
         return 0
 
-    # id -> lista de (autor, entrada); permite detectar desacuerdos entre personas.
-    by_signal: dict[int, list[tuple[str, dict]]] = {}
+    # clave de señal -> lista de (autor, entrada); permite detectar desacuerdos.
+    # La clave es ("hash", url_hash). ("id", n) es sólo para exports viejos: se
+    # emparejan a ciegas, así que se avisa.
+    by_signal: dict[tuple[str, str], list[tuple[str, dict]]] = {}
+    legacy = 0
     for path in files:
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
@@ -69,18 +77,37 @@ def main() -> int:
             continue
         author = payload.get("autor") or path.stem.replace("reviews_", "")
         for entry in payload.get("reviews", []):
-            by_signal.setdefault(int(entry["id"]), []).append((author, entry))
+            url_hash = (entry.get("url_hash") or "").strip()
+            if url_hash:
+                key = ("hash", url_hash)
+            elif entry.get("id") is not None:
+                key = ("id", str(int(entry["id"])))
+                legacy += 1
+            else:
+                continue
+            by_signal.setdefault(key, []).append((author, entry))
         print(f"leído {path.name}: {len(payload.get('reviews', []))} revisiones de {author}")
+
+    if legacy:
+        print(
+            f"AVISO: {legacy} revisiones vienen sin url_hash (export viejo) y se "
+            "emparejan por id. El id depende del orden de carga de cada base: si no "
+            "coincide, la revisión cae en otra señal. Pedí que vuelvan a exportar."
+        )
 
     applied = skipped = conflicts = 0
     conflict_report: list[str] = []
 
     init_db()
     with get_session() as session:
-        for signal_id, candidates in sorted(by_signal.items()):
-            signal = repo.get_signal(session, signal_id)
+        for (kind, value), candidates in sorted(by_signal.items()):
+            if kind == "hash":
+                signal = repo.find_by_url_hash(session, value)
+            else:
+                signal = repo.get_signal(session, int(value))
             if signal is None:
-                print(f"SALTEADA #{signal_id}: no está en el corpus local")
+                referencia = candidates[0][1].get("link") or value
+                print(f"SALTEADA {referencia[:70]}: no está en el corpus local")
                 skipped += 1
                 continue
 
@@ -101,7 +128,7 @@ def main() -> int:
                             f"{a}={entry.get('utility') or '—'}" for a, entry in candidates
                         )
                         conflict_report.append(
-                            f"  #{signal_id:<4} {signal.title[:58]}\n"
+                            f"  #{signal.id:<4} {(signal.title or '')[:58]}\n"
                             f"        {autores}"
                         )
                         continue

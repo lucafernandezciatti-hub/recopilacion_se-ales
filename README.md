@@ -186,6 +186,11 @@ python scripts/import_reviews.py --dry-run      # ver qué haría, sin tocar nad
 python scripts/import_reviews.py
 ```
 
+Las señales se emparejan por `url_hash` —igual que los clusters—, nunca por `id`:
+el id es el orden de inserción de cada base local, así que si alguien cargó las
+rondas en otro orden su señal 42 no es la misma que la tuya. Si a alguien le llega
+una revisión de una señal que no tiene, el import la reporta por su URL y sigue.
+
 Conviene **repartir los clusters sin superposición**: si nadie revisa las mismas
 señales, no hay desacuerdos posibles. Si igual dos personas califican distinto la
 misma señal, el import **no elige por su cuenta**: reporta el desacuerdo y deja
