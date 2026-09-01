@@ -1,0 +1,116 @@
+{
+  "autor": "catalina",
+  "_comentario": "Decisiones humanas sobre el corpus. Se aplica con scripts/import_reviews.py. Un archivo por persona.",
+  "reviews": [
+    {
+      "url_hash": "92a3026870cce3a738b5583e180bff1467a20b37a5b92d381e54924b51aba94b",
+      "id": 210,
+      "link": "https://argentina.gob.ar/node/436471",
+      "utility": "poor",
+      "why_it_matters": "El artículo solo confirma que ya existe un marco legal (Ley 25.326) y un organismo (AAIP) para protección de datos.  Es más un dato de contexto que una señal de alguna tensión o proyección específica .",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T22:34:00.050926"
+    },
+    {
+      "url_hash": "c9ba4c0ca6ab1b7e76f965354b1340cf8c1feb4ba2ef59cbb269b33fbc55fa6d",
+      "id": 246,
+      "link": "https://argentina.gob.ar/node/494559",
+      "utility": "poor",
+      "why_it_matters": "a declaración no se queda en lo legal entre países: pide generar información \"clara y adaptada a la edad\" de niños y adolescentes, con participación de educadores. Esto ya le da un rol activo a la escuela en 2026. Pero ¿en 2050 esto va a seguir siendo un contenido que hay que \"enseñar\" como algo nuevo (tipo alfabetización digital, un concepto de hoy), o para entonces va a ser algo tan común e implementado que ya se haya resuelto años antes?",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:42:49.251913"
+    },
+    {
+      "url_hash": "de4f365038f5dd9051602f0d6130a6e315e4d93d815de9652bb0d25ec3312eee",
+      "id": 247,
+      "link": "https://argentina.gob.ar/noticias/la-aaip-inicio-una-investigacion-de-oficio-ante-presunta-filtracion-masiva-de-datos",
+      "utility": "poor",
+      "why_it_matters": "La cita solo describe medidas administrativas de rutina (capacitación de agentes, registro de bases de datos, políticas de privacidad).  No aporta una señal clara de cambio para el proyecto.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:04:07.580618"
+    },
+    {
+      "url_hash": "2c4561ccb0088333b843ef0fa9af9dd1f733a3cdd47f664f8b383e0e18b056f7",
+      "id": 248,
+      "link": "https://argentina.gob.ar/node/507951",
+      "utility": "very_useful",
+      "why_it_matters": "La señal identifica dos mecanismos concretos: verificación de edad y estándares de privacidad  para dispositivos conectados usados por niños. Si en 2026 ya se pide que los fabricantes de dispositivos escolares/domésticos cumplan buenas prácticas de privacidad \"by design\", hacia 2050 la infraestructura tecnológica que entre al aula (tablets, asistentes de IA, wearables) probablemente vaya a requerir certificación específica.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T22:56:36.993931"
+    },
+    {
+      "url_hash": "598b526dd52a912ab65434266c0e073092b7cf001e7cdc3683311f6a24b92c07",
+      "id": 249,
+      "link": "https://argentina.gob.ar/node/184493",
+      "utility": "not_useful",
+      "why_it_matters": "el dato es de 2020, que, según señales más recientes del mismo cluster, ya se volvió normativa concreta. No aporta tensión hacia el futuro, ya es una señal resuelta.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:12:30.909655"
+    },
+    {
+      "url_hash": "610f0e070729798cde1b5c7dcab23af9488a1d1b52869e3d4faf0ea4e30cd67a",
+      "id": 414,
+      "link": "https://cosn.org/cosn-news/cosn-releases-first-of-its-kind-national-student-data-privacy-report",
+      "utility": "useful",
+      "why_it_matters": "En EE.UU. ya existe un relevamiento nacional específico sobre cómo los distritos escolares gestionan la privacidad de datos de estudiantes , es decir ,  el tema ya se está abordando institucionalmente allá. Esto abre la pregunta para Argentina: ¿en el futuro se va a hacer la misma pregunta acá? ¿Cómo protegen hoy ,y cómo van a proteger en el futuro, las escuelas argentinas los datos de los chicos? Nota: si entras al articulo, dice que  en EE.UU. esto sigue siendo una problemática abierta: gran parte de los líderes de tecnología escolar no tiene la privacidad de datos como parte formal de su rol, casi 1 de cada 5 nunca recibió capacitación, y no hay una ley federal única sino más de 130 leyes estatales distintas, nos indica que todavia es una problemática a resolver.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:22:40.911781"
+    },
+    {
+      "url_hash": "69277fbcbf8e1717b308c7c66a51368424f0020023c9b9c69915610e4e7bef4d",
+      "id": 416,
+      "link": "https://projectunicorn.org/state-of-the-sector",
+      "utility": "useful",
+      "why_it_matters": "Muestra que en EE.UU. ya hay una encuesta anual (SSDS) que mide cómo los sistemas escolares manejan sus datos educativos , es decir, hay seguimiento institucional continuo del tema.  En Argentina va a existir algo similar en el futuro? Se va a poder lograr una seguimiento continuo en todas las escuelas, si hoy ni siquiera existe un relevamiento básico?",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:28:50.558315"
+    },
+    {
+      "url_hash": "5037730235de6c6f7732ea515021d6720a57615123e44edef932bc557423c410",
+      "id": 421,
+      "link": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/06/ico-statement-on-edtech-examined-report",
+      "utility": "poor",
+      "why_it_matters": "Es una declaración genérica de un regulador de protección de datos  del Reino Unido, confirmando que la privacidad de los chicos en apps educativas está bajo su radar. No nos da ninguna disparador, solo nos dice que ellos también lo ven como una problemática que se tiene que abordar.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:32:25.353193"
+    },
+    {
+      "url_hash": "e956e3bdb6d73c12742cd233574cadcbb9e0a4018a8e236ef0d63a8c29cc091f",
+      "id": 425,
+      "link": "https://newamerica.org/insights/empowering-student-agency-in-the-digital-age-the-role-of-privacy-in-edtech",
+      "utility": "very_useful",
+      "why_it_matters": "Acá los que hablaron no fueron solo expertos: participaron chicos de secundaria, además de comunidades rurales y tribales. Nos indica que este tema no solo se tiene que abordar desde el marco legal, sino también desde la propia educación: enseñarles a los chicos a entender y ejercer su privacidad",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:37:12.268214"
+    },
+    {
+      "url_hash": "ef271f42d0a5befb378aab7d4737fc8d2f689ff6fd559e0f56b5572543f64ea1",
+      "id": 427,
+      "link": "https://newamerica.org/insights/how-edtech-monitoring-is-reshaping-public-schools",
+      "utility": "very_useful",
+      "why_it_matters": "Con datos concretos (82% de los chicos monitoreados en clase, 38% de docentes que confirman que sigue fuera del horario escolar), esta señal muestra que la vigilancia digital escolar ya es mayoritaria en EE.UU., y que se filtra a la vida del chico fuera de la escuela . Para la primaria argentina en 2050, plantea:  si la tecnología educativa sigue este camino, ¿la escuela del futuro va a vigilar más al chico de lo que hoy imaginamos, incluso fuera del sistema educativo?",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": "2026-09-01T23:42:51.799928"
+    }
+  ]
+}
