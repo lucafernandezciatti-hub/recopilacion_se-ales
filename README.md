@@ -111,7 +111,8 @@ python scripts/load_signals.py data/signals_ronda9.json
 python scripts/load_signals.py data/signals_ronda10.json
 python scripts/load_signals.py data/signals_ronda11.json
 python scripts/verify_quotes.py
-python scripts/cluster_signals.py    # embeddings + clustering (la 1ra vez baja el modelo)
+python scripts/cluster_signals.py    # embeddings (la 1ra vez baja el modelo)
+python scripts/import_clusters.py    # clusters de referencia del grupo
 streamlit run app.py
 ```
 
@@ -194,6 +195,39 @@ la Clase 4, no un dato a resolver pisando el de otra. Una vez acordado:
 ```bash
 python scripts/import_reviews.py --forzar luca
 ```
+
+### Unificar los clusters del equipo
+
+Los clusters **no se recalculan en cada máquina**: se calculan una vez y se
+versionan. El clustering es *global* —HDBSCAN agrupa por densidad sobre el corpus
+entero—, así que dos personas obtienen particiones distintas, no "la misma con
+ruido", si difieren en una señal, si cargaron las rondas en otro orden (el orden
+de las filas cambia la proyección de UMAP) o si tienen otra versión de
+`umap-learn` o `scikit-learn`.
+
+Quien define la clusterización del grupo la exporta una vez:
+
+```bash
+python scripts/cluster_signals.py               # sólo esta persona
+python scripts/export_clusters.py --autor luca  # -> data/clusters.json
+git add data/clusters.json && git commit -m "clusters de referencia" && git push
+```
+
+El resto sólo importa:
+
+```bash
+git pull
+python scripts/import_clusters.py --dry-run     # ver qué haría, sin tocar nada
+python scripts/import_clusters.py
+```
+
+Las señales se emparejan por `url_hash` —sale de la URL normalizada y vale lo
+mismo en cualquier máquina—, nunca por `id`, que es el orden de inserción de cada
+base local. Si a alguien le faltan señales, el import las reporta
+(`faltan-en-tu-corpus`) y aplica el resto: nunca inventa una asignación.
+
+Después de importar, **no correr `cluster_signals.py`**: recalcula y pisa lo
+importado. Sólo lo corre quien exporta, cuando el corpus crece.
 
 ### Tests
 ```bash

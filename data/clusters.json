@@ -1,0 +1,3212 @@
+{
+  "_comentario": "Clusterización de referencia del grupo. Se aplica con scripts/import_clusters.py. Las señales se identifican por url_hash porque el id depende del orden de carga de cada base local. OJO: correr cluster_signals.py después de importar pisa esto.",
+  "autor": "luca",
+  "exportado_en": "2026-09-01T22:09:52.275218+00:00",
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "params": {
+    "umap": {
+      "n_neighbors": 15,
+      "min_dist": 0.0,
+      "n_components": 10,
+      "metric": "cosine"
+    },
+    "hdbscan": {
+      "min_cluster_size": 8,
+      "min_samples": 3,
+      "metric": "euclidean",
+      "cluster_selection_method": "eom"
+    },
+    "random_state": 42
+  },
+  "n_signals": 500,
+  "n_clusters": 23,
+  "n_noise": 60,
+  "clusters": [
+    {
+      "index": 0,
+      "size": 13,
+      "label": "Educación intercultural bilingüe y lenguas indígenas",
+      "description": "La EIB pasa de programa focalizado a modalidad institucionalizada, con mapeos de lenguas y matrícula. Tensión entre reconocimiento formal y prácticas escolares cotidianas.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 1,
+      "size": 39,
+      "label": "La educación ambiental se vuelve contenido curricular obligatorio",
+      "description": "Leyes y estándares empujan el ambiente hacia contenido transversal en todos los niveles. La brecha está entre la norma vigente y su implementación efectiva en el aula.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 2,
+      "size": 20,
+      "label": "Formación para el trabajo frente a la transformación del empleo",
+      "description": "Competencias verdes y digitales, certificación de aprendizajes informales y precarización del empleo juvenil. Presiona sobre qué debe preparar la escuela básica.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 3,
+      "size": 47,
+      "label": "Pobreza infantil como condición material de la escolaridad",
+      "description": "Pobreza monetaria y multidimensional, comedores escolares, primera infancia y desigualdad de acceso. El cluster más grande del corpus: la escuela como amortiguador social.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 4,
+      "size": 10,
+      "label": "Calor extremo en el aula y caída de aprendizajes",
+      "description": "Evidencia que liga temperatura con desempeño medible, y diseños edilicios incompatibles con el clima emergente. Conecta infraestructura con resultados de aprendizaje.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 5,
+      "size": 11,
+      "label": "Exposición ambiental temprana y desarrollo cognitivo",
+      "description": "Literatura científica sobre contaminación prenatal, prematuridad y microbiota como determinantes cognitivos. ATENCIÓN: robustez 1 — todas las señales vienen de una sola fuente (Europe PMC).",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 6,
+      "size": 9,
+      "label": "Calidad del aire y salud respiratoria infantil",
+      "description": "Zonas de bajas emisiones, humo de incendios y polvo en jardines. Aparece como determinante de asistencia y salud escolar, no sólo como tema ambiental.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 7,
+      "size": 25,
+      "label": "Eventos climáticos extremos interrumpen el ciclo lectivo",
+      "description": "Olas de calor, inundaciones y temporales que suspenden clases sin protocolo común. El clima deja de ser contenido y pasa a ser una variable operativa del calendario.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 8,
+      "size": 9,
+      "label": "Agua e infraestructura básica como condición de escolaridad",
+      "description": "Agua potable, contaminación por agroquímicos, filtraciones y renovación edilicia. Lo material precede a lo pedagógico: sin agua no hay clase.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 9,
+      "size": 19,
+      "label": "Resultados de aprendizaje y brechas sociales persistentes",
+      "description": "Mejoras agregadas en Lengua conviven con estancamiento en Matemática y brechas socioeconómicas estables. La mejora promedio no cierra la desigualdad.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 10,
+      "size": 22,
+      "label": "Contracción demográfica y reconfiguración de la matrícula",
+      "description": "Caída de la natalidad, cierre de secciones, segregación escolar y crisis de ingresantes a la docencia. El problema deja de ser escolarizar a más y pasa a ser qué hacer con menos.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 11,
+      "size": 12,
+      "label": "Regulación del celular como política de bienestar emocional",
+      "description": "La restricción del celular escala de norma escolar a ley provincial y se reencuadra como salud mental, no como disciplina.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 12,
+      "size": 12,
+      "label": "Cierre de escuelas rurales y disputa por la conectividad",
+      "description": "Despoblamiento, cierres sistemáticos y brechas provinciales en servicios básicos. Starlink abre además un debate de soberanía tecnológica.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 13,
+      "size": 30,
+      "label": "Disputa por el currículum: alfabetización, matemática y medios",
+      "description": "Rotación del foco federal entre áreas, entrada de la alfabetización mediática y discusión sobre si la escuela forma ciudadanos críticos o usuarios de herramientas.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 14,
+      "size": 11,
+      "label": "Educación financiera y financiamiento por demanda",
+      "description": "Alfabetización financiera entrando al currículum sin ley nacional, junto a proyectos de vouchers. Cruza contenido escolar con modelo de financiamiento.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 15,
+      "size": 13,
+      "label": "Evaluación de IA educativa y privacidad juvenil",
+      "description": "Metodologías para evaluar chatbots y retroalimentación automática, más preocupaciones de privacidad. Campo académico emergente, todavía sin anclaje local.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 16,
+      "size": 9,
+      "label": "La adopción infantil de IA supera a sus marcos de protección",
+      "description": "El uso de IA generativa por chicos crece más rápido que la regulación y que la capacidad adulta de mediarlo. Incluye el uso como contención emocional.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 17,
+      "size": 10,
+      "label": "Protección de datos infantiles y ciudadanía digital",
+      "description": "Filtraciones, imágenes sintéticas y marcos de consentimiento que la IA vuelve insuficientes. La privacidad se instala como contenido y como derecho escolar.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 18,
+      "size": 35,
+      "label": "La IA entra al currículum obligatorio de primaria",
+      "description": "De herramienta a contenido: currículum obligatorio, cuentas de Gemini para alumnos estatales, formación docente masiva y un mercado privado de gobernanza escolar de IA.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 19,
+      "size": 27,
+      "label": "Ciencia del desarrollo infantil aplicada al aula",
+      "description": "Investigación experimental sobre perseverancia, sueño, actividad física, lenguaje y razonamiento. Base de evidencia para prácticas pedagógicas, mayormente no argentina.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 20,
+      "size": 12,
+      "label": "Disputa metodológica sobre cómo se enseña a leer",
+      "description": "Método fonológico versus constructivismo, y evidencia sobre papel frente a pantalla. Una reforma curricular en curso con contracara académica crítica.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 21,
+      "size": 27,
+      "label": "Crisis de la docencia y pérdida de secciones",
+      "description": "Caída del salario real, retracción de aspirantes a maestro, cargos sin cubrir y cierre de divisiones. La sostenibilidad del cuerpo docente como cuello de botella.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    },
+    {
+      "index": 22,
+      "size": 18,
+      "label": "Retracción del financiamiento educativo",
+      "description": "Inversión en mínimos históricos, derogación del piso del 6% del PBI y desregulación de aranceles privados. El marco económico que condiciona todo lo demás.",
+      "label_model": null,
+      "label_prompt_version": "cluster_labeler_v1"
+    }
+  ],
+  "asignaciones": [
+    {
+      "url_hash": "c89a500bd56c90978ad7e52cf725c8da2e52c4c246555d6657097c5c494109cf",
+      "cluster": 10,
+      "link": "https://lanacion.com.ar/sociedad/cambio-demografico-preven-una-caida-de-la-matricula-de-la-escuela-primaria-y-plantean-un-desafio-nid28012026",
+      "title": "La contracción demográfica se proyecta como una caída estructural de la matrícula primaria"
+    },
+    {
+      "url_hash": "025e6c377ef8c6539c4eee525b0d2f7b7b62762683b0c80d3e6a298afb1be523",
+      "cluster": 21,
+      "link": "https://lanacion.com.ar/sociedad/por-la-baja-matriculacion-empiezan-los-cierres-de-grados-en-escuelas-publicas-portenas-y-hay-quejas-nid25122025",
+      "title": "El cierre de grados por falta de alumnos aparece como decisión administrativa corriente"
+    },
+    {
+      "url_hash": "f1628dc72ae628cbfbc4e48cad4c755c21e49d9d8e4aae33a8049a51229794a3",
+      "cluster": 10,
+      "link": "https://ambito.com/politica/caba-bajan-las-inscripciones-escuelas-y-jardines-portenos-la-fuerte-caida-la-natalidad-n6228309",
+      "title": "La natalidad porteña cae a la mitad en menos de una década"
+    },
+    {
+      "url_hash": "fec648dda513f15a959a9c4a4810969da20bb01a8322f7c8c6c3ee53bd89594c",
+      "cluster": 10,
+      "link": "https://revistacrisis.com.ar/notas/una-escuela-para-la-baja-natalidad-argentina",
+      "title": "La caída de nacimientos a escala nacional supera el 45% en menos de diez años"
+    },
+    {
+      "url_hash": "f8951e3d576b54009f9af0de91cd3a3901526bfede366fa8a1fc99c0da147ea8",
+      "cluster": 21,
+      "link": "https://gentedesalta.com/sociedad/la-argentina-perdio-205000-alumnos-1500-divisiones-ano-mapa-nacional-aulas-vacias-mas-chicos-n10957",
+      "title": "La pérdida de divisiones se vuelve medible año a año en todo el país"
+    },
+    {
+      "url_hash": "b00504680a5fbd412e46195432dc72a69a0e677be02f0dc9c55e3951503c1b52",
+      "cluster": 12,
+      "link": "https://infobae.com/educacion/2026/02/06/desde-diciembre-cerraron-cinco-escuelas-privadas-en-caba-la-economia-y-la-natalidad-dos-factores-clave",
+      "title": "El cierre alcanza también al sector privado, no sólo al estatal"
+    },
+    {
+      "url_hash": "0142cdc6463a40e3db25295a37b30c646d0f9d52ffd28cede029e6d944b2d484",
+      "cluster": 21,
+      "link": "https://infobae.com/sociedad/2025/10/15/baja-de-natalidad-y-educacion-las-escuelas-portenas-cierran-grados-y-docentes-y-familias-toman-medidas-para-evitarlo",
+      "title": "Docentes y familias se organizan para resistir el cierre de secciones"
+    },
+    {
+      "url_hash": "db1006631ee2354f359b46fdc8187ff323bfc0641cbbc8883b33b1c0f501bf61",
+      "cluster": 9,
+      "link": "https://argentina.gob.ar/noticias/segun-las-pruebas-aprender-2025-la-escuela-primaria-alcanzo-los-mejores-resultados-en",
+      "title": "El Estado presenta la mejora en Lengua como resultado de la política de alfabetización"
+    },
+    {
+      "url_hash": "2561fd1751d2eb1aae2d9ff0e3a19104d6a7df729cc58d0cceef16db7d9df8bf",
+      "cluster": 9,
+      "link": "https://infobae.com/educacion/2026/07/06/como-entender-los-resultados-de-las-pruebas-aprender-mejoraron-los-resultados-pero-persisten-fuertemente-las-brechas-sociales",
+      "title": "La mejora agregada en aprendizajes convive con brechas sociales estables"
+    },
+    {
+      "url_hash": "b4e9280f6e4c7b9be25063bf50000bc5e40bb47614d66c9eda1d279b22177bf1",
+      "cluster": 13,
+      "link": "https://infobae.com/educacion/2026/01/03/tras-los-planes-de-alfabetizacion-en-2026-la-nacion-y-las-provincias-pondran-el-foco-en-matematica",
+      "title": "El foco de política curricular rota de alfabetización a matemática por acuerdo federal"
+    },
+    {
+      "url_hash": "6871256013f167a033ab3f63b4a40b2eb3b0dc371009ade9ee6cab718108bc24",
+      "cluster": null,
+      "link": "https://infobae.com/educacion/2026/02/12/en-2026-mas-de-700-mil-alumnos-no-alcanzaran-el-minimo-de-horas-de-clase-acordado-a-nivel-nacional",
+      "title": "Las metas nacionales de días de clase se anuncian sin capacidad provincial de cumplirlas"
+    },
+    {
+      "url_hash": "63002e625d36f4cdcceb20bdcee55e60b84b39b21b816433d854f423bda7295e",
+      "cluster": 10,
+      "link": "https://argentinosporlaeducacion.org/informe/extension-de-la-jornada-escolar-en-el-nivel-primario",
+      "title": "La jornada extendida sigue siendo minoritaria pese a dos décadas de metas"
+    },
+    {
+      "url_hash": "2909854c2fe4aadb18d9081ef1aab41ada7d191c6dfcfedfe413ef6c64e6e5aa",
+      "cluster": 18,
+      "link": "https://infobae.com/educacion/2026/08/18/caba-incorpora-la-inteligencia-artificial-como-contenido-obligatorio-en-las-escuelas-primarias-y-secundarias",
+      "title": "La IA pasa de herramienta a contenido curricular obligatorio en primaria"
+    },
+    {
+      "url_hash": "ce8dfa68834f246f7f3c35cb081505d7ac83f5478c16189de1544e1810de1426",
+      "cluster": 16,
+      "link": "https://mdzol.com/sociedad/inteligencia-artificial-el-aula-2026-prohibir-gobernar-n1456761",
+      "title": "El uso escolar de IA generativa ya es mayoritario entre los chicos sin mediación institucional"
+    },
+    {
+      "url_hash": "a7021adb35432aea4a8d21792189624109153090eb079032003db0ea3d39d052",
+      "cluster": 16,
+      "link": "https://infobae.com/opinion/2026/02/11/ia-en-el-aula-en-2026-vamos-bien",
+      "title": "El mismo dato de adopción de IA circula replicado entre medios distintos"
+    },
+    {
+      "url_hash": "6ea65028b4282a6a41b871b842f525d8e0cdd9f4240bf5768d584cd9d945bfc2",
+      "cluster": 18,
+      "link": "https://iproup.com/startups/67397-startup-argentina-mejora-el-uso-de-ia-en-escuelas-y-avanza-en-la-region",
+      "title": "Aparece un mercado privado que ofrece gobernar el uso escolar de la IA"
+    },
+    {
+      "url_hash": "e03e266601bd4298d24bf1b13a8672f3dd2c22d05bf353bdae1df29e71441237",
+      "cluster": 18,
+      "link": "https://sobretiza.com.ar/2026/08/12/la-inteligencia-artificial-ya-entro-al-sistema-educativo-como-se-esta-implementando",
+      "title": "La formación docente en IA alcanza escala de decenas de miles"
+    },
+    {
+      "url_hash": "5701b74cc28930aa80ccf4a9ea1bca628bcbf4b1d6874a6471df337b2e381528",
+      "cluster": 16,
+      "link": "https://news.un.org/es/story/2026/06/1541629",
+      "title": "El desfasaje entre adopción infantil de IA y marcos de protección se vuelve tema de agenda global"
+    },
+    {
+      "url_hash": "d3afabab5ecc2cec60a8679f855fd1b50c9bcc5d74d8aa8bf118dfe9bab5e7b2",
+      "cluster": null,
+      "link": "https://thirdspacelearning.com/blog/ai-tutoring-evidence",
+      "title": "La tutoría uno a uno pasa de restricción presupuestaria a problema técnico"
+    },
+    {
+      "url_hash": "df7e51bbe9c427114eda2b7b1905af76b3652612b7aad8c8466c00c174589fc2",
+      "cluster": 11,
+      "link": "https://infobae.com/educacion/2026/03/04/rige-por-ley-la-prohibicion-de-usar-celulares-en-las-escuelas-primarias-de-provincia-de-buenos-aires",
+      "title": "La restricción del celular en primaria pasa de norma escolar a ley provincial"
+    },
+    {
+      "url_hash": "cec56b372b118cd299eba11ee56ebc08928e4e20239afb7cc96de39318bafaba",
+      "cluster": 11,
+      "link": "https://infobae.com/educacion/2026/07/17/6-de-cada-10-chicos-de-8-anos-tienen-celular-afirman-que-la-prohibicion-escolar-no-garantiza-mejores-aprendizajes",
+      "title": "La mayoría de los chicos de tercer grado ya tiene teléfono propio"
+    },
+    {
+      "url_hash": "121f8b6bcc5a2b01b14ee1c2923db90acbd05de8c05bf71364cbf163536095b9",
+      "cluster": 11,
+      "link": "https://argentinosporlaeducacion.org/informe/celulares-prohibir-o-no-prohibir",
+      "title": "El informe original detrás de la cobertura sobre celulares en tercer grado"
+    },
+    {
+      "url_hash": "565efd07cec461c5fa47c88b30589bf930e0a935a298b3e1027bdd36307881a4",
+      "cluster": 11,
+      "link": "https://infobae.com/estados-unidos/2026/05/30/el-primer-estudio-nacional-confirma-el-impacto-de-la-prohibicion-de-celulares-en-escuelas-de-estados-unidos",
+      "title": "Aparece evidencia nacional de que la prohibición sí modifica la conducta en clase"
+    },
+    {
+      "url_hash": "a638b06f568ebcfe32a8a144e0dddf80a039b7e0f9b2aeb7be63eb03c5901ef9",
+      "cluster": 20,
+      "link": "https://observatorio.tec.mx/leer-en-papel-mejora-la-comprension-lectora",
+      "title": "La evidencia sobre lectura profunda sigue favoreciendo al papel frente a la pantalla"
+    },
+    {
+      "url_hash": "8bfa0614b02aa55416967b882c6ec20dd1a9e7f20ff87a2fc269b5f9106887c4",
+      "cluster": 22,
+      "link": "https://chequeado.com/el-explicador/presupuesto-2026-el-gasto-en-educacion-crece-pero-la-participacion-dentro-del-pbi-continua-en-valores-minimos-historicos",
+      "title": "La inversión educativa nacional se estabiliza en mínimos históricos como proporción del PBI"
+    },
+    {
+      "url_hash": "dcc8a2752af5545210a924ee88ed74822b2a432d7853c9c439b45b1e9adb9cc1",
+      "cluster": 22,
+      "link": "https://infobae.com/educacion/2025/10/30/en-2026-el-estado-nacional-invertira-el-075-del-pbi-en-educacion-es-la-mitad-que-hace-10-anos",
+      "title": "El financiamiento educativo nacional se reduce a la mitad en una década"
+    },
+    {
+      "url_hash": "df503fb7895b6e1f30b1b98b2c154bec2f6516e91b6a247dfa2ee61f3c6706fa",
+      "cluster": 21,
+      "link": "https://chequeado.com/el-explicador/los-salarios-docentes-retrocedieron-23-real-desde-fines-de-2023-con-caidas-en-casi-todas-las-provincias",
+      "title": "El salario docente real cae casi un cuarto en menos de tres años"
+    },
+    {
+      "url_hash": "b6af1e4b4c1cfe4e44e4006af91ec9008e6405ac25b1bfa9eab078998b742515",
+      "cluster": 21,
+      "link": "https://analisisdigital.com.ar/provinciales/2026/05/11/salario-recortado-futuro-hipotecado-un-informe-advierte-una-fuerte-perdida-del-poder-adquisitivo-docente",
+      "title": "El salario docente deja de funcionar como sostén económico según los propios gremios"
+    },
+    {
+      "url_hash": "56721cb0ca30c6463c726accdfa726cb5278894b399287330ea3ab6830f81a7e",
+      "cluster": 21,
+      "link": "https://ellitoral.com/educacion/docencia-educacion-matricula-escuelas-cargos-docentes-escuelas-privadas-egresos-matricula-educativo-argentino_0_Mc2Z6wHqI3.html",
+      "title": "Caen los inscriptos en profesorados mientras crecen los cargos sin cubrir"
+    },
+    {
+      "url_hash": "e32592c964f870e67a2d0f9795b12295eef3a655b12e20c0c9db2553ef9b8d2d",
+      "cluster": 10,
+      "link": "https://gestioneducativa.net/reforma-de-la-carrera-docente-en-buenos-aires-el-plan-ser-docente-busca-frenar-la-crisis-de-ingresantes-con-evaluacion-residencias-pagas-y-virtualidad",
+      "title": "Se ensayan residencias pagas y virtualidad para frenar la caída de ingresantes a la docencia"
+    },
+    {
+      "url_hash": "b7af56ff542f31ba1bc0da470e8e3960affd0a2ce09d82f6040ae362dcf223c3",
+      "cluster": 21,
+      "link": "https://cippec.org/textual/mejorar-la-formacion-docente-inicial-exige-la-voluntad-de-actuar-a-largo-plazo",
+      "title": "La retracción de aspirantes a maestro de primaria lleva una década"
+    },
+    {
+      "url_hash": "dc17c24425372a708373413d1b5e0911584f88e403324c34c07cc37578b2d606",
+      "cluster": 21,
+      "link": "https://tiempoar.com.ar/ta_article/maestros-quemados-la-crisis-de-la-profesion-docente",
+      "title": "La sobrecarga de funciones aparece como rasgo estructural del trabajo docente"
+    },
+    {
+      "url_hash": "ba079a62b36d6368c2b01e4d2b06954d1402ae5e6d9ece9d6bd2b586aa60d3f2",
+      "cluster": 3,
+      "link": "https://unicef.org/argentina/comunicados-prensa/informe-pobreza-monetaria-2026",
+      "title": "Cuatro de cada diez chicos siguen en hogares pobres pese a la baja del indicador"
+    },
+    {
+      "url_hash": "0f81dcec79c9cbab8cb1dce34ea3b42c73fe714347e02b151cfb763c1bf720c7",
+      "cluster": 3,
+      "link": "https://chequeado.com/el-explicador/pobreza-infantil-segun-unicef-cayo-al-423-en-2025-pero-podria-aumentar-en-2026",
+      "title": "La pobreza monetaria baja pero la multidimensional está estancada hace un lustro"
+    },
+    {
+      "url_hash": "cca7b1a9a9e6b861da4d83ee1ef34153b54e596d36cdacfc8c1dc1eb7bcdf194",
+      "cluster": 3,
+      "link": "https://unicef.org/argentina/comunicados-prensa/unicef-fic-argentina-y-fagran-lanzan-alimenta-futuro",
+      "title": "El comedor escolar aparece limitado por infraestructura y personal, no sólo por presupuesto"
+    },
+    {
+      "url_hash": "263d6d68f18e03cfea286fe359477dc3d7aa739fbc5c82e4d3c393993f8974a1",
+      "cluster": 21,
+      "link": "https://infobae.com/educacion/2025/11/22/crece-la-educacion-privada-un-nuevo-estudio-cuestiona-que-haya-una-fuga-desde-la-escuela-publica",
+      "title": "Un estudio desmiente la narrativa de fuga masiva hacia la escuela privada"
+    },
+    {
+      "url_hash": "9e107cdceb17ff4949fa5551722fe2f9776e2f51bfd0e9343ed7795c2df9921d",
+      "cluster": 10,
+      "link": "https://argentinosporlaeducacion.org/informe/matricula-y-segregacion-escolar-en-america-latina-una-mirada-a-la-ultima-decada",
+      "title": "Argentina se separa de la región en el aumento de segregación escolar"
+    },
+    {
+      "url_hash": "44e2f41ad10575322c17d0c171706c2e726d3c2f9c2be3082ddc866748da0695",
+      "cluster": 10,
+      "link": "https://elancasti.com.ar/informacion-general/argentina-es-el-unico-pais-la-region-que-profundizo-la-brecha-escuelas-publicas-y-privadas-n579990",
+      "title": "La cobertura provincial replica el hallazgo sobre segregación escolar"
+    },
+    {
+      "url_hash": "8888f256b5c563aed46bfd498f9a99d85d27ee8f855b5c5f5070b2550a818a1a",
+      "cluster": 21,
+      "link": "https://lanacion.com.ar/sociedad/que-es-el-homeschooling-el-modelo-escolar-que-evalua-el-gobierno-en-su-proyecto-de-libertad-nid21112025",
+      "title": "El Estado evalúa reconocer la educación básica fuera del establecimiento escolar"
+    },
+    {
+      "url_hash": "8cad5c5dc3e2b16d8f2a68cb1d509a27deee8a0babad79657a0019b1c18d11bd",
+      "cluster": 10,
+      "link": "https://agencia.unq.edu.ar/?p=33269",
+      "title": "La educación en el hogar ya alcanza a decenas de miles de familias sin marco legal"
+    },
+    {
+      "url_hash": "aff6ee2df8b51f8f90f0a09ec074063589bf03c06804bc19d52989f4efc43412",
+      "cluster": null,
+      "link": "https://sitioandino.com.ar/sociedad/homeschooling-mas-20-mil-familias-argentinas-educan-sus-hijos-casa-n5675052",
+      "title": "La pandemia funcionó como umbral de entrada masiva a la educación en el hogar"
+    },
+    {
+      "url_hash": "7c730c0a328bda71f9d92b106e056ee078f3473aace0fdca9da1bf58a8eb0ba4",
+      "cluster": 7,
+      "link": "https://pagina12.com.ar/531381-de-la-suspension-al-manguerazo-y-cambio-de-uniforme-la-ola-d",
+      "title": "La ola de calor obliga a improvisar protocolos escolares sin norma común"
+    },
+    {
+      "url_hash": "ffde291c6842bf00f2f6bc89729fcacb8c50d69ee54eadc0ce3b0c4e8dc4730d",
+      "cluster": 7,
+      "link": "https://ute.org.ar/desinversion-escuelas-de-la-ciudad-suspendieron-clases-por-ola-de-calor",
+      "title": "El sindicato enmarca la suspensión por calor como problema de inversión edilicia"
+    },
+    {
+      "url_hash": "734336dd5a3e2d0e2f32164209de277d5aaf6e4507528aafa9515d9015908330",
+      "cluster": 7,
+      "link": "https://pagina12.com.ar/2026/03/17/tucuman-mas-de-100-escuelas-siguen-sin-clases-por-las-inundaciones-tras-el-temporal",
+      "title": "Un evento climático deja más de cien escuelas fuera de servicio por semanas"
+    },
+    {
+      "url_hash": "15976a2401681b666d9907235a192a7833bcfe29b05d5fffc8078ef00282fdff",
+      "cluster": 7,
+      "link": "https://infobae.com/sociedad/2026/03/14/inundaciones-en-el-norte-del-pais-alerta-roja-evacuaciones-rios-desbordados-y-suspension-de-clases",
+      "title": "La evacuación masiva por lluvias arrastra la suspensión del ciclo lectivo regional"
+    },
+    {
+      "url_hash": "64965fc706f9cad52b8bac39de6991a764a0363074a2df17bbd79b18543ef56b",
+      "cluster": 1,
+      "link": "https://eldiarioar.com/sociedad/medio-ambiente/ley-yolanda-lucha-mantener-viva-ley-formacion-ambiental_1_12094865.html",
+      "title": "Una ley de formación ambiental vigente queda sin implementación efectiva"
+    },
+    {
+      "url_hash": "e74b20dd6cf92cca4c6f0e6bf8660eba5e3237fd71f9f1459ab321d6522f03b3",
+      "cluster": 12,
+      "link": "https://analisisdigital.com.ar/provinciales/2026/05/14/en-dos-anos-cerraron-21-escuelas-rurales-en-entre-rios",
+      "title": "El cierre de escuelas rurales avanza a ritmo de una decena por año en una sola provincia"
+    },
+    {
+      "url_hash": "a6fff64a1c6ce166bbf69c84a7581c0b9bfc864299340ae1e27a8e43bc2ce4e7",
+      "cluster": null,
+      "link": "https://unesco.org/es/articles/erce-2025-quinto-ciclo-del-estudio-regional-comparativo-y-explicativo",
+      "title": "La evaluación regional de primaria mantiene su ciclo pese al ajuste presupuestario"
+    },
+    {
+      "url_hash": "9e0ae50ad33788bd09afc7b52e6513e03a48fd8c8245549a4af9a51d4d28a9b5",
+      "cluster": 9,
+      "link": "https://infobae.com/educacion/2025/06/23/comenzo-a-realizarse-el-estudio-erce-2025-la-evaluacion-educativa-que-impacta-a-mas-de-190-mil-estudiantes-de-america-latina-y-el-caribe",
+      "title": "La medición regional de aprendizajes alcanza escala de 190 mil alumnos"
+    },
+    {
+      "url_hash": "d660ac5209e7b737e80513e599aab05b4c20d8f4718fa4a57ffdf5d862d49836",
+      "cluster": null,
+      "link": "https://arxiv.org/abs/2608.20822",
+      "title": "Las lecciones generadas por IA con voz sintética empiezan a personalizarse según el perfil de aprendizaje del alumno"
+    },
+    {
+      "url_hash": "4f52602b75d5eb9ba1cf008c65f7b5e4e375447115c25f00245e38486ea872a4",
+      "cluster": null,
+      "link": "https://arxiv.org/abs/2608.21106",
+      "title": "Un currículum escolar se descompone en miles de unidades mínimas leídas y ordenadas por una máquina"
+    },
+    {
+      "url_hash": "5dbcedd5bcb5fc1580d70283a656a992633a47e00cb214d57c1e7b6b41427fcb",
+      "cluster": 16,
+      "link": "https://arxiv.org/abs/2608.20345",
+      "title": "Los chatbots de IA se vuelven un recurso informal de contención emocional para la generación que hoy cursa la primaria"
+    },
+    {
+      "url_hash": "47bfb72f1b270bacc07c4e79b3b3592bf0cd5ad68cc299d2171165e097a87790",
+      "cluster": 18,
+      "link": "https://arxiv.org/abs/2608.20521",
+      "title": "La corrección de exámenes manuscritos por IA alcanza niveles de acuerdo casi idénticos a la corrección humana en evaluac"
+    },
+    {
+      "url_hash": "55780f6399feaafb89ec9dc1467f27a03228d30af6a88c83f081e4548434af9d",
+      "cluster": null,
+      "link": "https://arxiv.org/abs/2608.21165",
+      "title": "modelos de IA pequeños y explicables reemplazan cajas negras en analítica de aprendizaje, sin sacar datos del dispositiv"
+    },
+    {
+      "url_hash": "b3fd27415954c52e9cebb174bf6cdc5d44dc279d0cde1ce0972ec3a954afb25c",
+      "cluster": 18,
+      "link": "https://restofworld.org/2026/china-ai-boyfriend-ban-bytedance-doubao",
+      "title": "china regula el vínculo emocional de los menores con compañeros de IA, anticipando un futuro problema para la escuela"
+    },
+    {
+      "url_hash": "3fa64fb25f4d9a8e41596febd9a7999d54357c2231667af61cc2a888f5d91cc8",
+      "cluster": 10,
+      "link": "https://chequeado.com/un-ano-de-periodismo-innovador-y-federal-en-accion",
+      "title": "la vacunación al ingreso a primaria cae 30 puntos y reaparecen enfermedades como el sarampión"
+    },
+    {
+      "url_hash": "720e3569bbfac7f61d3b32aba8af3789edb594d7a92a8b6af3aa53d4c9874e2b",
+      "cluster": 13,
+      "link": "https://chequeado.com/acercar-la-alfabetizacion-mediatica-a-las-aulas-a-traves-de-libros-escolares",
+      "title": "la alfabetización mediática entra a los libros de texto escolares, pero solo 6 de cada 10 chicos distinguen información "
+    },
+    {
+      "url_hash": "b31e8338926be2d971023aea69b30896589718c1df4655bdbbe675a3785dd2cb",
+      "cluster": 13,
+      "link": "https://chequeado.com/declaracion-de-la-red-por-la-alfabetizacion-mediatica-e-informacional-ami-en-argentina",
+      "title": "una coalición de organizaciones pide incorporar la alfabetización mediática al currículum desde la infancia"
+    },
+    {
+      "url_hash": "9068461b3952a7fa76365c40e6e4be0da07fa1969a87bb6410e0ea2ffbdd1a22",
+      "cluster": 13,
+      "link": "https://chequeado.com/un-encuentro-para-debatir-sobre-el-rol-de-la-educacion-mediatica-frente-a-la-desinformacion-y-la-inteligencia-artificial",
+      "title": "especialistas discuten si el rol de la escuela es formar ciudadanos críticos o usuarios de herramientas de IA"
+    },
+    {
+      "url_hash": "fd778f07181b2a80c5bc35a1ebd7ddd4ae8dd866338edd748cd9a92f1741afa2",
+      "cluster": null,
+      "link": "https://chequeado.com/vacunas-una-alianza-de-chequeado-y-la-ops-para-fortalecer-la-confianza-y-contrarrestar-la-desinformacion",
+      "title": "la desconfianza en vacunas hace reaparecer el sarampión en la región mientras 1,4 millones de chicos quedan sin esquema "
+    },
+    {
+      "url_hash": "3c951e4052c86a683eb02afdbaa33ccde68771685b4589ab1719709fbe60fd61",
+      "cluster": 13,
+      "link": "https://chequeado.com/chequeado-presento-un-estudio-regional-sobre-alfabetizacion-mediatica-e-informacional-en-la-red-latamchequea",
+      "title": "Las redes de fact-checking empiezan a capacitar, aunque marginalmente, a docentes de primaria en alfabetización mediátic"
+    },
+    {
+      "url_hash": "d449f28d8d23d11d72eefdea26029632b179a961ebb629c6e2923c864579e20e",
+      "cluster": 6,
+      "link": "https://theguardian.com/environment/2026/aug/23/london-low-emission-zone-working-other-cities-cautious-clean-air",
+      "title": "Zonas de bajas emisiones urbanas muestran mejoras medibles en la salud pulmonar infantil"
+    },
+    {
+      "url_hash": "5285c4a6d6bf00ba6e183d3f4918522323217a25a7f82b179e0320476a64dad8",
+      "cluster": 3,
+      "link": "https://cenital.com/casi-el-40-de-los-jovenes-tuvo-problemas-para-comprar-vestimenta-en-el-ultimo-ano-por-falta-de-plata",
+      "title": "Cuatro de cada diez chicos y adolescentes no pudieron comprar ropa o calzado por falta de dinero"
+    },
+    {
+      "url_hash": "cc131ec7ef9e85f8a93567f7b8886f623054236a64b862d8f99d7f445178beb0",
+      "cluster": 3,
+      "link": "https://cenital.com/fernando-cerimedo-declaro-ante-la-fiscalia-de-santa-cruz-de-la-sierra",
+      "title": "El discurso presidencial vincula explícitamente el derecho al aborto con la caída de la natalidad y la crisis previsiona"
+    },
+    {
+      "url_hash": "bab31ec60ac394f3847619058453cee538fe41db09ada0a4dcb3fade6cf022c0",
+      "cluster": 7,
+      "link": "https://cronista.com/economia-politica/confirmado-suspenden-las-clases-por-la-ola-de-calor",
+      "title": "Olas de calor sin infraestructura adecuada obligan a suspender clases"
+    },
+    {
+      "url_hash": "2d0f0b12b44c7573bfc2946db1f1cf73e17bdf47b63107ad760361c78adc6431",
+      "cluster": 18,
+      "link": "https://infobae.com/sociedad/2026/02/26/el-gobierno-porteno-habilito-cuentas-para-que-alumnos-de-primaria-usen-inteligencia-artificial",
+      "title": "CABA habilita el uso gratuito de IA generativa (Gemini) para todos los alumnos de primaria estatal"
+    },
+    {
+      "url_hash": "f8b71c8b367cbefc873f301808070dc00f7cfb7c0fd0ef90c92d9c2169b002c3",
+      "cluster": 18,
+      "link": "https://lanacion.com.ar/sociedad/ciudad-incorporan-la-ia-como-contenido-obligatorio-en-las-escuelas-primarias-y-secundarias-nid18082026",
+      "title": "La enseñanza de IA se vuelve contenido curricular obligatorio desde primer grado en CABA"
+    },
+    {
+      "url_hash": "8bde60462e8d468d2a0a7211b99ac602bfbd1f0fd1b24a373425bb5af4bb6e69",
+      "cluster": 16,
+      "link": "https://chequeado.com/el-explicador/ia-en-la-escuela-primaria-que-dice-la-evidencia-sobre-su-impacto-en-el-aprendizaje-y-como-se-esta-implementando-en-caba",
+      "title": "La evidencia sobre el efecto de la IA en el aprendizaje de niños de primaria todavía es escasa y disputada"
+    },
+    {
+      "url_hash": "c6d93947e9eb56764f19a528366c0bd19c09367e1df50c56aa5c20fdf8053ed8",
+      "cluster": 10,
+      "link": "https://eldia.com/la-ciudad/el-futuro-del-trabajo-ya-empezo-colegios-de-educacion-tecnica-de-la-region-ante-el-avance-de-la-ia-la-ciudad_1780983204",
+      "title": "La automatización expone a más de la mitad del empleo formal y presiona a repensar qué habilidades forma la escuela"
+    },
+    {
+      "url_hash": "ba092a107831ba7014b8cc64535af6c890d2f7b5295737ecb17222435301f81a",
+      "cluster": 12,
+      "link": "https://chequeado.com/el-explicador/infraestructura-escolar-5-datos-para-conocer-cual-es-la-situacion-en-las-provincias-argentinas",
+      "title": "Persisten brechas provinciales profundas en electricidad, agua, calefacción y conectividad de las escuelas"
+    },
+    {
+      "url_hash": "6ba29fd1a252d4710c0080321971b7de2b6485e3a7fbc74e739c49be3c55bf41",
+      "cluster": 10,
+      "link": "https://argentinosporlaeducacion.org/informe/conectividad-y-sistemas-de-gestion-escolar",
+      "title": "Uno de cada diez estudiantes argentinos todavía asiste a una escuela sin conectividad a internet"
+    },
+    {
+      "url_hash": "9ea78a80201e57e8177321d3a0e4b0b4ab6842303ab6582288d76b19326a80bd",
+      "cluster": 12,
+      "link": "https://elfederalonline.com/2026/08/14/el-gobierno-riojano-salio-al-cruce-de-starlink-en-las-escuelas-y-defendio-la-conectividad-estatal-y-la-soberania-tecnologica",
+      "title": "El avance de Starlink en escuelas rurales abre un debate sobre soberanía tecnológica frente a la conectividad estatal"
+    },
+    {
+      "url_hash": "5500e15520a247e4fc352b5323491e84b74bce6c16420f5498632b954f898ddd",
+      "cluster": 22,
+      "link": "https://somosjujuy.com.ar/politica/presupuesto-2026-gobierno-recorto-casi-25-billones-fuerte-ajuste-educacion-universidades-n117761",
+      "title": "El recorte presupuestario 2026 golpea directamente al Plan Nacional de Alfabetización"
+    },
+    {
+      "url_hash": "5d52edd518027091708d295a5543633362ce9ab4b4d091946cfd9a0d7677378c",
+      "cluster": 22,
+      "link": "https://ctera.org.ar/rechazo-al-proyecto-de-ley-de-presupuesto-2026-un-nuevo-ajuste-y-ataque-a-la-educacion-publica",
+      "title": "El proyecto de presupuesto 2026 deroga la ley que obliga a invertir al menos 6% del PBI en educación"
+    },
+    {
+      "url_hash": "39041fd438c72013b44bf6604b7201a30583de2ac128ba74eece7847b101583c",
+      "cluster": 22,
+      "link": "https://argentinosporlaeducacion.org/informe/presupuesto-educativo-nacional-2026",
+      "title": "La inversión educativa nacional se mantiene por debajo del 1% del PBI pese al aumento nominal previsto para 2026"
+    },
+    {
+      "url_hash": "686b3a83f6da6fb82d6f862d1ffa051e956e6695d174d43d4f3cf3b668d6704f",
+      "cluster": 20,
+      "link": "https://docente.com.ar/blog/plan-nacional-de-alfabetizacion-2026-docentes",
+      "title": "La disputa entre el método fonológico y el constructivismo redefine cómo se enseña a leer en la primaria argentina"
+    },
+    {
+      "url_hash": "1063d04332d8f64abe31ec9a34e5977ac04d5c5c751fa5489be5460e4034bc87",
+      "cluster": 9,
+      "link": "https://argentina.gob.ar/capital-humano/educacion/plan-nacional-de-alfabetizacion",
+      "title": "El 46% de los estudiantes de tercer grado no alcanza el nivel mínimo de comprensión lectora al lanzarse el plan nacional"
+    },
+    {
+      "url_hash": "547b1fec7aacaf612ac63aaabb146936371d27edf786be4f9cd7db1344b90bbf",
+      "cluster": null,
+      "link": "https://infobae.com/educacion/2025/06/05/caen-los-niveles-de-alfabetizacion-y-comprension-lectora-a-nivel-mundial-como-es-la-situacion-de-la-argentina",
+      "title": "El deterioro global en comprensión lectora ubica a la Argentina cada vez más lejos de los países con PBI comparable"
+    },
+    {
+      "url_hash": "847e970139c787f6a68c5a05646d0f956283177b719460a28483afe249663771",
+      "cluster": 9,
+      "link": "https://agenciasanluis.com/2026/06/03/1173599-el-86-de-los-alumnos-del-primer-ciclo-de-primaria-alcanzan-competencias-minimas-de-lectoescritura",
+      "title": "Un plan provincial de alfabetización eleva del 7% al 57% la proporción de alumnos con nivel óptimo en dos años"
+    },
+    {
+      "url_hash": "ba9ffe4d9a05aa54eb828db312700c97044fed0c52dfb33f8f83723309449392",
+      "cluster": null,
+      "link": "https://infobae.com/educacion/2026/05/03/cambios-en-las-pruebas-aprender-buscan-menos-sobrecarga-de-evaluaciones-y-mas-foco-en-el-uso-de-los-datos",
+      "title": "El sistema de evaluación educativa pasa de mediciones anuales a un esquema plurianual para reducir la sobrecarga"
+    },
+    {
+      "url_hash": "7488335419f17abd91c7ad1ffad323fc94e5079dcb44e93cbd1bda71bc3893b0",
+      "cluster": 9,
+      "link": "https://infobae.com/educacion/2026/06/30/pruebas-aprender-hubo-mejoras-en-lengua-pero-en-matematica-la-mitad-de-los-alumnos-de-escuela-primaria-no-alcanza-el-nivel-esperado",
+      "title": "Los resultados en matemática de la escuela primaria permanecen estancados desde hace más de una década"
+    },
+    {
+      "url_hash": "ae8eb03b600cd4d4363899c3440fe3bb21be9a4b2d80aa847b71b578684c7754",
+      "cluster": 9,
+      "link": "https://infobae.com/educacion/2025/05/06/prueba-aprender-solo-el-45-de-los-alumnos-de-tercer-grado-alcanza-el-nivel-esperado-en-lectura",
+      "title": "La brecha socioeconómica en comprensión lectora duplica las chances de los alumnos de escuelas privadas frente a las est"
+    },
+    {
+      "url_hash": "48b6da6e35930ee8d3646f75f0a1b8bc62153c5194c7ddd9f61b26814f3c5bc9",
+      "cluster": 21,
+      "link": "https://fundacioncolsecor.org.ar/informes/docentes-tiempos-crisis-n13269",
+      "title": "El salario docente de primaria cae por debajo de la línea de pobreza mientras la profesión pierde prestigio social"
+    },
+    {
+      "url_hash": "921232591d2f533a5c8557a668405b0b1e80e19ce081fcb3ec29b8121d8f1482",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/educacion/unahoramas",
+      "title": "El programa nacional Hora+ busca universalizar la jornada extendida como pilar del plan de alfabetización"
+    },
+    {
+      "url_hash": "61a4d9c4ac0f39e5f282a0e7648939bb5f0d1b1207d48f3725221233076b9b28",
+      "cluster": 21,
+      "link": "https://utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=22606",
+      "title": "Especialistas debaten si la caída de la matrícula es una oportunidad para mejorar la calidad o una excusa para recortar "
+    },
+    {
+      "url_hash": "2f3f281be6528c661bae3502d3be4ff06ebae73a3788e26efb0fbed56c05bdb6",
+      "cluster": 10,
+      "link": "https://labrujula24.com/notas/2026/08/23/la-caida-de-la-tasa-de-natalidad-golpea-a-las-escuelas-y-tiene-su-impacto-n516704",
+      "title": "Un inspector educativo describe cómo la caída de nacimientos ya obliga a rediseñar secciones y cargos escuela por escuel"
+    },
+    {
+      "url_hash": "269235eb59462a0a7c4d9889900fe5ea7e0e7aa7d9eb10774873bf5516aecf40",
+      "cluster": 21,
+      "link": "https://lagaceta.com.ar/nota/1122993/sociedad/caida-natalidad-estiman-para-2030-caera-27porciento-matricula-primaria.html",
+      "title": "Proyectan que hacia 2030 habrá 50.000 secciones menos y 71.000 cargos docentes por reasignar en todo el país"
+    },
+    {
+      "url_hash": "ded4088bef07d170bad4e0f548034d034b3a337e97733b95e8a46d810e9a2c71",
+      "cluster": 21,
+      "link": "https://aulagix.com/recursos-para-colegios/blog/estudio-2025-2035-el-impacto-de-la-baja-natalidad-en-los-colegios-privados-de-argentina",
+      "title": "un estudio de mercado proyecta aulas cada vez más vacías en los colegios privados hacia 2030-2035"
+    },
+    {
+      "url_hash": "068c26233cb00670e00a53065da09c19551530790ae587eae0ccecd108fa7215",
+      "cluster": 13,
+      "link": "https://nortemisionero.com.ar/educacion/simposio-de-primera-infancia-se-elaborara-el-diseno-jurisdiccional-para-jardines-maternales",
+      "title": "misiones inicia el diseño de su primer currículum jurisdiccional propio para jardines maternales"
+    },
+    {
+      "url_hash": "5f61e82cab645ed55c05247b45117f6189f188bc8a99e60e80b5fbc4c9d35e67",
+      "cluster": 3,
+      "link": "https://cippec.org/textual/la-oferta-de-jardines-maternales-y-de-infantes-y-espacios-de-primera-infancia-es-escasa-e-inequitativa",
+      "title": "el acceso a jardines maternales y espacios de primera infancia sigue siendo minoritario y desigual"
+    },
+    {
+      "url_hash": "5e3d797a97cb6df1089edc42962c76a08b7610e3a7dab172352f204b9e165bd0",
+      "cluster": 21,
+      "link": "https://tiempoar.com.ar/ta_article/educacion-pro-cierre-de-escuelas-jardines-maternales-y-grados-en-el-inicio-de-clases",
+      "title": "el cierre y la fusión de grados primarios porteños pasan de excepción a política de ajuste sistemática"
+    },
+    {
+      "url_hash": "6411ae01f337498bfff413f04bb9c8bea7d2d0dbd2eea79fa8e5a6ab4a6c0cb6",
+      "cluster": 11,
+      "link": "https://hoydia.com.ar/sociedad/la-prohibicion-del-celular-en-la-escuela-muestra-resultados-dispares",
+      "title": "la prohibición del celular en la escuela primaria funciona como respuesta reactiva a una crisis de salud mental más ampl"
+    },
+    {
+      "url_hash": "c2520fa9cbdb5f3a5e99f9ef11e3645dd37f27330ff00f5bdb7b9116b479c4a6",
+      "cluster": 20,
+      "link": "https://hola.com/padres/20260716913161/beneficios-lectura-papel-ninos-frente-lectura-pantallas-entrevista-neuropediatra-raquel-buenache",
+      "title": "la evidencia neurocientífica respalda la lectura en papel por sobre la pantalla en los primeros años"
+    },
+    {
+      "url_hash": "f9fa1324dfd1afc07b672d69d4276fd939c95009012a1e8b553fb656d79c1b71",
+      "cluster": null,
+      "link": "https://oes.fundacion-sm.org/eduforics/reimaginar-juntos-los-futuros/tecnologias-y-aprendizaje/pantallas-en-la-infancia-si-o-no-lo-que-dice-la-ciencia",
+      "title": "el consenso científico ubica recién a los 5-6 años la edad razonable para el primer contacto con pantallas"
+    },
+    {
+      "url_hash": "c0591d81c0d29acf5f93ed991d99843dc5c5d6aac353256cf03871fc2b7abcb6",
+      "cluster": 12,
+      "link": "https://sepernoticias.com.ar/noticias/2026/04/23/cierre-escuelas-rurales-muestra-legislatura-santa-fe.html",
+      "title": "una muestra fotográfica en la legislatura santafesina documenta el cierre sistemático de escuelas rurales en el país"
+    },
+    {
+      "url_hash": "45a4b0a3916eee7456fa5485f612560aa5e7dced6ea9f4fe2f89536221f8fb4a",
+      "cluster": 12,
+      "link": "https://infovera.com.ar/web/2026/05/30/que-pasa-cuando-se-cierra-una-escuela-rural",
+      "title": "el cierre de escuelas rurales se redefine como una decisión de país, no un trámite administrativo"
+    },
+    {
+      "url_hash": "ec3df68b0a32aa81df3cfcd3793914cc28de79c8cb86474ba9151e5d341f55da",
+      "cluster": 22,
+      "link": "https://pregon.com.ar/nota/29787/2026/05/educacion--afirman-que-no-hay-cierre-de-escuelas-hay-despoblamiento-en-parajes",
+      "title": "el gobierno reencuadra el cierre de escuelas como despoblamiento y no como decisión de política educativa"
+    },
+    {
+      "url_hash": "d30d977e21afec03fe228064e5f5d1f340fd9217f0919d50d1a73bf29773b405",
+      "cluster": 3,
+      "link": "https://canalc.com.ar/educacion-en-casa-el-proyecto-oficial-que-cambia-la-escuela",
+      "title": "especialistas advierten que el homeschooling podría profundizar las desigualdades educativas existentes"
+    },
+    {
+      "url_hash": "73e44d10c3163037faaa33775daecebaf7e898afce2578dd066acc4e81ed3905",
+      "cluster": 22,
+      "link": "https://cronista.com/negocios/cuanto-cuesta-la-cuota-de-los-colegios-privados-mas-top-de-la-argentina",
+      "title": "el estado desregula el control sobre los aranceles de los colegios privados"
+    },
+    {
+      "url_hash": "ecc2de24248bf127ef997d1b7971c64b8c426b29d7ee656a364c34748a35c0e7",
+      "cluster": 21,
+      "link": "https://primeraedicion.com.ar/nota/101115703/matricula-colegios-gestion-privada-misiones-crecimiento",
+      "title": "en misiones la matrícula privada crece a contramano del país gracias a cuotas bajas y continuidad de clases"
+    },
+    {
+      "url_hash": "ffa755991fb78fc5a4c238595d7e58c49267e900dd78bb862857f4aa5cd54d2d",
+      "cluster": 21,
+      "link": "https://chequeado.com/el-explicador/crecio-la-matricula-en-las-escuelas-estatales-y-cayo-en-las-privadas-durante-la-pandemia",
+      "title": "la pandemia invirtió la tendencia de 15 años: creció la matrícula estatal y por primera vez cayó la privada"
+    },
+    {
+      "url_hash": "f629fc036132f46101efcdd9ca906d186ce07c49c30c246f52ddaa54349beabe",
+      "cluster": 21,
+      "link": "https://noticiasdel6.com/advierten-una-migracion-de-alumnos-hacia-escuelas-privadas-y-alertan-por-el-impacto-en-la-matricula-publica",
+      "title": "la migración de alumnos a la privada y la caída de matrícula empiezan a generar sobreoferta de docentes"
+    },
+    {
+      "url_hash": "56a81eccf6e1e4f533a6e5c982f2f7c98f7c50a0ce4420baa7f75ff23d6b6dab",
+      "cluster": 0,
+      "link": "https://argentina.indymedia.org/2026/05/27/una-vez-mas-la-educacion-intercultural-bilingue-tuvo-su-encuentro-en-la-provincia-de-salta",
+      "title": "el congreso de educación intercultural bilingüe en salta consolida un espacio educativo propio para pueblos originarios"
+    },
+    {
+      "url_hash": "07aae546cb6428031a8837565dac1da72b24c4d1daa3ccce75f19b9b65e56b62",
+      "cluster": 10,
+      "link": "https://suteba.org.ar/la-grave-situacion-de-los-comedores-escolares-de-la-provincia-llego-al-global-press-journal-15370.html",
+      "title": "los ajustes fiscales recortan de forma directa la comida que reciben los chicos en la escuela"
+    },
+    {
+      "url_hash": "536aa118bfd8be1d2646d466e2e365a1e59a0eb1e2ddc3b0d2cfa3facda91c3a",
+      "cluster": 10,
+      "link": "https://ucema.edu.ar/investigacion/clarin-170625",
+      "title": "el potencial federal para experimentar con libertad educativa provincial permanece sin usar en argentina"
+    },
+    {
+      "url_hash": "5629bb659775f294416e814a1c1732430b577f3e6fc1258c2fe13a0b9c812c7f",
+      "cluster": null,
+      "link": "https://revista.elarcondeclio.com.ar/va-de-nuevo-nuevo-proyecto-de-modificacion-de-la-ley-de-educacion-en-argentina",
+      "title": "el proyecto de reforma educativa fija menos horas de clase obligatorias en primaria que las acordadas hoy a nivel federa"
+    },
+    {
+      "url_hash": "43c93412d733bf7099871cea132813044c5dd287123b5f0a17aa846516ba3f1e",
+      "cluster": 21,
+      "link": "https://blog.pearsonlatam.com/credenciales-alternativas-el-nuevo-lenguaje-del-mercado-laboral",
+      "title": "el mercado de credenciales alternativas crece a un ritmo que podría erosionar el valor exclusivo del título tradicional"
+    },
+    {
+      "url_hash": "f33dea1dd2e4ea67868bace53ace98fda40224eef1a2443f118c081baf6ebf04",
+      "cluster": null,
+      "link": "https://continuemosestudiando.abc.gob.ar/contenido/ciudadania-digital",
+      "title": "el currículum oficial bonaerense ya incorpora el consumo problemático de tecnología como contenido a enseñar"
+    },
+    {
+      "url_hash": "7d97d00e925b08ce9c7b9e6c2784133b40eb2a5aa2818aaa17b7d1ae266a8793",
+      "cluster": 7,
+      "link": "https://eldiarioar.com/sociedad/escuelas-argentinas-buscan-combatir-calor-extremo_1_12636958.html",
+      "title": "Las olas de calor ya obligan a suspender clases en escuelas de una gran ciudad argentina"
+    },
+    {
+      "url_hash": "262c38eb5a142197490a6f835e3951a94062a0d60c7463bc5fffa36a8b3d07ce",
+      "cluster": 4,
+      "link": "https://uoc.edu/es/news/2026/el-calor-amenaza-el-aprendizaje-en-escuelas-no-adaptadas-al-clima",
+      "title": "Evidencia internacional liga la exposición al calor en el aula con caídas medibles en pruebas estandarizadas"
+    },
+    {
+      "url_hash": "90b07847af597af766738c619ee3c2e3608474b0b0dffeb885fb75d12dcfe062",
+      "cluster": 7,
+      "link": "https://lagaceta.com.ar/nota/1128617/sociedad/mas-100-escuelas-siguen-sin-clases-tucuman-tras-inundaciones.html",
+      "title": "Las inundaciones dejan escuelas primarias sin clases durante semanas por daños edilicios y accesos cortados"
+    },
+    {
+      "url_hash": "ec11d61941e93a5a58446a81e880e79d6833a9a809f6b1ebf6f8fe006bc8f97b",
+      "cluster": null,
+      "link": "https://eltribuno.com/nacionales/2026-3-11-9-17-0-inundaciones-en-el-sur-de-tucuman-evacuan-a-cientos-de-familias-y-suspenden-las-clases-en-toda-la-provincia",
+      "title": "Ante una emergencia climática, un gobierno provincial descarta la virtualidad y opta por recuperar días de clase después"
+    },
+    {
+      "url_hash": "f1728df704dd3f7e29982f4dfd2f0bdda2d49f03888a43a028d0e046a2862719",
+      "cluster": 7,
+      "link": "https://infobae.com/sociedad/2026/04/17/temporal-en-la-pampa-intensas-lluvias-y-fuertes-rafagas-de-viento-causaron-anegaciones-destrozos-y-evacuaciones",
+      "title": "Un solo temporal daña vidrios, techos y aulas en varias escuelas de una misma ciudad"
+    },
+    {
+      "url_hash": "59bc827ce0edd477d5fe60db941e5d8093a8968445a58efe1eaf4d8402fbf79a",
+      "cluster": 1,
+      "link": "https://educ.ar/recursos/150016/educacion-ambiental-integral",
+      "title": "Una ley nacional obliga a incorporar la educación ambiental como contenido transversal en todos los niveles, incluida la"
+    },
+    {
+      "url_hash": "b7f18d5522964aa51681578836549aff2860673ec57f85a225c70ccde8025f8a",
+      "cluster": 22,
+      "link": "https://cronista.com/apertura/empresas/huertas-escolares-sustentabilidad-a-futuro",
+      "title": "Una provincia obliga por ley a que todas las escuelas primarias tengan huerta propia"
+    },
+    {
+      "url_hash": "50f0acc73964005176ddc2619a6a6e3f568460b89f9ad6c5ce97aa39615d4aa5",
+      "cluster": 10,
+      "link": "https://mascomunidad.org.ar/huertas-escolares-un-esfuerzo-alimentario-y-un-aula-a-cielo-abierto",
+      "title": "Casi la mitad de los chicos argentinos depende de la escuela para recibir ayuda alimentaria"
+    },
+    {
+      "url_hash": "7d616c8d4153a253b4c7b308933999a2c50a60cb606d634200609819b2be95bc",
+      "cluster": 7,
+      "link": "https://buenosaires.gob.ar/gcaba_historico/noticias/programa-escuelas-verdes-cuidar-el-ambiente-desde-el-aula-y-hacia-la",
+      "title": "Un programa estatal sostenido convierte huertas, reciclaje y energías renovables en rutina escolar porteña"
+    },
+    {
+      "url_hash": "75fc420ea95caf73941c7b35ecb2639247f82dfdb62842b5fafa849c86a8511f",
+      "cluster": 18,
+      "link": "https://cuyonoticias.com/contenido/18471/san-juan-eduge-plataforma-educativa-ia",
+      "title": "Una provincia integra IA en la gestión escolar de primaria para detectar riesgo de abandono y digitalizar trámites"
+    },
+    {
+      "url_hash": "1842b3c14ce82e1438ad7bb12fef135ea13fc4edb972fc985d431c1bf47e788a",
+      "cluster": 18,
+      "link": "https://argentina.gob.ar/noticias/hub-tecnoeducativo-7-proyectos-para-potenciar-los-procesos-educativos",
+      "title": "Un hub público-privado pilotea la incorporación de robótica y programación a la currícula de primaria"
+    },
+    {
+      "url_hash": "cc13c0021da7c95cb4ddcc192b84fa80f8e303d698c331bebfdafcf727d1cefd",
+      "cluster": 12,
+      "link": "https://congresos.fahce.unlp.edu.ar/seminarioredestrado/xiii-seminario/actas/ponencia-241203114036943801",
+      "title": "Clubes de tecnología rural muestran que la conectividad sin formación docente sostenida no alcanza"
+    },
+    {
+      "url_hash": "a238fe01c9d5302b286ddedb58c6fd14fc402c4abbeee1b64ca0835b144966a2",
+      "cluster": 12,
+      "link": "https://lanacion.com.ar/tecnologia/como-la-firma-argentina-orbith-logra-reducir-la-brecha-digital-y-brindar-conectividad-satelital-a-nid04082022",
+      "title": "Un proveedor privado de internet satelital se vuelve infraestructura crítica para escuelas rurales sin cobertura estatal"
+    },
+    {
+      "url_hash": "42bc3a47b04d0ee342cd7f4e84cc059b097e10379798ff2d29d754991ccc9cda",
+      "cluster": 12,
+      "link": "https://argentina.gob.ar/noticias/un-total-de-156-escuelas-rurales-acceden-por-primera-vez-internet-traves-de-arsat",
+      "title": "El estado conecta escuelas rurales por satélite como política pública explícita desde 2017"
+    },
+    {
+      "url_hash": "bb8a3ceeebfd2d362dac38a6b1335bba8f70dbb18fa5358737402db451ab35fa",
+      "cluster": 12,
+      "link": "https://casarosada.gob.ar/haciendo/plan-de-conectividad-de-escuelas-rurales.html",
+      "title": "El plan de conectividad satelital rural fija una meta de miles de escuelas sin cronograma de cumplimiento verificable en"
+    },
+    {
+      "url_hash": "e65433e7787792af2a555842c7382a3e970264fc9fcc9e85a0e3488efe9aeaf9",
+      "cluster": 12,
+      "link": "https://lanacion.com.ar/sociedad/informe-de-dos-ong-el-ano-pasado-el-435-de-las-escuelas-argentinas-no-tuvieron-acceso-a-internet-nid17052023",
+      "title": "El incumplimiento de metas de conectividad escolar expone una brecha digital territorial persistente entre provincias"
+    },
+    {
+      "url_hash": "1df1cdc04db768596da7688339517d4f821e67cad8de99c63bc850adc9a58025",
+      "cluster": 12,
+      "link": "https://iproup.com/innovacion/52685-de-la-brecha-digital-al-acceso-total-el-impacto-de-orbith-en-la-educacion-rural",
+      "title": "El proveedor satelital privado más que duplica su alcance en escuelas rurales en pocos años"
+    },
+    {
+      "url_hash": "8a0bc42fdb7194d0f17113797454c6ae026fc981e7f91554f93af23b6ecedfb0",
+      "cluster": 10,
+      "link": "https://inteligenciaargentina.ar/educaci%C3%B3n/argentina-y-la-brecha-digital-educativa-conectados-al-wifi-desconectados-del-conocimiento",
+      "title": "La discontinuación de Conectar Igualdad deja a la Argentina sin política nacional de inclusión digital escolar"
+    },
+    {
+      "url_hash": "f97c5d68a7f143d4f94165cc15679a564f464d9bf0a8c20f367dcac8b0858e2a",
+      "cluster": 9,
+      "link": "https://conurbanodigital.com/pruebas-aprender-en-la-edicion-2025-mejoraron-los-resultados-en-lengua-y-matematica-en-la-provincia-de-buenos-aires",
+      "title": "Los resultados de Aprender 2025 muestran mejoras en primaria concentradas en escuelas estatales y sectores de menor nive"
+    },
+    {
+      "url_hash": "d68fe424f4cd0ab73b206be57763341d4fb41c946d1206d1719164f71b62068c",
+      "cluster": 9,
+      "link": "https://diputadosbsas.com.ar/pruebas-aprender-resultados-tercer-grado",
+      "title": "Más de la mitad de los chicos de tercer grado no llega al nivel de lectura esperado, con brecha marcada por gestión y co"
+    },
+    {
+      "url_hash": "4f700eaea6071cf71929260f97eb8652678d24bb080058c06e2ca8d4ddb5adfe",
+      "cluster": 9,
+      "link": "https://misionescuatro.com/politica/matematica-el-desafio-educativo-las-provincias-impulsan-un-plan-para-mejorar-el-aprendizaje",
+      "title": "Las 24 provincias acuerdan un plan federal para revertir el bajo desempeño en matemática desde la primaria"
+    },
+    {
+      "url_hash": "f9aaf10d8f726472a2791b5406cd07c376053c21df5a23e448aeacfec04d55f0",
+      "cluster": 9,
+      "link": "https://diarioderivera.com.ar/2026/07/03/la-provincia-supero-el-promedio-nacional-en-lengua-y-matematica-en-la-prueba-aprender",
+      "title": "Los resultados de Aprender por quintil socioeconómico muestran una brecha de aprendizaje de más de cuatro a uno en matem"
+    },
+    {
+      "url_hash": "3d3c45672e17aea8bb7c7af0287dfd3f73b92fa6a320c07ce1c7201c0089f978",
+      "cluster": 8,
+      "link": "https://agenciasanluis.com/2026/08/20/1200254-la-provincia-refaccionara-y-dara-mantenimiento-a-cuatro-escuelas",
+      "title": "El mantenimiento edilicio escolar empieza a justificarse como adaptación a lluvias más intensas"
+    },
+    {
+      "url_hash": "47b2ac96b9541c62fa73f91a91a672dc10fa15b1275bc381919bf8048867fe0d",
+      "cluster": 8,
+      "link": "https://eltribuno.com/nota/2022-2-1-0-0-0-las-escuelas-sin-agua-no-pueden-educar",
+      "title": "La falta de agua potable en escuelas rurales se asocia directamente con peor rendimiento en primaria"
+    },
+    {
+      "url_hash": "48700b22c82915033d5adbc6374a9dab16959d409e49aaab4c3b4aebbef957a4",
+      "cluster": 8,
+      "link": "https://naturaleza.ar/contenido/4037/agua-que-no-has-de-beber-el-derecho-humano-al-agua-en-las-escuelas-bonaerenses",
+      "title": "El agua contaminada con agroquímicos en escuelas bonaerenses se resuelve por vía judicial, caso por caso"
+    },
+    {
+      "url_hash": "15fc600acbe69b7350b1ba7d8f210c9e8e635e7f8ef3f46bb2d66941ff021681",
+      "cluster": 7,
+      "link": "https://buenosaires.gob.ar/gcaba_historico/noticias/las-escuelas-portenas-apuestan-por-las-energias-renovables",
+      "title": "La energía renovable se instala como contenido pedagógico además de infraestructura en escuelas porteñas"
+    },
+    {
+      "url_hash": "c13970cfbc2e71b1afb8ff505af22db48d626d3400ec40a6830d11bc1c977e91",
+      "cluster": 7,
+      "link": "https://gba.gob.ar/gobierno/noticias/avanza_el_proyecto_de_paneles_solares_en_escuelas_del_delta",
+      "title": "La energía solar con baterías se usa para blindar la continuidad de clases y comedores ante cortes eléctricos"
+    },
+    {
+      "url_hash": "614763a9fe0e40f8f7a6441811aedb30f6c432b35963976f24c037f0cf242c23",
+      "cluster": 0,
+      "link": "https://argentina.gob.ar/noticias/permer-avanza-en-la-repotenciacion-de-energia-solar-para-260-escuelas-rurales-de-salta",
+      "title": "La electrificación rural exige consulta previa a comunidades originarias en escuelas interculturales bilingües"
+    },
+    {
+      "url_hash": "d594f416be9983e1d71fa0b3980f68d64964e982a2bccf6748799862cb500b04",
+      "cluster": 21,
+      "link": "https://iprofesional.com/finanzas/451505-cuanto-gana-un-maestro-en-2026-con-una-brecha-entre-provincias-que-llega-al-100-por-ciento",
+      "title": "La brecha salarial docente entre provincias supera el 100% para el mismo cargo y antigüedad"
+    },
+    {
+      "url_hash": "3543f3d55b0c4e4bd08eb04bea0822ff4ae9c14e7f1f28a603eb50a75a13726c",
+      "cluster": 10,
+      "link": "https://infobae.com/educacion/2024/08/08/en-las-escuelas-mas-pobres-3-de-cada-10-docentes-son-suplentes-advierten-que-impacta-en-el-aprendizaje",
+      "title": "La inestabilidad docente por suplencias se concentra en las escuelas primarias más pobres"
+    },
+    {
+      "url_hash": "2f7263d74f720a7825b22ef1d90b84bc65e05ad258f1db390885f6bdf3cc33b5",
+      "cluster": 21,
+      "link": "https://lanacion.com.ar/opinion/el-gran-ausentismo-docente-tiene-solucion-nid28032024",
+      "title": "Un incentivo de asistencia en Mendoza bajó el ausentismo docente estatal al nivel del sector privado en un mes"
+    },
+    {
+      "url_hash": "7659592b432d04007f69e372cb834f609bb7230db9b55b1324b9bc236daa90ef",
+      "cluster": null,
+      "link": "https://revista.elarcondeclio.com.ar/en-las-escuelas-mas-pobres-3-de-cada-10-maestros-son-suplentes",
+      "title": "La rotación por suplencias docentes se concentra en las escuelas primarias más pobres"
+    },
+    {
+      "url_hash": "afe6b62b5df6a01ab546d50261ef7a9fd49ec9a15e86641fa18d011dbda5876f",
+      "cluster": 9,
+      "link": "https://cuadernodetrabajo.wordpress.com/2026/08/24/solo-la-mitad-de-los-alumnos-argentinos-llega-a-sexto-grado-a-tiempo-y-con-los-aprendizajes-esperados",
+      "title": "La primaria retiene a casi todos los chicos, pero solo la mitad aprende lo esperado"
+    },
+    {
+      "url_hash": "33be5362124af2ecef58da21fc48f310795ac51fdb44a401d8d17c918e131f71",
+      "cluster": 9,
+      "link": "https://revistasalvador.com.ar/la-educacion-argentina-se-encuentra-en-estado-terminal",
+      "title": "Programas locales como MateSalta emergen para cerrar la brecha estructural en matemática"
+    },
+    {
+      "url_hash": "971f3b6f462cfd111dbe1ebe316f9f4789515080bd1510a8efec68c3bd855a79",
+      "cluster": 9,
+      "link": "https://infobae.com/educacion/2026/07/12/matematica-la-gran-deuda-de-aprendizaje-que-estan-haciendo-las-provincias-para-mejorar-la-ensenanza",
+      "title": "Un plan federal instala la matemática como la nueva prioridad de aprendizaje tras la alfabetización"
+    },
+    {
+      "url_hash": "77ba0cbce6c62b6314f01c05a177be7c2ad65666e8c69e7184cb242414244b46",
+      "cluster": 20,
+      "link": "https://infobae.com/educacion/2024/10/06/en-2025-cambia-la-forma-de-ensenar-lengua-y-matematica-en-las-escuelas-primarias-de-caba",
+      "title": "CABA reemplaza el enfoque de 'psicogénesis' por un método estructurado de alfabetización inicial"
+    },
+    {
+      "url_hash": "28f75c263e72399cd23be51d9bc31c42661b50a9e9ce8d99931b07db3206589c",
+      "cluster": 11,
+      "link": "https://escuelademaestros.bue.edu.ar/bienestar-socioemocional",
+      "title": "La formación docente en bienestar socioemocional se instala como política institucional, no como contenido aislado"
+    },
+    {
+      "url_hash": "f6e73e03b0b4b0b8a99c55d5dc25b5fc6e9edd1f84189a3e4ab4558a2b6e7232",
+      "cluster": 11,
+      "link": "https://infobae.com/opinion/2025/05/01/el-bienestar-emocional-es-aprendizaje",
+      "title": "El retiro de celulares del aula se enmarca como política de bienestar emocional, no solo disciplinaria"
+    },
+    {
+      "url_hash": "d95d30f6d91700a8c4b78525fd95a28c54df5c9f7f7f52c09b048f1ec28b2877",
+      "cluster": 3,
+      "link": "https://iprofesional.com/management/450382-la-matricula-escolar-en-argentina-entra-en-una-fase-de-caida-historica",
+      "title": "La caída de matrícula esconde una redistribución territorial: crece en la Patagonia, se vacía en el norte"
+    },
+    {
+      "url_hash": "2dbcb345ed5735a9fbecd1599030cd6bb1f857a50ccc8f75d4170c27cb568f6d",
+      "cluster": 0,
+      "link": "https://poblaciones.org/2025/05/28/mapa-de-pueblos-indigenas-lenguas-y-educacion-intercultural-en-argentina",
+      "title": "Un mapeo sistemático cruza lenguas indígenas, censo y matrícula de educación intercultural bilingüe"
+    },
+    {
+      "url_hash": "bf8bbc1fae6b7accc76af26314aa76ea00d0e560493833baf84348b03c3f6870",
+      "cluster": null,
+      "link": "https://infobae.com/politica/2026/02/24/que-reformas-buscara-impulsar-milei-en-el-congreso-ley-de-estabilidad-reforma-educativa-y-boleta-unica",
+      "title": "El voucher escolar se instala como bandera explícita de la agenda presidencial para 2026"
+    },
+    {
+      "url_hash": "b5a5afb868286acbdd2720433c7de84e6e95323f6c24d4cddd629b2f1455d9f9",
+      "cluster": 21,
+      "link": "https://eldiarioar.com/opinion/tribuna/proyecto-ley-libertad-educativa-milei_129_13409685.html",
+      "title": "El salario docente arrastra una caída estructural de cuatro décadas que condiciona cualquier reforma de la carrera"
+    },
+    {
+      "url_hash": "8aa1bad449fdb78c2c1da64e4c530d2ddf1d1f89b72ac4e4f9c2022bacb931ef",
+      "cluster": 14,
+      "link": "https://lanacion.com.ar/politica/que-dice-el-proyecto-de-ley-de-libertad-educativa-nid09122025",
+      "title": "El proyecto de ley habilita explícitamente el financiamiento por demanda (vouchers) para toda la educación básica"
+    },
+    {
+      "url_hash": "c72c9c0371ccaf00b9fcb7dce01e606830c93cf3739efd409d828bd9a78172ef",
+      "cluster": 22,
+      "link": "https://redaccionrosario.com/2026/08/11/una-ley-para-entregar-la-soberania-educativa",
+      "title": "El sindicato docente mayoritario declara a la escuela pública 'la última frontera' frente al proyecto libertario"
+    },
+    {
+      "url_hash": "45898231a46f56a00b5e1d1b130294192cdc78def763b0a9ccc8345565eeeef2",
+      "cluster": 22,
+      "link": "https://lareforma.com.ar/Ley-de-libertad-educativa-en-que-consiste-esta-reforma-del-gobierno-y-cuales-son-los-puntos-mas-conflictivos.html",
+      "title": "El proyecto de ley omite la laicidad como principio de la educación pública por primera vez desde Sarmiento"
+    },
+    {
+      "url_hash": "95d3c1cf1960f5bb50783bf82db3316dcb1f8ad8ad3025c043b856e3efce341a",
+      "cluster": 22,
+      "link": "https://latfem.org/eso-que-llaman-libertad-educativa",
+      "title": "El presupuesto 2026 elimina las metas legales de inversión educativa, incluido el piso del 6% del PBI"
+    },
+    {
+      "url_hash": "66c3b334566d31f6c900b3b405b9d6f634efec8be9993c3940ee502f8a89984c",
+      "cluster": 3,
+      "link": "https://accion.coop/2026/08/04/pais/sociedad/obesidad-infantil-etiquetado-frontal-desigualdad-pobreza-nutricion",
+      "title": "el mapeo territorial de la doble carga de malnutrición infantil coincide con un intento de derogar el etiquetado frontal"
+    },
+    {
+      "url_hash": "82ec445e211906a3f505af6b3d1c1d29c3e4512600012a35a358309d2f174668",
+      "cluster": 3,
+      "link": "https://infobae.com/salud/2026/03/04/obesidad-infantil-12-recomendaciones-de-los-especialistas-para-prevenir-el-sobrepeso-en-ninos",
+      "title": "la obesidad infantil proyectada a duplicarse para 2035 vuelve la prevención temprana un tema de política pública"
+    },
+    {
+      "url_hash": "1caffb3f01de0361da0c79f3ab9f12747997e60020c4e8e89f22fddf708f1d4c",
+      "cluster": 3,
+      "link": "https://infobae.com/salud/2026/04/20/por-que-preocupa-la-obesidad-infantil-en-argentina-riesgos-y-el-rol-de-los-alimentos-ultraprocesados",
+      "title": "una periodista propone volver obligatoria la educación alimentaria en la currícula escolar frente al liderazgo regional "
+    },
+    {
+      "url_hash": "28bfff8fc6d6a6721891f929be1c3f3488a5a57fac77de99001d39abcb9244d7",
+      "cluster": 3,
+      "link": "https://cadena3.com/noticia/sociedad/estudio-revela-el-estado-actual-del-cuidado-infantil-y-las-licencias-en-argentina_581094",
+      "title": "el debate sobre licencias parentales se redefine como una discusión de capital humano ante la caída de la natalidad"
+    },
+    {
+      "url_hash": "f4ecbbc6df82663b864a3dc20d5e1a4cd0ee91892726da4b635ecd0d775c527f",
+      "cluster": 10,
+      "link": "https://iprofesional.com/management/447673-reforma-laboral-2026-que-pasaria-con-las-licencias-por-maternidad-paternidad-y-cuidado",
+      "title": "la reforma laboral 2026 deja intacto el régimen de licencias por maternidad y paternidad de 1974"
+    },
+    {
+      "url_hash": "88f416b8d1c2ca0e38b4e8f7cc9653ed55bd01f93a9658ba3a70bacf9ae8b815",
+      "cluster": 10,
+      "link": "https://perfil.com/noticias/sociedad/licencias-por-paternidad-presentan-un-proyecto-de-ley-para-extenderlas-a-30-dias-e-incluir-a-monotributistas.phtml",
+      "title": "un proyecto legislativo busca extender la licencia por paternidad a 30 días e incluir a monotributistas"
+    },
+    {
+      "url_hash": "ebb1a5ea87ea08f6d8b6ec682e65d657559576cde6a416bb438007bed5fc6896",
+      "cluster": 10,
+      "link": "https://economis.com.ar/lactancia-y-licencias-por-maternidad-y-paternidad-como-esta-argentina",
+      "title": "la caída del 49% en la tasa de fecundidad no modifica la lógica original del régimen de licencias familiares"
+    },
+    {
+      "url_hash": "d100dd794da7f8c4527f9d5796c0495e70dc60c2e9fb4a613495257bfc72a0c7",
+      "cluster": 21,
+      "link": "https://chequeado.com/el-explicador/vouchers-educativos-2026-quienes-pueden-acceder-a-este-beneficio-y-hasta-cuando-hay-tiempo-para-inscribirse",
+      "title": "la demanda del voucher educativo cae 43% en su segundo año de implementación"
+    },
+    {
+      "url_hash": "59e81bb73258cd6fb9f8311c5ba121e8d566569c9b19566665a5aacffd7f84f8",
+      "cluster": null,
+      "link": "https://ellitoral.com/educacion/calendario2026-educacion-argentina-clases-consejofederal-horasreloj-sistemaeducativo-monitoreo-ensenanza_0_3Z9zlaBkvJ.html",
+      "title": "el gobierno y las provincias fijan un piso de 190 días de clase medido por horas reloj efectivas"
+    },
+    {
+      "url_hash": "5762b2f6ba85d74f59e4c286375d0a9136b2be5ed58dd85f936d5f127e03b851",
+      "cluster": null,
+      "link": "https://inforegion.com.ar/2025/11/11/ciclo-lectivo-2026-el-gobierno-y-las-provincias-acordaron-190-dias-de-clases",
+      "title": "las 24 provincias acuerdan de forma federal un calendario escolar unificado de 190 días para 2026"
+    },
+    {
+      "url_hash": "3608189ebaaf31cd00c97aa2b739fe997598b4fe3531dc3b29b3f3300c5be422",
+      "cluster": null,
+      "link": "https://cronista.com/economia-politica/computadoras-gratis-el-gobierno-confirmo-que-reactivaran-un-plan-de-entrega-cuando-comienza",
+      "title": "el gobierno reactiva la entrega de computadoras del programa conectar igualdad"
+    },
+    {
+      "url_hash": "3c2f5e4c6fc5df3358a69f9de8f3643a8ad828b71984067340dc5fbae0003c88",
+      "cluster": 18,
+      "link": "https://buenosaires.gob.ar/gcaba_historico/educacion/agencia-de-habilidades-para-el-futuro/microcredenciales-certificacion-de-habilidades-para",
+      "title": "las microcredenciales digitales avanzan como forma alternativa de certificar habilidades fuera del título tradicional"
+    },
+    {
+      "url_hash": "f8f5711732129f2ec11a13fd8c825a6cc06ef102920528bb634536c94e612149",
+      "cluster": 9,
+      "link": "https://infobae.com/educacion/2025/07/03/los-estudiantes-argentinos-mejoraron-sus-resultados-de-lectura-y-matematica-en-una-prueba-regional",
+      "title": "La mejora post-pandemia en las pruebas ERCE contradice las proyecciones de catástrofe educativa"
+    },
+    {
+      "url_hash": "e509650f955fbbbf2351da333046de132b0e27829c96957ceed82f90844de002",
+      "cluster": 9,
+      "link": "https://lanacion.com.ar/sociedad/la-argentina-obtuvo-el-peor-resultado-de-su-historia-en-una-prueba-educativa-realizada-por-la-unesco-nid30112021",
+      "title": "El desempeño argentino en la evaluación regional ERCE retrocede a su peor nivel histórico y se politiza su causa"
+    },
+    {
+      "url_hash": "6d122471d66885de83f6e86f66126c815e5dfafa9b11ea29bcc7a27738cc3f1f",
+      "cluster": 9,
+      "link": "https://ellitoral.com/educacion/preguntas-prueba-educativa-unesco-fallaron-argentinos_0_sIsSgOPuGs.html",
+      "title": "Una segunda cobertura del mismo resultado ERCE 2019 repite el hallazgo sin evidencia adicional"
+    },
+    {
+      "url_hash": "8df664c5325c1b7bf4e7de5c4e9b4dac6ba656206b4ed0e7553a3c64553611fe",
+      "cluster": 9,
+      "link": "https://perfil.com/noticias/actualidad/unesco-como-es-la-prueba-que-marco-el-peor-desempeno-educativo-de-argentina-en-su-historia.phtml",
+      "title": "Una tercera cobertura del mismo resultado ERCE 2019 enmarca la caída como paradoja del país de mayor desarrollo humano r"
+    },
+    {
+      "url_hash": "d4eadd0ed9bba432b41e58dba7607b70f379c24482670e043228f69ebb3b783f",
+      "cluster": null,
+      "link": "https://identidadsindical.ar/nota-reforma-jubilatoria-2026-el-gobierno-eliminara-regimenes-diferenciales-que-alcanzan-a-millones-de-trabajadores-formales-64290",
+      "title": "La reforma previsional nacional proyecta eliminar el régimen jubilatorio especial docente junto a otros regímenes difere"
+    },
+    {
+      "url_hash": "b6e6cdfa49d0e68f0b4182f4865003bf270a77836bd301b6c4bda2f586aa733c",
+      "cluster": 21,
+      "link": "https://analisisdigital.com.ar/provinciales/2026/07/08/reforma-previsional-tras-el-rechazo-docente-el-pj-dio-marcha-atras-y-desistio-de-aumentar-la-edad",
+      "title": "El rechazo gremial docente logra frenar en el Senado provincial un intento de aumentar la edad jubilatoria especial"
+    },
+    {
+      "url_hash": "4b99efe0feca30dd3c59d34dc9a369895134ba1443effe6634a8b3cd2b102a1e",
+      "cluster": 22,
+      "link": "https://infobae.com/politica/2026/07/13/quienes-son-los-ganadores-y-perdedores-en-el-reparto-de-la-coparticipacion-bonaerense-en-2026",
+      "title": "El fondo de financiamiento educativo bonaerense crece mientras la coparticipación general a municipios cae"
+    },
+    {
+      "url_hash": "93901fd1328a9db5d0e1f85e0784b049d7fbd12c64f4b27325e3c5785badd4eb",
+      "cluster": 22,
+      "link": "https://grupolaprovincia.com/contenido/593219/presupuesto-2026alarmaenelgobiernoporunarticuloclavesobrefondoseduca",
+      "title": "El Congreso debate derogar la garantía legal del 6% del PBI para financiamiento educativo"
+    },
+    {
+      "url_hash": "33881cf95f8324c0f1ad922962c159667932ac101803cd68f64eae0079f4dfd5",
+      "cluster": 22,
+      "link": "https://todoprovincial.com/alerta-en-los-municipios-porque-el-presupuesto-2026-desfinancia-el-fondo-educativo",
+      "title": "La provincia de Buenos Aires denuncia que el presupuesto nacional desactiva la garantía de financiamiento educativo y co"
+    },
+    {
+      "url_hash": "b3f50f804737c751f18cb36d5edab7303acbeb01686946ba2c09e0b796671ab4",
+      "cluster": 22,
+      "link": "https://diariodelujan.com/coparticipacion-provincial-2026",
+      "title": "Una reescritura del mismo dato de coparticipación bonaerense circula citando a Infobae como fuente"
+    },
+    {
+      "url_hash": "db7f23e7027ad93aa8ba27d2443e07e288a3ca1397b45dea46cfd574bec79824",
+      "cluster": 3,
+      "link": "https://infobae.com/america/agencias/2026/08/23/la-inestabilidad-economica-y-laboral-entre-las-causas-de-la-baja-natalidad-en-argentina",
+      "title": "La brecha entre los hijos deseados y los hijos posibles se atribuye a la inestabilidad económica más que a factores cult"
+    },
+    {
+      "url_hash": "a7474c63db4d818898f9537ca19219da475796cfcc669fdda3758b50c5a9c5c9",
+      "cluster": 10,
+      "link": "https://iaepg.com.ar/el-invierno-demografico-argentino",
+      "title": "Ningún escenario de fecundidad modelado a 2035 recupera el nivel de reemplazo poblacional en Argentina"
+    },
+    {
+      "url_hash": "7456cba8245990fa1441810f3f8c7620c262834f4d483cecae854c97e6cc522c",
+      "cluster": 16,
+      "link": "https://infobae.com/tecno/2026/02/17/ninos-inteligencia-artificial-y-limites-expertos-alertan-sobre-riesgos-de-los-chatbots-en-la-infancia",
+      "title": "El uso infantil de chatbots de IA crece más rápido que los marcos de seguridad y regulación disponibles"
+    },
+    {
+      "url_hash": "c245d3eb4940029389978b0c2e706fdaa6245ed940072d76ff1eb84868834da4",
+      "cluster": 16,
+      "link": "https://welivesecurity.com/es/seguridad-menores/menores-y-chatbots-a-que-riesgos-prestar-atencion",
+      "title": "El uso infantil de chatbots de IA se generaliza más rápido que la capacidad de los adultos para mediarlo"
+    },
+    {
+      "url_hash": "e64d5e1d27e1cb20c8b48b9418ecb7e5ce0bf9affe6a9e77e662f07d42d572b6",
+      "cluster": 16,
+      "link": "https://qustodio.com/es/blog/son-aptos-para-jovenes-los-bots-de-compania",
+      "title": "Los bots de compañía con IA se instalan como confidentes cotidianos de chicos y adolescentes"
+    },
+    {
+      "url_hash": "7d769f69a48f1e2f7438c7b640521cb4f3362559ae7b788a5d3372d44f53de72",
+      "cluster": null,
+      "link": "https://recfaces.com/es/articles/a-la-escuela-por-la-cara-la-experiencia-internacional-de-la-recogida-de-datos-biometricos-de-los-menores",
+      "title": "La biometría escolar se expande en algunos países mientras otros la prohíben por riesgo a la privacidad infantil"
+    },
+    {
+      "url_hash": "ace576f945579ce64a7ffdf4f1af53f972b4baf221b4090b2a1a14419f32f76d",
+      "cluster": 1,
+      "link": "https://comunidadqdc.com.ar/ley-yolanda-asi-es-la-capacitacion-ambiental-obligatoria-y-virtual-para-la-administracion-publica",
+      "title": "La formación ambiental obligatoria para agentes del Estado empieza a alcanzar a directivos y docentes de primaria"
+    },
+    {
+      "url_hash": "26ddc48f440554f1d065745a2068fad8e7c39403dad067d9b64568d4914c0250",
+      "cluster": 22,
+      "link": "https://infobae.com/economia/2026/02/02/tension-en-colegios-privados-piden-un-aumento-del-81-en-las-cuotas-a-semanas-del-inicio-de-clases",
+      "title": "La derogación del control estatal de aranceles privados traslada el riesgo financiero de la escuela a las familias"
+    },
+    {
+      "url_hash": "3da93ee36e7d5a248c55fbcd4b6b4da4190507fcf40519ac011bd6f165fa1e41",
+      "cluster": 21,
+      "link": "https://infobae.com/economia/2026/03/31/las-cuotas-de-los-colegios-privados-aumentaran-mas-de-un-6-a-partir-de-abril-en-la-provincia-de-buenos-aires",
+      "title": "Los cierres de colegios privados se explican por una combinación de menos natalidad y crisis de aranceles"
+    },
+    {
+      "url_hash": "d03bc81c0e484709301940d90b9533ecf78a8de9de49417ca695e00ae80d5a57",
+      "cluster": 22,
+      "link": "https://enorsai.com.ar/economia/42972-colegios-privados-como-detectar-aumentos-ilegales-cuotas-denuncias.html",
+      "title": "La desregulación arancelaria habilita cobros informales que las familias deben aprender a impugnar"
+    },
+    {
+      "url_hash": "29018e848fda150172876c97b699dd60173bdbe638446baa5be2c2fa05ae1fed",
+      "cluster": 21,
+      "link": "https://infobae.com/educacion/2026/05/29/caba-reforma-la-carrera-docente-ante-la-caida-de-ingresantes-cambios-en-formacion-evaluacion-y-presentismo",
+      "title": "La evaluación docente porteña deja de discriminar desempeño y motiva un rediseño integral de la carrera"
+    },
+    {
+      "url_hash": "40f6deafc49037ff71d7ad63423eb4ed83bc681ae3a57823b582e182351f970d",
+      "cluster": 21,
+      "link": "https://perfil.com/noticias/sociedad/como-sera-ser-docente-el-plan-con-el-que-las-autoridades-portenas-buscan-redisenar-la-formacion-de-los-maestros.phtml",
+      "title": "La caída de aspirantes y egresados de los profesorados porteños persiste pese a un repunte puntual de ingresantes"
+    },
+    {
+      "url_hash": "b07fe81e346738b55048e00f804e0bdf5315d1633688e6b40d782e752039421e",
+      "cluster": null,
+      "link": "https://wroargentina.org/",
+      "title": "Una competencia internacional de robotica educativa gana escala entre chicos de 8 a 12 anos"
+    },
+    {
+      "url_hash": "06bfc1df2a1ff7f4ebe375d0daa7d2b62888cfd84abc17e223f28f51be600cc0",
+      "cluster": 11,
+      "link": "https://puntoconvergente.uca.edu.ar/violencia-escolar-en-argentina-del-tiroteo-en-san-cristobal-a-la-crisis-de-convivencia-en-las-aulas",
+      "title": "Un tiroteo escolar fatal dispara una ola de amenazas replicadas en escuelas de todo el pais"
+    },
+    {
+      "url_hash": "1a7efd120c5c06ab943da48c03ed4300529956730d88d6afa0bacaaf1ca54ab2",
+      "cluster": 11,
+      "link": "https://perfil.com/noticias/policia/aulas-bajo-amenaza-la-radiografia-de-una-violencia-escolar-que-ya-no-se-puede-ocultar.phtml",
+      "title": "Un estudio ubica a la Argentina entre los paises con mayor conflictividad educativa del mundo"
+    },
+    {
+      "url_hash": "24bad92bd67cc6cb5bd81d4f15f359540918a5868964e2095755f5d77a3b3eda",
+      "cluster": 11,
+      "link": "https://infobae.com/sociedad/2025/07/23/seis-de-cada-10-alumnos-de-6-grado-sufrio-bullying-en-la-escuela-primaria-o-via-redes-sociales",
+      "title": "Seis de cada diez chicos de sexto grado sufrio bullying en la escuela o por redes sociales"
+    },
+    {
+      "url_hash": "c07386db542cd20c6ea5c92e5e76ceec1c16aeae8a8c56ce47ca47fb58789cf9",
+      "cluster": 14,
+      "link": "https://cronista.com/finanzas-mercados/dia-de-la-educacion-financiera-cuales-son-las-asignaturas-pendientes-en-la-argentina",
+      "title": "La educacion financiera empieza a entrar como contenido escolar sin ley nacional que la exija"
+    },
+    {
+      "url_hash": "3c7c55ead17575f482525fac9e010e35eb87fcd12de58a7ef9a6399e7060df7b",
+      "cluster": 14,
+      "link": "https://cordoba.gob.ar/educacion-financiera-nueva-materia-escuelas-municipales",
+      "title": "Un sistema educativo municipal incorpora alfabetizacion financiera obligatoria en todos los grados de primaria"
+    },
+    {
+      "url_hash": "8746f8fe595779a989dcd144ec69aa525ec92580efaf927033cf7d20ae6a8f09",
+      "cluster": 3,
+      "link": "https://ellitoral.com/politica/pobreza-ninez-tareas-cuidado-alimentacion-auh-argentina-unicef_0_ei1TUVu0oj.html",
+      "title": "UNICEF distingue la pobreza infantil por ingresos de la privacion estructural y advierte que ambas pueden divergir"
+    },
+    {
+      "url_hash": "8a2437cba9bee313210aad9713e5e852d6f56cc371ba5f9f359f5de019fd1633",
+      "cluster": 3,
+      "link": "https://infobae.com/salud/2026/05/20/infancia-en-argentina-presentaron-un-programa-para-ampliar-derechos-y-reducir-la-pobreza-hasta-2030",
+      "title": "UNICEF fija una agenda 2026-2030 para la ninez argentina centrada en aprendizaje y proteccion"
+    },
+    {
+      "url_hash": "6d13368533f13ff57998b58d44857ba65f973c0471177f4698762efcb003a525",
+      "cluster": 3,
+      "link": "https://lanacion.com.ar/economia/unicef-sostiene-que-la-pobreza-infantil-bajo-al-423-en-2025-pero-advierte-por-una-suba-en-el-primer-nid09062026",
+      "title": "La pobreza infantil toca su nivel mas bajo desde 2018 pero UNICEF anticipa un rebote"
+    },
+    {
+      "url_hash": "e4b0e93e7a8ea00b18384b5852077c413353fd621bf0185c1098339f4b4930a9",
+      "cluster": 13,
+      "link": "https://infobae.com/educacion/2025/02/14/plan-de-alfabetizacion-las-provincias-adoptaron-distintos-metodos-para-ensenar-a-leer-y-escribir",
+      "title": "Las 24 provincias firman un compromiso federal de alfabetizacion pero divergen en el metodo elegido"
+    },
+    {
+      "url_hash": "6448bdf1a9b033feab5de261282afb370b95659097656be49958bfa785564664",
+      "cluster": 13,
+      "link": "https://infobae.com/educacion/2026/03/11/divulgador-cientifico-propone-revisar-como-se-ensena-a-leer-y-plantea-un-enfoque-distinto-para-enfrentar-la-crisis-educativa",
+      "title": "Un divulgador cientifico instala en medios masivos el metodo fonologico como solucion a la crisis lectora"
+    },
+    {
+      "url_hash": "ef65ada096c1451c26abf009e9ce4e6cceb030f2eaa5c308d9a3e29872d6df79",
+      "cluster": null,
+      "link": "https://ipehcs.conicet.gov.ar/alfabetizarse-es-mucho-mas-que-aprender-letras-el-reduccionismo-del-nuevo-metodo-de-alfabetizacion-en-argentina-nora-scheuer",
+      "title": "Una investigadora en psicologia del desarrollo cuestiona que el nuevo metodo de alfabetizacion reduzca leer a decodifica"
+    },
+    {
+      "url_hash": "f00915c0c1f2c7a3e1391a9400f79dd1178e73b92b482cd4e738ddaede46e807",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/greening-curriculum-guidance-teaching-and-learning-climate-action",
+      "title": "Los objetivos de aprendizaje climático empiezan a definirse por edad dentro del currículo"
+    },
+    {
+      "url_hash": "156639c50d09d341bb0606033fd9c44951f4118254e35f56c2a7e0005432079d",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/green-school-quality-standard-greening-every-learning-environment",
+      "title": "La sostenibilidad pasa de contenido aislado a estándar integral para toda la escuela"
+    },
+    {
+      "url_hash": "05ebfa593579f8a8702877022824cbce7473225cff1ac301861f44930d3cfa43",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/climate-change-and-sustainability-science-and-social-science-secondary-school-curricula",
+      "title": "Los currículos omiten cambio climático incluso cuando los docentes creen estar enseñándolo"
+    },
+    {
+      "url_hash": "2b0dbbb9dcf0e9de711ce504e0d6eb840e97f9327b6c45e32fe4e5fb8171427e",
+      "cluster": 1,
+      "link": "https://unesco.org/gem-report/en/2024ccec",
+      "title": "La educación comienza a medirse también por su capacidad de preparar para la transición verde"
+    },
+    {
+      "url_hash": "5fcc1be5d6d20c00ee448b39cbda593a85fd503bb5b1e7356ff48e70a87f3232",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/greening-education-partnership-getting-every-learner-climate-ready",
+      "title": "Una alianza internacional fija metas cuantificables para volver climáticamente preparadas a las escuelas"
+    },
+    {
+      "url_hash": "48d7b9bd05330a567375073a0e7929a6b1283206c07318e738dbd379e83c5b5a",
+      "cluster": null,
+      "link": "https://unesco.org/en/articles/environmental-stewardship-schools-cyprus-whole-school-approach-sustainability",
+      "title": "Las escuelas se convierten en laboratorios vivos de eficiencia energética y aprendizaje ambiental"
+    },
+    {
+      "url_hash": "8af97a72d1cd6c07b5cb0c0faba6b1161c67c71ac936d023f99b533a673f8fbe",
+      "cluster": 1,
+      "link": "https://argentina.gob.ar/ambiente/educacion-ambiental/avances-en-la-implementacion-de-la-ley-0",
+      "title": "La ley ambiental argentina empieza a traducirse en estrategias jurisdiccionales de educación"
+    },
+    {
+      "url_hash": "1ac08d31bd958e03bbd95bf09a0c9874a39c9b4c9560700d97bf9d7c709798f5",
+      "cluster": 2,
+      "link": "https://ilo.org/es/resource/noticias/la-oit-llama-fortalecer-las-capacidades-laborales-en-la-industria",
+      "title": "La transición industrial obliga a combinar formación técnica con competencias digitales y verdes"
+    },
+    {
+      "url_hash": "d3b9c241d94266e0d2575a0de5eb9c53812a54a442676651fab012be3ccad6fe",
+      "cluster": 2,
+      "link": "https://ilo.org/es/publications/trayectorias-laborales-y-certificacion-de-competencias-en-argentina",
+      "title": "Las certificaciones laborales comienzan a reconocer aprendizajes adquiridos fuera de trayectorias formales"
+    },
+    {
+      "url_hash": "92a3026870cce3a738b5583e180bff1467a20b37a5b92d381e54924b51aba94b",
+      "cluster": 17,
+      "link": "https://argentina.gob.ar/node/436471",
+      "title": "La protección de datos infantiles se vuelve una condición explícita de la ciudadanía digital"
+    },
+    {
+      "url_hash": "4d354eee447fb2c82fbc4ad9599a469072d8be9ae7e12aaf1553fb07bfe58ff6",
+      "cluster": null,
+      "link": "https://argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/sistema-integral-de-informacion-digital-educativa-sinide",
+      "title": "Argentina consolida registros nominales para seguir cada trayectoria educativa"
+    },
+    {
+      "url_hash": "2b3c4d8044c8c420d3779641e42d9ecbd22ad2e732dce39e5a2f844ecab2f906",
+      "cluster": 0,
+      "link": "https://argentina.gob.ar/modalidad-de-educacion-intercultural-bilingue",
+      "title": "La educación intercultural bilingüe se institucionaliza como modalidad nacional"
+    },
+    {
+      "url_hash": "e47e9fd193bf89bd0ca55bdb67fae23a25cd082912122c73cdc985501cb5f530",
+      "cluster": 13,
+      "link": "https://cippec.org/presentacion-del-documento-el-diseno-de-sistemas-provinciales-efectivos-de-evaluacion-de-aprendizajes",
+      "title": "Las provincias multiplican evaluaciones propias mientras persiste la débil coordinación federal"
+    },
+    {
+      "url_hash": "29b1f6f08899cf7987165a89049e17fd7b51ead64643223c79fcf85ee1fd4758",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/cfe-consolidacion-de-la-base-nacional-homologada-y-presentacion-de-los-planes-de",
+      "title": "La base educativa nacional integra personas, titulaciones, organizaciones e infraestructura"
+    },
+    {
+      "url_hash": "d4166c3f8f7b1161b6c87baf730a61e1c5a09d485d3f3cbe34313e8aa5986839",
+      "cluster": 1,
+      "link": "https://santafe.gob.ar/noticias/noticia/imprimir/283608",
+      "title": "Santa Fe incorpora la educación ambiental como enfoque transversal del currículo primario"
+    },
+    {
+      "url_hash": "e16c3d2fbcaa91773d70dc21823aaf3d1d7e36fe5778408a0bbdf4e54b64cd71",
+      "cluster": 1,
+      "link": "https://santafe.gob.ar/noticias/noticia/284448",
+      "title": "Los proyectos ambientales escolares comienzan a recibir incentivos públicos provinciales"
+    },
+    {
+      "url_hash": "9036309aab5e6ad467f996e8630d81bb5be59dd3eb063aa84e509e952b5fec99",
+      "cluster": 8,
+      "link": "https://portal.entrerios.gov.ar/prensa/noticias/28855",
+      "title": "La renovación escolar combina agua, accesibilidad, comedor e instalaciones eléctricas"
+    },
+    {
+      "url_hash": "3b1ee98a8b02eac41978767901058b42bcb4a87c9ce7d4b0e3f1bf1d55146fb7",
+      "cluster": 8,
+      "link": "https://entrerios.gov.ar/minplan/noticias/20250613-finalizo-la-obra-en-la-escuela-n%C2%B0-94-de-gualeguaychu-para-garantizar-el-suministro-de-agua",
+      "title": "Garantizar agua segura reaparece como condición básica para sostener la escolaridad"
+    },
+    {
+      "url_hash": "1ae81824c5e47f87d46f811063d691df15ce051361ec4314946d7ac89397806d",
+      "cluster": 8,
+      "link": "https://entrerios.gov.ar/minplan/noticias/20251113-optimizan-el-sistema-de-agua-en-una-escuela-de-maria-luisa",
+      "title": "Las provincias intervienen sistemas de agua escolares antes de que interrumpan las clases"
+    },
+    {
+      "url_hash": "33ebbbd7f8d4472a1a5fece3984d102ca60a12777f5622205e4616dfbcf06240",
+      "cluster": 8,
+      "link": "https://entrerios.gov.ar/minplan/noticias/20250619-en-parana-se-ejecutan-obras-en-la-escuela-hellen-keller-por-filtraciones-y-fallas-en-el-sistema-de-agua",
+      "title": "Filtraciones y fallas de agua exponen la vulnerabilidad cotidiana de los edificios escolares"
+    },
+    {
+      "url_hash": "65ff5bb7e82632b99306c633a0717b8c756aa9fe6646c49f39071bfa7431dc84",
+      "cluster": 8,
+      "link": "https://entrerios.gov.ar/minplan/noticias/20250623-la-provincia-refuerza-la-infraestructura-en-la-escuela-integral-n%C2%B0-3-%E2%80%9Ctobar-garcia%E2%80%9D-de-parana",
+      "title": "La adaptación de escuelas especiales exige resolver simultáneamente accesibilidad y deterioro edilicio"
+    },
+    {
+      "url_hash": "103a48e61526135c7d2c4b377befd13525ee9b716617541d4c2601b15a985a44",
+      "cluster": 1,
+      "link": "https://argentina.gob.ar/noticias/conocer-para-proteger-educacion-ambiental-desde-el-territorio",
+      "title": "La educación ambiental se desplaza del aula hacia experiencias directas en áreas protegidas"
+    },
+    {
+      "url_hash": "2f8877053fd3327e3f230e4ee45279bac5646c6344c48335033ea1a27d2b7915",
+      "cluster": 1,
+      "link": "https://argentina.gob.ar/noticias/la-subsecretaria-de-ambiente-de-la-nacion-realizo-una-inspeccion-para-analizar-las",
+      "title": "Las familias impulsan monitoreo ambiental permanente alrededor de una escuela"
+    },
+    {
+      "url_hash": "8ea9dbd51bb56557dc4bcb1cb46d9c05e5154dca0631b8e3fbf993b11fb11686",
+      "cluster": 1,
+      "link": "https://argentina.gob.ar/ambiente/educacion-ambiental/ley-de-educacion-ambiental-integral",
+      "title": "La educación ambiental adquiere un marco legal transversal para ámbitos formales y no formales"
+    },
+    {
+      "url_hash": "a88d2dd0ebfb1eda854ecd714409bf2ab2fafc897b167b7132f7a817f7340609",
+      "cluster": 1,
+      "link": "https://argentina.gob.ar/noticias/la-educacion-ambiental-integral-y-el-cambio-climatico",
+      "title": "La crisis climática instala nuevos contenidos pedagógicos y formas de participación comunitaria"
+    },
+    {
+      "url_hash": "2aac0617c6985a4318aa25640f5c68b02cb20197daf2ccad1bb9a8d0ffcd557b",
+      "cluster": 1,
+      "link": "https://argentina.gob.ar/noticias/ambiente-dio-inicio-al-nuevo-programa-de-educacion-ambiental-puertas-abiertas",
+      "title": "Los organismos ambientales abren programas educativos fuera de la estructura escolar tradicional"
+    },
+    {
+      "url_hash": "8b729bc149adbfdbe3220e052fbd403a1573982824bcb64105e957bc2a80b60f",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/bridging-digital-and-green-transitions-through-education",
+      "title": "La transición digital empieza a evaluarse por su capacidad de acelerar o frenar la transición verde"
+    },
+    {
+      "url_hash": "bac60ee8129f2407a037f09edfe72473ace7cd1a31c0b6112c3f0f8fe61d8f5a",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/safe-and-resilient-schools-climate-crisis-contexts-key-takeaways-global-education-meeting-0",
+      "title": "La resiliencia climática se vuelve requisito para garantizar continuidad educativa durante emergencias"
+    },
+    {
+      "url_hash": "9564b13e644e6af88583e635cc3426d0de79faf7adb65cd4c024977c84f60fef",
+      "cluster": 7,
+      "link": "https://cadenaser.com/aragon/2026/07/05/educacion-trabaja-ya-con-las-demandas-de-caracter-urgente-para-luchar-con-las-olas-de-calor-en-los-colegios-radio-huesca",
+      "title": "Las olas de calor convierten la climatización escolar en una demanda educativa urgente"
+    },
+    {
+      "url_hash": "3d264337648dc795e9c777cb64b960eb3731447ed4d82403f708c953803d5b67",
+      "cluster": 7,
+      "link": "https://cadenaser.com/aragon/2026/07/14/fraga-anuncia-la-climatizacion-de-las-aulas-de-primaria-ser-aragon-oriental",
+      "title": "Los municipios comienzan a climatizar específicamente las aulas de primaria"
+    },
+    {
+      "url_hash": "b42cb7dd7aaec4ad8229747d7a2a4558cde66bd8f02cfed33c8a27d93fdb929c",
+      "cluster": 7,
+      "link": "https://cadenaser.com/aragon/2026/05/26/calor-en-las-aulas-educacion-prepara-un-plan-de-climatizacion-mientras-los-sindicatos-critican-que-llega-tarde-radio-zaragoza",
+      "title": "La adaptación térmica escolar avanza después de la emergencia y bajo presión sindical"
+    },
+    {
+      "url_hash": "36c7b574518a87f9f8a667ff3b5d55e8a9dfd79e287ce553cd1fba92319f1f62",
+      "cluster": 7,
+      "link": "https://cadenaser.com/euskadi/2026/08/24/el-gobierno-vasco-activa-un-plan-para-adaptar-los-colegios-de-bilbao-al-calor-tras-las-quejas-de-las-familias-radio-bilbao",
+      "title": "Las quejas familiares aceleran planes públicos para adaptar colegios al calor"
+    },
+    {
+      "url_hash": "fabd0fee2f911c437f60609b094072438920e734566425d95eabbc6a638124e0",
+      "cluster": 7,
+      "link": "https://elpais.com/educacion/2026-06-08/el-calor-extremo-en-las-aulas-obliga-a-las-familias-a-pagar-apanos-ante-la-falta-de-soluciones-solo-el-1-de-los-colegios-publicos-esta-climatizado.html",
+      "title": "Las familias financian soluciones térmicas ante la baja climatización de las escuelas públicas"
+    },
+    {
+      "url_hash": "8686be7c08c3d612d52ebee040072d79aeb07bd8fe3d2e840f6e3572ccfb16d9",
+      "cluster": 4,
+      "link": "https://elpais.com/educacion/2026-06-17/radiografia-de-un-cole-achicharrado-mas-de-37-grados-en-unas-aulas-ardientes-recien-construidas.html",
+      "title": "Aulas nuevas superan los 37 grados y revelan diseños escolares incompatibles con el clima emergente"
+    },
+    {
+      "url_hash": "c996358394a4c7b996392735cb08bff68bc91caf45c340b11fc2492448c1d969",
+      "cluster": 2,
+      "link": "https://cepal.org/es/noticias/estudio-ayuda-accion-cepal-proyecta-que-2030-70-la-juventud-america-latina-trabajara-sector",
+      "title": "El empleo juvenil latinoamericano se desplaza hacia servicios con riesgo de mayor precariedad"
+    },
+    {
+      "url_hash": "7d7f46c759ec5f071808baef73c318a64f490dd8ff86664b66b1d91706c5015c",
+      "cluster": 2,
+      "link": "https://cepal.org/es/publicaciones/80995-estudio-prospectivo-empleo-juvenil-america-latina-la-educacion-la-formacion",
+      "title": "La formación para el trabajo gana centralidad frente a la transformación del empleo juvenil"
+    },
+    {
+      "url_hash": "7d5402931a14c52ebc92dea7eec535f707ad7fe89a35cedf8316cc166030f879",
+      "cluster": 2,
+      "link": "https://cepal.org/es/notas/cepal-advierte-que-todo-se-resuelve-creando-nuevos-programas-urge-aproximacion-diagnostica",
+      "title": "Las políticas de habilidades empiezan a exigir diagnósticos antes de crear nuevos programas"
+    },
+    {
+      "url_hash": "8fdc5dbf45f836040b826a7e437daa4b34180591c60b425ee7dea9e60553c06a",
+      "cluster": 3,
+      "link": "https://cepal.org/es/articulos/2024-mejorar-aprendizajes-la-transformacion-educativa-que-la-region-necesita",
+      "title": "La crisis de aprendizajes regional fuerza a tratar la transformación educativa como política de desarrollo"
+    },
+    {
+      "url_hash": "7b546053b2f80811c85416eb5f5d382f86bf44e43674e96f840fe84497e05d7c",
+      "cluster": 2,
+      "link": "https://cepal.org/es/notas/cepal-identifica-la-formacion-competencias-laborales-como-componente-clave-politicas",
+      "title": "La formación de competencias laborales se integra a las estrategias de desarrollo productivo"
+    },
+    {
+      "url_hash": "e9e79da1db5655267aaa5a241054db2bd4d99127b64a2f9e38f9a8443b38bcde",
+      "cluster": 2,
+      "link": "https://cepal.org/es/notas/desafios-la-transformacion-digital-cepal-insta-incorporar-juventudes-como-actores-clave",
+      "title": "La transformación digital puede ampliar oportunidades juveniles y también profundizar brechas"
+    },
+    {
+      "url_hash": "b1c4e2161daec96436a6613833111bcd85797cc8b1af5e7a0bcab0b10c041b21",
+      "cluster": 2,
+      "link": "https://ilo.org/es/resource/articulo/automatizacion-recesiones-y-empleo-lo-que-nos-dice-la-ley-de-okun",
+      "title": "La automatización altera de manera desigual el empleo durante las recesiones"
+    },
+    {
+      "url_hash": "d61db54756079006da28999b3504681c4d5a5b351dd7541f41afb6e55aaaffb2",
+      "cluster": 2,
+      "link": "https://ilo.org/es/resource/noticias/ia-generativa-mayores-riesgos-laborales-para-las-mujeres",
+      "title": "La IA generativa amenaza con ampliar las brechas laborales de género"
+    },
+    {
+      "url_hash": "8df47edaff433261f573ca67ff557bd794684768cc9052a4af17005b455cfa36",
+      "cluster": 2,
+      "link": "https://ilo.org/es/resource/noticias/inteligencia-artificial-guia-estrategica-para-organizaciones-empresariales",
+      "title": "Las organizaciones empresariales latinoamericanas empiezan a planificar la adopción estratégica de IA"
+    },
+    {
+      "url_hash": "dd4c47ce93ca8c9e089f9131a37e13096db1ecfc5697c2e664ad141165dff1de",
+      "cluster": 2,
+      "link": "https://argentina.gob.ar/noticias/nuevas-tecnologias-y-trabajos-del-futuro-la-urgencia-de-acortar-la-brecha-digital-para",
+      "title": "La brecha digital condiciona quién puede acceder a los trabajos automatizados del futuro"
+    },
+    {
+      "url_hash": "e06704a19f4f2940f7ea3dd16823ad01af91e1559d4499aad5676a5c1706517a",
+      "cluster": 10,
+      "link": "https://argentina.gob.ar/noticias/la-ministra-sandra-pettovello-expuso-la-vision-de-argentina-sobre-el-futuro-del-trabajo-en",
+      "title": "El gobierno argentino vincula movilidad social futura con empleo, mérito y cambio demográfico"
+    },
+    {
+      "url_hash": "c9ba4c0ca6ab1b7e76f965354b1340cf8c1feb4ba2ef59cbb269b33fbc55fa6d",
+      "cluster": 17,
+      "link": "https://argentina.gob.ar/node/494559",
+      "title": "Las autoridades de privacidad coordinan respuestas frente a imágenes sintéticas no consentidas"
+    },
+    {
+      "url_hash": "de4f365038f5dd9051602f0d6130a6e315e4d93d815de9652bb0d25ec3312eee",
+      "cluster": 17,
+      "link": "https://argentina.gob.ar/noticias/la-aaip-inicio-una-investigacion-de-oficio-ante-presunta-filtracion-masiva-de-datos",
+      "title": "Una filtración masiva activa investigaciones estatales sobre seguridad de datos personales"
+    },
+    {
+      "url_hash": "2c4561ccb0088333b843ef0fa9af9dd1f733a3cdd47f664f8b383e0e18b056f7",
+      "cluster": 17,
+      "link": "https://argentina.gob.ar/node/507951",
+      "title": "La protección de datos se internacionaliza para responder a flujos digitales transfronterizos"
+    },
+    {
+      "url_hash": "598b526dd52a912ab65434266c0e073092b7cf001e7cdc3683311f6a24b92c07",
+      "cluster": 17,
+      "link": "https://argentina.gob.ar/node/184493",
+      "title": "La inteligencia artificial vuelve insuficientes los marcos tradicionales de consentimiento y privacidad"
+    },
+    {
+      "url_hash": "14070ad2fbfafb1efcb4a739eaaf7c76da0a97a82c18f7faf6c405a8e0f9557e",
+      "cluster": 18,
+      "link": "https://argentina.gob.ar/noticias/capital-humano-lanza-el-programa-paideia-para-integrar-inteligencia-artificial-en-el",
+      "title": "Argentina inicia la integración institucional de inteligencia artificial en el sistema educativo"
+    },
+    {
+      "url_hash": "76b371fa9afbf025c8da6e6b2f200cb6a80d52307b018ea6f3cc5826c6ea7d43",
+      "cluster": 18,
+      "link": "https://unesco.org/en/articles/use-ai-education-deciding-future-we-want",
+      "title": "La adopción educativa de IA empieza a incorporar límites de edad, privacidad y agencia humana"
+    },
+    {
+      "url_hash": "49d5c073d821268457e89a10a0e79ac624cd96a4bbd32eae08a4198a6123c26c",
+      "cluster": 18,
+      "link": "https://unesco.org/en/articles/ai-and-education-protecting-rights-learners",
+      "title": "El derecho a la educación se amplía para incluir protección algorítmica y seguridad de datos"
+    },
+    {
+      "url_hash": "0d07ec6059e0a9fb0c4bf3afb646bf60b1120504c738601413a0a4fdc59cdd19",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/digital-learning-and-transformation-education",
+      "title": "Las competencias digitales y de IA dejan de ser opcionales en las políticas educativas"
+    },
+    {
+      "url_hash": "e29ac628e50e58b3b21100aee9b017bafeff8b010dd848485302cd6490cdd843",
+      "cluster": 0,
+      "link": "https://sedici.unlp.edu.ar/handle/10915/169719",
+      "title": "La diversidad lingüística indígena sigue tensionando las prácticas escolares cotidianas"
+    },
+    {
+      "url_hash": "dccdf1a80a7fa68c4a75c8ce3f146703dabcdeeb49c40e6940f7d1cb5b4092e5",
+      "cluster": 0,
+      "link": "https://cui.edu.ar/html/MapadeLenguasIndigenas.html",
+      "title": "Un mapa interactivo actualiza la presencia y revitalización de lenguas indígenas argentinas"
+    },
+    {
+      "url_hash": "4e1914ebea8cc899ea3ec76f1b82b98941cc9a705ead38e1a2ce50db04269744",
+      "cluster": 0,
+      "link": "https://educ.ar/recursos/152588/educacion%20intercultural%20bilingue",
+      "title": "La educación intercultural bilingüe busca sostener identidades y aprendizajes en la escuela"
+    },
+    {
+      "url_hash": "ffa6388ca8febf6a7972ad87e6f5f796ef56bcb2aa80da9c10333df6b58f0ef5",
+      "cluster": 0,
+      "link": "https://salta.gob.ar/prensa/noticias/en-tartagal-se-realizo-el-primer-encuentro-sobre-ensenianza-de-lenguas-originarias-101842",
+      "title": "La enseñanza de lenguas originarias articula docentes, comunidades y política provincial"
+    },
+    {
+      "url_hash": "946ee075ea0320c7efb85af0774e4614761376d314f73c986cacf254da1a5442",
+      "cluster": 0,
+      "link": "https://educacion.santafe.gob.ar/estudios/modalidades/educacion-intercultural-bilingue",
+      "title": "Santa Fe organiza la educación bilingüe con participación de comunidades originarias"
+    },
+    {
+      "url_hash": "ce4664a626bdd6449313023f5806186b0bdc49f694cfce24d0d9086fc37db156",
+      "cluster": 0,
+      "link": "https://elpais.com/mexico/2025-03-10/el-nahuatl-irrumpe-en-las-escuelas-de-ciudad-de-mexico.html",
+      "title": "El náhuatl ingresa al sistema escolar urbano como política de revitalización lingüística"
+    },
+    {
+      "url_hash": "0fa6038962ccd8c99e5e24497c07f8389cef2b3895c5b7486468e6a7de666b62",
+      "cluster": 1,
+      "link": "https://elpais.com/america-futura/2024-08-15/los-refugiados-climaticos-de-panama-aun-no-tienen-escuela.html",
+      "title": "El desplazamiento climático deja a comunidades reubicadas sin acceso inmediato a una escuela"
+    },
+    {
+      "url_hash": "59a05c39f4d9d50900862d92f8a7c9b68d969d087d526a0948121c7085a53e2a",
+      "cluster": 2,
+      "link": "https://elpais.com/america/iberoamerica-democracia/2025-06-24/mapeo-de-brechas-en-la-transformacion-digital-de-la-educacion-reflexiones-sobre-el-valor-del-diagnostico-participativo.html",
+      "title": "La transformación digital de escuelas indígenas adopta diagnósticos participativos y situados"
+    },
+    {
+      "url_hash": "550a25756800d7a46989cfe54c052840bf27a593d7f1eb38ad37de1d09089925",
+      "cluster": null,
+      "link": "https://argentina.gob.ar/noticias/el-gobierno-redefine-su-rol-en-la-paritaria-docente-nacional",
+      "title": "La Nación redefine su intervención en la negociación salarial docente federal"
+    },
+    {
+      "url_hash": "1d1cb00430752f6ec5930c20f205cc7d9b26ff70b6177c74beac761fd717c2a1",
+      "cluster": 6,
+      "link": "https://theconversation.com/vulnerability-to-wildfire-smoke-is-in-our-genes-thanks-to-an-evolutionary-quirk-288695",
+      "title": "El humo de incendios emerge como riesgo sanitario diferencial para niños y comunidades escolares"
+    },
+    {
+      "url_hash": "97598d0d756ebc02f80a57f4d7272bf2d8659ac304887127cd98d6ae93899f92",
+      "cluster": null,
+      "link": "https://theconversation.com/why-being-born-helpless-may-be-one-of-humanitys-greatest-strengths-282933",
+      "title": "La dependencia prolongada de la infancia refuerza el valor educativo de los cuidados"
+    },
+    {
+      "url_hash": "21254510c06fdcff1b26d29fb9d35bf824ac5aa063ba5882f05b4cab5dccdb99",
+      "cluster": 1,
+      "link": "https://theconversation.com/impact-of-climate-change-may-be-equivalent-to-3-3-million-years-of-transformations-in-tropical-vegetation-288073",
+      "title": "El cambio climático puede comprimir millones de años de transformación ecológica en pocas décadas"
+    },
+    {
+      "url_hash": "895ae8bf96c4564b59744bae96d974a62dff5a85015c49e1fbc67c532c2e49b2",
+      "cluster": 11,
+      "link": "https://theconversation.com/when-a-teenager-makes-the-stupid-choice-their-brain-is-working-exactly-as-designed-287503",
+      "title": "La toma de riesgos adolescente se reinterpreta como rasgo funcional del desarrollo cerebral"
+    },
+    {
+      "url_hash": "8e0b087bb8f2b7e322ae7f9e9ff6ccba07091510fbe675ec3a2e529db27bd743",
+      "cluster": 0,
+      "link": "https://theconversation.com/where-did-language-come-from-nobody-really-knows-but-the-theories-are-fascinating-284081",
+      "title": "El origen incierto del lenguaje mantiene abiertas preguntas sobre cómo se adquiere y enseña"
+    },
+    {
+      "url_hash": "77521e96903899c345888189dc6db673ea15c28dd864bfc5d5a137e3a283a768",
+      "cluster": null,
+      "link": "https://technologyreview.com/2026/08/25/1140905/youtuber-finds-niche-as-college-admissions-mentor",
+      "title": "Creadores digitales convierten la orientación educativa en un mercado masivo personalizado"
+    },
+    {
+      "url_hash": "6a631e491369a282e73206826d5000133a46a1c65e94433041f9f5f2b6a3b38f",
+      "cluster": null,
+      "link": "https://technologyreview.com/2026/08/25/1140911/launching-youth-entrepreneurship",
+      "title": "El emprendimiento juvenil se incorpora como trayectoria formativa antes del empleo tradicional"
+    },
+    {
+      "url_hash": "65b0fb6ecde883e2fb4b6c186b408a54232a3cfab7e0687c4bd2dd044ea7bcd6",
+      "cluster": null,
+      "link": "https://technologyreview.com/2026/08/25/1140955/seeing-through-murky-waters",
+      "title": "Nuevas tecnologías de visión permiten observar ambientes acuáticos antes inaccesibles"
+    },
+    {
+      "url_hash": "05b4b1f9535896c8f31c452a62586432a81c17728f6fec48935566ad7b6e6d65",
+      "cluster": 18,
+      "link": "https://technologyreview.com/2026/08/25/1140958/your-brain-on-ai",
+      "title": "El uso intensivo de IA comienza a asociarse con cambios en esfuerzo y actividad cognitiva"
+    },
+    {
+      "url_hash": "3e783a74f7a16562f1453151e107cf0af5bc2804dced0db6c5626bb563cb2293",
+      "cluster": 18,
+      "link": "https://arxiv.org/abs/2608.21373",
+      "title": "El uso estudiantil de IA se relaciona con motivación y búsqueda de ayuda académica"
+    },
+    {
+      "url_hash": "0b3827287139b34cba591f580ed68f28f30a5d938072aa26163f060d00482e78",
+      "cluster": 2,
+      "link": "https://arxiv.org/abs/2608.21383",
+      "title": "Los salarios iniciales dependen de señales educativas que modelos explicables pueden hacer visibles"
+    },
+    {
+      "url_hash": "ff1edb4f3fa08f860587ba78ff2aba270f49a3e98c104259308ed72a3fe11de5",
+      "cluster": null,
+      "link": "https://arxiv.org/abs/2608.21389",
+      "title": "La alfabetización mediática debe preparar para cadenas completas de desinformación generada por IA"
+    },
+    {
+      "url_hash": "db3d821015445df00e2c1aba66b6bb5c07ee896b239f06e5efa234cba743e440",
+      "cluster": 18,
+      "link": "https://arxiv.org/abs/2608.21391",
+      "title": "La alfabetización en IA empieza a medirse con instrumentos específicos para estudiantes"
+    },
+    {
+      "url_hash": "25d142b9a28d32f29f87f7357a99082094720a51dd5ad24a9852a2fa8dfbb1b5",
+      "cluster": null,
+      "link": "https://arxiv.org/abs/2608.21537",
+      "title": "Las auditorías de contratación automatizada comienzan a localizar sesgos decisión por decisión"
+    },
+    {
+      "url_hash": "ac2472695c1c8c8d47fdf1c4771d0d2abd33f80f1a2c154bf11046ab66744f53",
+      "cluster": 15,
+      "link": "https://arxiv.org/abs/2608.21850",
+      "title": "La calidad de la retroalimentación automática se evalúa por consistencia y no sólo por casos exitosos"
+    },
+    {
+      "url_hash": "056ee5602e53e8788d4a8272dba97e3196a55707da67b2e88bf29965c9cd1973",
+      "cluster": 1,
+      "link": "https://arxiv.org/abs/2608.22242",
+      "title": "Modelos especializados integran ciencia, economía y política para razonar sobre riesgos climáticos"
+    },
+    {
+      "url_hash": "764d379d733a902eedafaa8bdf3209b2d6ebc043665b2ed4f86c89b04179d2e1",
+      "cluster": 18,
+      "link": "https://arxiv.org/abs/2608.22660",
+      "title": "La evaluación educativa pierde capacidad probatoria cuando la IA puede producir el resultado final"
+    },
+    {
+      "url_hash": "84e6b187abd5f03dc1ad0ab9db72bf599387651a5f5fb6b510913973f879a71d",
+      "cluster": null,
+      "link": "https://arxiv.org/abs/2608.23406",
+      "title": "Los puntajes agregados de preparación para IA ocultan desacuerdos entre personas y sectores"
+    },
+    {
+      "url_hash": "4a227a59d0dbcb10cc49c6e161f5977163eb4c28de62d3276784eb7c3c2e222b",
+      "cluster": null,
+      "link": "https://arxiv.org/abs/2608.21618",
+      "title": "La enseñanza con IA empieza a diseñar mecanismos para preservar la agencia cognitiva"
+    },
+    {
+      "url_hash": "c24d46cc2467bdfbbca7145d4bf4809d8fe0632a95f619590b831e5d7aeed608",
+      "cluster": null,
+      "link": "https://arxiv.org/abs/2608.22887",
+      "title": "Los modelos de lenguaje usan proxies sociales sin calibrarlos a la evidencia disponible"
+    },
+    {
+      "url_hash": "709812f23bba62ab993bf6f9cb117735d80922a07445920c3d442ab7a46c3c16",
+      "cluster": 15,
+      "link": "https://arxiv.org/abs/2608.23309",
+      "title": "Los asistentes de demostración formal ingresan al aula para enseñar razonamiento matemático"
+    },
+    {
+      "url_hash": "44611a1019545ab3bb54ec2261f2397561a333344b4ae25a615b7cb6942fac9d",
+      "cluster": 18,
+      "link": "https://arxiv.org/abs/2603.13620",
+      "title": "Las aplicaciones de compañía con IA expanden riesgos emocionales y de datos para menores"
+    },
+    {
+      "url_hash": "c0db7376b606611a8c87ca94fee9f9677c9b420dd62facffa7ac7121c1b47d77",
+      "cluster": null,
+      "link": "https://arxiv.org/abs/2607.17067",
+      "title": "La IA erosiona los puestos iniciales que tradicionalmente formaban a los profesionales senior"
+    },
+    {
+      "url_hash": "cf24d56448d1ca20cb7bafcfe28b7047e07ff901b8d07108838a38c468723731",
+      "cluster": null,
+      "link": "https://arxiv.org/abs/2501.13976",
+      "title": "La moderación automatizada busca escalar la protección frente a contenidos dañinos"
+    },
+    {
+      "url_hash": "33323de9ccb939b175ed3d641e40a5ef5b27ad8f74905963417a2a62cc8ac301",
+      "cluster": 3,
+      "link": "https://restofworld.org/2026/us-immigration-rules-ai-talent-china",
+      "title": "Las restricciones migratorias redistribuyen dónde se forman y trabajan los futuros líderes de IA"
+    },
+    {
+      "url_hash": "b7f438c53637bf430bb073af385034c6ad4ed492875b06e8f11040680f9eff6a",
+      "cluster": 18,
+      "link": "https://restofworld.org/2026/mark-zuckerberg-meta-ai-for-everyone-manifesto-global-critique",
+      "title": "El acceso masivo a IA no garantiza una distribución equitativa de poder y beneficios"
+    },
+    {
+      "url_hash": "373635c5e89660adb1e377e5e0c40b777e1a80d81b5d77799402f1078e6c4212",
+      "cluster": 18,
+      "link": "https://restofworld.org/2026/open-source-ai-infrastructure-mozilla",
+      "title": "Los modelos abiertos se consolidan como infraestructura alternativa para conservar control sobre datos"
+    },
+    {
+      "url_hash": "fe7c01044477c1435922453f994b7caad27fbd834f7973fa8582e76e07dad8b9",
+      "cluster": null,
+      "link": "https://restofworld.org/2026/ai-elections-deepfake-voter-chatbot",
+      "title": "La IA electoral vuelve urgente enseñar a reconocer chatbots, deepfakes y persuasión automatizada"
+    },
+    {
+      "url_hash": "03e9ab11ac95ab354c88d0d9605529db9fa3fb6e0aaa6a8151c13389495c762b",
+      "cluster": 13,
+      "link": "https://chequeado.com/nueva-investigacion-quienes-son-mas-vulnerables-a-las-desinformaciones-sobre-salud",
+      "title": "La vulnerabilidad a la desinformación depende de múltiples factores y puede orientar intervenciones educativas"
+    },
+    {
+      "url_hash": "ca509aecc2a249aab258f93aa1bcefd5580f9e741f72d50c90134795a079c44c",
+      "cluster": 15,
+      "link": "https://chequeado.com/evaluar-chatbots-un-desafio-metodologico-de-un-primer-ejercicio-con-estudiantes-a-una-investigacion-que-sigue-creciendo",
+      "title": "La evaluación de chatbots con estudiantes se convierte en un campo metodológico propio"
+    },
+    {
+      "url_hash": "49aca38701ae84f38491a4bc8c0ed0736c9b4c6fa42be36ca4503c302b6a7dfd",
+      "cluster": 18,
+      "link": "https://chequeado.com/cuando-ya-no-sabemos-que-es-real-la-ia-y-el-consumo-de-noticias",
+      "title": "La IA erosiona la capacidad cotidiana de distinguir información real de contenido sintético"
+    },
+    {
+      "url_hash": "8c963c12ab150d36dd1d06a40af7b9037c9ab409d931dcbb0dccd35e0b2740d7",
+      "cluster": 13,
+      "link": "https://chequeado.com/educacion-mediatica-en-tiempos-de-ia-y-desinformacion",
+      "title": "La educación mediática se integra como respuesta curricular a la IA y la desinformación"
+    },
+    {
+      "url_hash": "b636f8782829dd0326b718f87009b92843e1c8820a4b1796042a51cc3142bb96",
+      "cluster": 4,
+      "link": "https://interactive.carbonbrief.org/el-nino-explainer/index.html",
+      "title": "Un super El Niño anticipa disrupciones simultáneas de calor, lluvias y continuidad escolar"
+    },
+    {
+      "url_hash": "8cbba44cedab7b98e453ab959796d9c1ac5df147cc1b8e233bd3cb9dc4c8813b",
+      "cluster": null,
+      "link": "https://theguardian.com/us-news/2026/aug/25/us-gas-power-china-ai-datacenter",
+      "title": "La expansión de IA impulsa nueva generación fósil y aumenta su costo ambiental indirecto"
+    },
+    {
+      "url_hash": "6c3c22e92352cdda1061359d5bbbb4dd5ed622f5569c01375df87c859d8b3085",
+      "cluster": 4,
+      "link": "https://theguardian.com/environment/2026/aug/25/at-least-35000-excess-deaths-europe-back-to-back-heatwaves",
+      "title": "Las olas de calor consecutivas convierten el clima extremo en una crisis de salud pública"
+    },
+    {
+      "url_hash": "9925f7c857a7f0069ca00cfb8e8c7a6297ddea4ac8a91f43c73cffafa5864cee",
+      "cluster": 8,
+      "link": "https://theguardian.com/commentisfree/2026/aug/25/scotland-england-water-privatisation-disaster",
+      "title": "La gobernanza del agua determina inversión, calidad del servicio y resiliencia de la infraestructura pública"
+    },
+    {
+      "url_hash": "e6a574710b0ebec326e4ce5c25432bce725af9909987a6ebf14444fa32108e15",
+      "cluster": 19,
+      "link": "https://theguardian.com/commentisfree/2026/aug/25/war-loudcasting-british-nudging-phones-public",
+      "title": "El audio de celulares sin auriculares instala nuevas normas colectivas sobre atención y convivencia"
+    },
+    {
+      "url_hash": "7b92d194046946448841d05f5ea9c0a216a4757ec61e6ea0bb020101af6cddb3",
+      "cluster": 4,
+      "link": "https://theguardian.com/environment/2026/aug/17/marine-heatwave-new-normal-britain-seas",
+      "title": "Las olas de calor marinas muestran que la normalidad climática cambia antes que las instituciones"
+    },
+    {
+      "url_hash": "41ee3eaa53330835d9f8aaa16141ab77c5201d524c91c147b04bdfcc308ffcb5",
+      "cluster": 20,
+      "link": "https://europepmc.org/article/MED/42501449",
+      "title": "Speech perception problems in Chinese children with reading difficulties: Insights from acoustic context effects"
+    },
+    {
+      "url_hash": "68905349c0e6cd7e936d39f325b5d7c21771c37117e4195372d8d605c0ddf032",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42478195",
+      "title": "Post-resettlement context matters: a qualitative study of refugee parents' responses to child trauma in low-resource set"
+    },
+    {
+      "url_hash": "07e11bd526f51da85abbd982a8a51038e3e7d1b50cfa796ae73592f059fd4c53",
+      "cluster": 20,
+      "link": "https://europepmc.org/article/MED/42456270",
+      "title": "The genesis of reading fluency in beginning readers"
+    },
+    {
+      "url_hash": "4d023c5564f6faabc64d2a91f0b88a6cd30a906d726c7cfd10d00bdcc62ac24b",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42435560",
+      "title": "Do preschoolers respond differently to autonomy-supportive and controlling prosody?"
+    },
+    {
+      "url_hash": "7fad45fd5d28c7b65f90ce29e10abac3863e33e74242fa3be54538e880b0b57e",
+      "cluster": 9,
+      "link": "https://europepmc.org/article/MED/42430885",
+      "title": "The role of school socioeconomic status in early mathematical development in Chile"
+    },
+    {
+      "url_hash": "419d25e170bf19c3f0f3d4b4326ad0278d53c3102dfcaff12314f687e8c7eec8",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42293299",
+      "title": "Beyond the plate: Exploring students' experiences with a food education intervention in an after-school program setting"
+    },
+    {
+      "url_hash": "9073949d16e2f132a20ac48b4dff66ba3585184b46c48b0129f81dfbd88dd635",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42407249",
+      "title": "\"I want to keep going\": Differential effects of storybooks on children's perseverance"
+    },
+    {
+      "url_hash": "269190d72beebecc4c95bd26abe9b136e3bf3ff7500a4afafd3c0e37a814925d",
+      "cluster": null,
+      "link": "https://europepmc.org/article/MED/42365803",
+      "title": "Shared cognitive risk factors underlying rapid automatized naming deficits for the comorbidity of developmental dyslexia"
+    },
+    {
+      "url_hash": "ed3e4cf0e7bc5f111d49c7234b3471d76c750efd0ffbe826e3b45a2bb46c48fb",
+      "cluster": 20,
+      "link": "https://europepmc.org/article/MED/42275785",
+      "title": "Learning words by ear or by eye: effects of modality on lexical configuration and lexicalization"
+    },
+    {
+      "url_hash": "6d5a8d336fd229505458f4ad94d68e73ef221b95e2824cc231b3f96673d96100",
+      "cluster": 20,
+      "link": "https://europepmc.org/article/MED/42250537",
+      "title": "Spatial parameters of eye-movement control during reading in Russian-speaking children"
+    },
+    {
+      "url_hash": "d1562b071f1ae730d67bc4f070637bb9fe98047bab97abbb0451879a9937efe9",
+      "cluster": 20,
+      "link": "https://europepmc.org/article/MED/42247821",
+      "title": "Chinese word reading advantage in musically trained children: the role of segmental phonological awareness but not tone "
+    },
+    {
+      "url_hash": "24a874d54669497af0ef3c405d9424f2c900d2d31ccaed34b39c61aba157a081",
+      "cluster": 5,
+      "link": "https://europepmc.org/article/MED/42592071",
+      "title": "Neonatal Brain Structure, Early Life Context, and Academic Achievement among Children Born Very Preterm"
+    },
+    {
+      "url_hash": "c3704769fc7dfa58e7950f61fa2924f7e11fc8dcfc99f0889ebec73ed9631229",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42559648",
+      "title": "Does greater purchasing power of Supplemental Nutrition Assistance Program improve children's development?"
+    },
+    {
+      "url_hash": "b3748f98ab0c1d8ccbe7e00413eedacb8f5d547e0be0f372bf768a5107b77329",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42502626",
+      "title": "A school-level randomized preliminary study of in-classroom physical activity breaks among fifth graders"
+    },
+    {
+      "url_hash": "2f0a4fd9a9a0fbc431c196f8031006d3c319eb0e63c31b91d49037ae79618e40",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42287972",
+      "title": "A cross-sectional, web-based survey on sleep duration and social sleep restriction by daily habits in Japanese children:"
+    },
+    {
+      "url_hash": "2805ec8079c3fac6ae75ea24ced2f79bdf7fb49e8b2a47f72e288271a6394504",
+      "cluster": null,
+      "link": "https://europepmc.org/article/MED/42603141",
+      "title": "Walking together: exploring australian parent experiences of walking in nature with their preschool children with autism"
+    },
+    {
+      "url_hash": "2b3c108b6eac61d60d8ef6feaa2623f63f1db0ec66c5d3aed3d38f43b355521c",
+      "cluster": 5,
+      "link": "https://europepmc.org/article/MED/41845594",
+      "title": "The putative role of the microbiota in the development of neuropsychiatric disorders following early childhood malnutrit"
+    },
+    {
+      "url_hash": "7392dee91acd55ba846e090c987babdef6af6d23ea0c45cf51e3705f6f5315f7",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42520545",
+      "title": "Beyond same and different: Explanation supports young children's relational reasoning across semantic domains"
+    },
+    {
+      "url_hash": "9a8356c710100b90b0aca496fa70b02d56e48a79e141a18298ccefae4223d3fc",
+      "cluster": null,
+      "link": "https://europepmc.org/article/MED/42497675",
+      "title": "Emotional consistency as a signal for word learning in early development"
+    },
+    {
+      "url_hash": "a74dd9d1a80c51b5c1b481c003916d09f4cbd820ecf6fdd52e8e7505240da79a",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42492400",
+      "title": "Maternal and paternal behaviors during play interactions and children's early language achievements"
+    },
+    {
+      "url_hash": "641fad6306381f841146e5cee4fbe879d1117631f8abe1fd83ccd408a85fc834",
+      "cluster": null,
+      "link": "https://europepmc.org/article/MED/42480384",
+      "title": "Executive functions performance in Latin American preschoolers: ethnic and socioeconomic variability within a shared geo"
+    },
+    {
+      "url_hash": "f63003da48cab4b33b14f7d7f7ba3b3201a4716acaaceeb7be3f38984bb33ff3",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42480383",
+      "title": "Exploring the role of structured music activities in enhancing cognitive, emotional, and social development in early chi"
+    },
+    {
+      "url_hash": "7e28165aa36f78eccd34f31ee9baf89bf350fc633e8cfdaa70504047d1aaf5f9",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42130375",
+      "title": "'We discovered new ways of learning': a qualitative study of child, caregiver, and facilitator perspectives on an inclus"
+    },
+    {
+      "url_hash": "702bea05e444f5d1864f27f53994916739cb11ecc42138e340ce1b35838c3d16",
+      "cluster": 20,
+      "link": "https://europepmc.org/article/MED/42442021",
+      "title": "English-hearing toddlers learn words from consistent and variable labels"
+    },
+    {
+      "url_hash": "6c1a5cd242d22a9b4488642ea95a484b6ae07b6544c7f889707c9858cbcb0ecb",
+      "cluster": 20,
+      "link": "https://europepmc.org/article/MED/42401060",
+      "title": "Memory for a dinosaur exhibit: retrieval-based practice vs. restudy"
+    },
+    {
+      "url_hash": "73bcd4e9b5791417456fc796975afa48bbe224ba7be95c841d0f6ba366adc05b",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42391666",
+      "title": "The interplay between Theory of Mind inferencing and visual attention in narrative comprehension in autistic preschooler"
+    },
+    {
+      "url_hash": "b86e0e9d6d3952c68ee6de565592fba5af915de586b969998bd2afb55e4dff3c",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42251812",
+      "title": "Effects of parental intervention on children's English utterances and behavioral responses in video-based second languag"
+    },
+    {
+      "url_hash": "b89d6cdf24b45be393d6f4dfa211c3fcd35900d8d0ae3d200b155b70887e8aa5",
+      "cluster": null,
+      "link": "https://europepmc.org/article/MED/42250610",
+      "title": "Cortical morphometric correlates of childhood adversity and learning burnout in depressive adolescents with non-suicidal"
+    },
+    {
+      "url_hash": "2a0c5a8f1a8947fc822724e98241c331d23ce4227882d62ae37e2c2a6744667e",
+      "cluster": 20,
+      "link": "https://europepmc.org/article/MED/42335652",
+      "title": "Children's narrow learning bottleneck accelerates the emergence of statistical properties of language"
+    },
+    {
+      "url_hash": "cd8b899ecb7f086cc5bad63f43e419650247613731ed9ce27d610d095b9704e9",
+      "cluster": null,
+      "link": "https://europepmc.org/article/MED/42176021",
+      "title": "Everyone should get to know that it's okay to feel bad: adolescents' and parents' experiences of participating in a prev"
+    },
+    {
+      "url_hash": "881cb5f86e400a576bc6cf5c83a92c46ccbc8576b7239e2abe2291f99fa79d4f",
+      "cluster": null,
+      "link": "https://europepmc.org/article/MED/41860061",
+      "title": "Parents' experiences with the Circle of Security Parenting (COSP) intervention - a scoping review of qualitative studies"
+    },
+    {
+      "url_hash": "e985dbbc7ba60166e3753dce8ded4121215e3e7064d0a5a3bb94592f6eff7eef",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/41928418",
+      "title": "Cyberbullying and cyber sexual harassment as predictors of subjective health complaints. A cross-sectional study among S"
+    },
+    {
+      "url_hash": "f4df3c22307dc137aff8f4f8de12126071810e1185efdafa8fed6d36ebf14f4d",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/41792042",
+      "title": "\"With all your friends in your pocket\" - a qualitative study about adolescents' experiences with social media from a hea"
+    },
+    {
+      "url_hash": "4ce5d0b278f11cd3eae15c761dc23b310fd274096f4750e0b456be81e339fa46",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42419457",
+      "title": "Longitudinal trajectories of ADHD-like symptoms across adolescence and associations with problematic smartphone use: Evi"
+    },
+    {
+      "url_hash": "0d3866f4ae007198bec26d042b6d11fed4465d4c2be5d7238964168179c8140e",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42537443",
+      "title": "The roles of task persistence and sleepiness in the associations between habitual sleep characteristics and vigilant att"
+    },
+    {
+      "url_hash": "a019761bc5f3769a50cdd106d417117f82126a9f54772375671362af4460b960",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42475941",
+      "title": "Longitudinal bidirectional relations between problematic smartphone use and academic burnout among adolescents: The medi"
+    },
+    {
+      "url_hash": "a9803e12bb9e3c758c3683e791b4e8eeba38f0f11e7e6d4a82326b36b9009ef2",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42470898",
+      "title": "Parent and carer perspectives on behavioural sleep management strategies for children with ADHD"
+    },
+    {
+      "url_hash": "221a76505fa3b44608516ad288de8c70c0d4aa06ce4fe461eba3be3843fed31a",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42167695",
+      "title": "Mapping heterogeneous predictors of problematic smartphone use in Chinese adolescents: A machine learning approach with "
+    },
+    {
+      "url_hash": "785ff23ab2e4078ec4123c50ff1379b055c97c2dcd484e03f9df5b9d6732c269",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42468257",
+      "title": "A pathway toward positive digital parenting: how screen exposure quality relates to preschoolers' socio-emotional compet"
+    },
+    {
+      "url_hash": "6efcc3da925f1d33ef74d2bce5aef0d95fad36dfc593afff2a3d041be3515881",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42410723",
+      "title": "Interventions to Reduce Screen Time in Preschool-Aged Children: A Systematic Review and Meta-Analysis of Randomized Cont"
+    },
+    {
+      "url_hash": "bbb736abec277704d17e7692b4923668255e24a4fe0a5ac615bb80f9dd571577",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42376722",
+      "title": "Media Parenting Practices and Early Adolescent Cyberbullying: Findings From the Adolescent Brain Cognitive Development S"
+    },
+    {
+      "url_hash": "2574250d37b8547ab2164a3cebe6d3bba0db4e693c3e14b8dfeae374a109f80f",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42143903",
+      "title": "Smartphones and social media are harming youth health: A comprehensive public health response is overdue"
+    },
+    {
+      "url_hash": "1347aaf59dab59df545332843b731c43320165970301cbd9fe2648f1efe88e6d",
+      "cluster": 14,
+      "link": "https://argentina.gob.ar/noticias/la-cnv-capacito-docentes-de-todo-el-pais-en-educacion-financiera-junto-la-secretaria-de",
+      "title": "La CNV capacitó a docentes de todo el país en educación financiera junto a la Secretaría de Educación de la Nación"
+    },
+    {
+      "url_hash": "3edb8e6a8881516ac93a2bcb061d4b84364b890c999b4c5f247c720b70927b11",
+      "cluster": 14,
+      "link": "https://argentina.gob.ar/noticias/educacion-financiera-en-la-certificacion-de-idoneidad-del-sistema-de-garantias",
+      "title": "Educación financiera en la Certificación de Idoneidad del Sistema de Garantías"
+    },
+    {
+      "url_hash": "eb5199aebf5be626a6a1914c4cd3b49fa4cadf6a758bd069c443baae5c713770",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/el-consejo-federal-de-educacion-acordo-los-ejes-del-plan-nacional-de-alfabetizacion",
+      "title": "El Consejo Federal de Educación acordó los ejes del Plan Nacional de Alfabetización"
+    },
+    {
+      "url_hash": "a26616e5758186cae1c4ce32641f850327dffda517cd2c1acc80f9d42a8af442",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/se-anuncio-la-red-federal-de-alfabetizacion-y-el-relevamiento-docente-2025",
+      "title": "Se anunció la Red Federal de Alfabetización y el Relevamiento Docente 2025"
+    },
+    {
+      "url_hash": "c546c2964bc4bf46ca8813cabf9e5514d7610185c44816381397c732fffb8eba",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/el-presidente-milei-lanzo-en-san-juan-el-plan-federal-de-alfabetizacion-la-educacion-es-el",
+      "title": "El Presidente Milei lanzó en San Juan el Plan Federal de Alfabetización: “La educación es el principal motor del crecimi"
+    },
+    {
+      "url_hash": "c0cf37a43c7b87f93b5addc884d86528e41e5197e5550aac0fe26014b24b3def",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/el-consejo-federal-de-educacion-aprobo-el-relevamiento-nacional-docente-para-2025",
+      "title": "El Consejo Federal de Educación aprobó el Relevamiento nacional docente para 2025"
+    },
+    {
+      "url_hash": "0c1b24df17961a2e815e83751d5a69e68221718e17204ef635e5719a042a1d06",
+      "cluster": 3,
+      "link": "https://argentina.gob.ar/noticias/salud-acompana-el-lanzamiento-de-la-estrategia-federal-de-primera-infancia",
+      "title": "Salud acompaña el lanzamiento de la Estrategia Federal de Primera Infancia"
+    },
+    {
+      "url_hash": "b5365d62d0cf5e3cb6843e31127df8be5a4efd5c967f76fd6b32db4ddb2811c1",
+      "cluster": null,
+      "link": "https://argentina.gob.ar/noticias/capital-humano-impulsa-la-formacion-docente-en-educacion-socioemocional",
+      "title": "Capital Humano impulsa la formación docente en educación Socioemocional"
+    },
+    {
+      "url_hash": "8acf229258bc4b5acf01aadb2e032424ea84f3d83ec4d966c8ab1746c5557e93",
+      "cluster": 14,
+      "link": "https://ilo.org/resource/article/financial-skills-and-literacy-improve-livelihoods-east-sumba%E2%80%99s-seaweed",
+      "title": "Financial skills and literacy improve the livelihoods of East Sumba’s seaweed farmers"
+    },
+    {
+      "url_hash": "2a973672f576319241371b231f7073b9f389a63cb0c324912e938acda6ac0ad8",
+      "cluster": 14,
+      "link": "https://ilo.org/resource/article/ghana-financial-skills-stronger-futures-mother%E2%80%99s-path-keeping-her-children",
+      "title": "In Ghana financial skills, stronger futures: A mother’s path to keeping her children in school"
+    },
+    {
+      "url_hash": "d02f39e948aabf1148d7ab474a693be505e17a237097fb6c9000d01fae854ee3",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/mas-de-100000-inscripciones-en-los-cursos-de-alfabetizacion-para-docentes",
+      "title": "Más de 100.000 inscripciones en los cursos de alfabetización para docentes"
+    },
+    {
+      "url_hash": "b72c4134bc62cdde256c927361267cc26b1cc2d8e7ad0537a988d1b34996bed9",
+      "cluster": null,
+      "link": "https://argentina.gob.ar/noticias/la-arn-brindo-capacitaciones-alumnos-y-docentes-de-las-escuelas-cercanas-al-complejo",
+      "title": "La ARN brindó capacitaciones a alumnos y docentes de las escuelas cercanas al Complejo Nuclear Atucha"
+    },
+    {
+      "url_hash": "0d4a3c011877b9ece15e5fc663ad220e80ef4baab83913e376f47c30c3cb24a1",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/comenzo-la-inscripcion-cursos-virtuales-sobre-alfabetizacion-para-docentes",
+      "title": "Comenzó la inscripción a cursos virtuales sobre alfabetización para docentes"
+    },
+    {
+      "url_hash": "7eaf8457434d4334c71801fb54ef6e23ca4ba71c92e1e183fd24c32b53659d64",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/capital-humano-sigue-impulsando-el-programa-federal-de-primera-infancia-con-la-adhesion-de",
+      "title": "Capital Humano sigue impulsando el Programa Federal de Primera Infancia con la adhesión de cuatro provincias"
+    },
+    {
+      "url_hash": "cf8d208a03e5c0010b05352405b2bd318eff11d461cfe42b0e9095997871a60c",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/primera-mesa-federal-de-formacion-docente-del-ano",
+      "title": "Primera mesa federal de formación docente del año"
+    },
+    {
+      "url_hash": "ad66223fbe62727299147aa1c1939756beb758c64d5c52262d2405b6a72e6672",
+      "cluster": 2,
+      "link": "https://ilo.org/resource/news/bringing-digital-skills-and-jobs-youth-rural-areas-and-refugees-turkana",
+      "title": "Bringing digital skills and jobs for youth in rural areas and refugees in Turkana, Kenya"
+    },
+    {
+      "url_hash": "0c0822b25535f2624b9ca118ef9ee6a5c51de74cc016fb0272ad8724ed7b2f2d",
+      "cluster": 3,
+      "link": "https://argentina.gob.ar/noticias/salud-fortalece-el-tratamiento-nutricional-de-ninos-en-provincias-del-norte-argentino",
+      "title": "Salud fortalece el tratamiento nutricional de niños en provincias del norte argentino"
+    },
+    {
+      "url_hash": "b0d64007483a06ac8e141a9931f5fcfd721c8b23c1854272ba74246271880a5a",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/ministros-de-educacion-presentaron-su-balance-sobre-los-planes-de-alfabetizacion",
+      "title": "Ministros de Educación presentaron su balance sobre los planes de alfabetización"
+    },
+    {
+      "url_hash": "bcd00eae357f32942d2ec2bc859f44c5101d9582b92f61d7a7c0e247e85ea8ab",
+      "cluster": 1,
+      "link": "https://argentina.gob.ar/noticias/la-alfabetizacion-ambiental-ciudadana-eje-del-encuentro-nacional-de-educacion-ambiental",
+      "title": "La alfabetización ambiental ciudadana, eje del Encuentro Nacional de Educación Ambiental 2024"
+    },
+    {
+      "url_hash": "c290488e0b9b397e7807b0833e44a3c7a277fa4a7338a2318a69c989bba2d767",
+      "cluster": null,
+      "link": "https://ilo.org/resource/news/teachers-strengthen-digital-learning-vocational-classrooms-bosnia-and",
+      "title": "Teachers strengthen digital learning in vocational classrooms in Bosnia and Herzegovina"
+    },
+    {
+      "url_hash": "358361ec8ecf4cdf0ad2333a7fc6ff1412600ac735baf42306a6d13de65fe27e",
+      "cluster": null,
+      "link": "https://ilo.org/resource/news/ilo-china-initiative-strengthens-teachers%E2%80%99-and-students%E2%80%99-competencies-and",
+      "title": "ILO-China initiative strengthens teachers’ and students’ competencies and promotes green skills in Lao People’s Democrat"
+    },
+    {
+      "url_hash": "a65ad2a1040f4c5dd54b39dfae86789e196e0403debf4b7f1b015fa8c654b917",
+      "cluster": 2,
+      "link": "https://ilo.org/resource/news/green-digital-skills-shift-construction-drives-youth-employment-push",
+      "title": "Green, digital skills shift in construction drives youth employment push"
+    },
+    {
+      "url_hash": "099dec4073f39c750bb2f62b39e4b2d5c6ea5f4b050acd45a7b850cf8533a30a",
+      "cluster": 3,
+      "link": "https://argentina.gob.ar/noticias/salud-envia-ampollas-de-niservimab-las-jurisdicciones-para-proteger-ninos-prematuros-y-con",
+      "title": "Salud envía ampollas de niservimab a las jurisdicciones para proteger a niños prematuros y con cardiopatías congénitas"
+    },
+    {
+      "url_hash": "e987cb8e792f4eb541dfa206caf4b380e46a8ea8432e9e8b5ba7be95d23facd5",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/el-consejo-federal-de-educacion-trabajo-sobre-el-plan-nacional-de-evaluacion-educativa-2025",
+      "title": "El Consejo Federal de Educación trabajó sobre el Plan Nacional de Evaluación Educativa 2025"
+    },
+    {
+      "url_hash": "07d1c4a20c4f1b4caae0c00c7b6d569ef94d92bd162ed7a20458cf1c847976ec",
+      "cluster": 2,
+      "link": "https://ilo.org/es/resource/news/cumbre-internacional-evaluacion-certificacion-competencias-laborales-sena-cinterfor-oit-lazos",
+      "title": "Trece instituciones de formación profesional de América Latina y el Caribe se reúnen para promover la Evaluación y Certi"
+    },
+    {
+      "url_hash": "0c8b2cc4e0b96cc6c7c504d654d3c532ea6d29f28bb6a5ca5223f039e148be36",
+      "cluster": 2,
+      "link": "https://ilo.org/es/resource/news/reconocimiento-mutuo-certificacion-competencias-laborales-migrantes-america-latina-caribe-ccl",
+      "title": "OIT impulsa el reconocimiento mutuo de la certificación de competencias laborales para migrantes en América Latina y el "
+    },
+    {
+      "url_hash": "288676eed5ad789d7b27346bba538b8b3fa3eff7d638d798f44eefb5a9ca35a0",
+      "cluster": 2,
+      "link": "https://ilo.org/es/resource/news/c-reconoce-tu-talento-certificacion-de-competencias-laborales-migrantes-colombia",
+      "title": "Impulsando la certificación de competencias laborales para la contratación de migrantes y refugiados en Colombia"
+    },
+    {
+      "url_hash": "81c539f04ae8f4efce2df41c325f4142c70e13bf0c464024bde8c168182ddb3c",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/torrendell-encabezo-el-primer-encuentro-federal-la-educacion-alimentaria-escolar-y-la",
+      "title": "Torrendell encabezó el Primer Encuentro Federal “La educación alimentaria escolar y la alfabetización, un binomio necesa"
+    },
+    {
+      "url_hash": "e64de0fbd3d4e768e07326f2b80c474c51b19752eb3a16a6e2a37191fcd5394d",
+      "cluster": 1,
+      "link": "https://argentina.gob.ar/noticias/dia-de-la-conservacion-del-suelo-docentes-de-san-luis-se-capacitan-para-llevar-el-cuidado-0",
+      "title": "Día de la Conservación del Suelo: docentes de San Luis se capacitan para llevar el cuidado del suelo a las aulas"
+    },
+    {
+      "url_hash": "236f330e4ba55d67380440e080af4345e460f76007695574f23b1c75920d6cd7",
+      "cluster": 18,
+      "link": "https://argentina.gob.ar/noticias/capacitaran-1600-docentes-en-inteligencia-artificial",
+      "title": "Capacitarán a 1.600 docentes en inteligencia artificial"
+    },
+    {
+      "url_hash": "624039066d5e9a08a06761801a4ccbaf9655f5449a454f36a71a74462d5628df",
+      "cluster": 14,
+      "link": "https://ilo.org/resource/news/financial-literacy-catalyst-inclusive-growth-zimbabwe",
+      "title": "Financial literacy as a catalyst for inclusive growth in Zimbabwe"
+    },
+    {
+      "url_hash": "a1cd52183ea1847e1819af4e01ff7549d12eba663263e99404b7d8dabe988681",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/abrio-la-inscripcion-de-la-cuarta-edicion-de-cursos-virtuales-sobre-alfabetizacion-para",
+      "title": "Abrió la inscripción de la cuarta edición de cursos virtuales sobre alfabetización para docentes"
+    },
+    {
+      "url_hash": "36f51e9684254f4c9cf1b533ae3f7bf1ad6cf91f8cd31096d0ed9ea01f3ca679",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/avanza-la-evaluacion-y-acreditacion-de-los-institutos-de-formacion-docente-en-todo-el-pais",
+      "title": "Avanza la evaluación y acreditación de los institutos de formación docente en todo el país"
+    },
+    {
+      "url_hash": "0dc71e45b871161bc0b66fa9c8f72b3c0a43bf35f8bc055eb2cfa955e2741afe",
+      "cluster": 13,
+      "link": "https://argentina.gob.ar/noticias/capital-humano-sigue-formando-equipos-tecnicos-del-plan-nacional-de-alfabetizacion",
+      "title": "Capital Humano sigue formando equipos técnicos del Plan Nacional de Alfabetización"
+    },
+    {
+      "url_hash": "8c692e41e9a5d3e6699c7f59eb5748d9c9a6557847e60240bfcde2ec0ff88107",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/unesco-action-education-highlights-2024",
+      "title": "UNESCO in action: Education highlights in 2024"
+    },
+    {
+      "url_hash": "2e078c50c3c6d0429692b8846e3158572bf7e67fce43a7972a66c0fb30fb96fa",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/unesco-action-education-highlights-2025?hub=701",
+      "title": "UNESCO in action: Education highlights in 2025"
+    },
+    {
+      "url_hash": "864765ee23e8136ac75a9e152b3fa1434a6ed7d3e9fb76f3db2795f7d7bb5ee8",
+      "cluster": 14,
+      "link": "https://unesco.org/en/articles/transforming-education-summit-unesco-mobilizes-leaders-113-countries-spend-more-debt-payments?hub=66973",
+      "title": "La deuda desplaza al gasto educativo en 113 países mientras cae la ayuda internacional"
+    },
+    {
+      "url_hash": "0290aa528d597fbbe00999d2f94ef32f93465ba921521e5ba597d88c1a367c04",
+      "cluster": null,
+      "link": "https://unesco.org/en/articles/transforming-education-towards-sdg4-report-global-survey-country-actions-transform-education",
+      "title": "Los países traducen sus compromisos del ODS 4 en acciones educativas con avances desiguales"
+    },
+    {
+      "url_hash": "2cbc711cb2ab9bb91e7cc808c0cfe8bf89010006040a03a2985f33280a934821",
+      "cluster": 0,
+      "link": "https://unesco.org/en/articles/new-unesco-guidance-calls-multilingual-education-unlock-learning-and-inclusion",
+      "title": "New UNESCO report calls for multilingual education to unlock learning"
+    },
+    {
+      "url_hash": "26fba5d4111b666e2ef7577056cf07b02f85684751e9f5bf663d55d53a9a8285",
+      "cluster": 0,
+      "link": "https://unesco.org/en/articles/languages-matter-global-guidance-multilingual-education?hub=370",
+      "title": "Languages matter: Global guidance on multilingual education"
+    },
+    {
+      "url_hash": "9664ecb0e291e08b039ff2230f144be092658486ce2fc9c43434634fbab87777",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/unesco-strategic-framework-migration-displacement-emergencies-and-education-2024-2029-protecting-and",
+      "title": "UNESCO define un marco educativo 2024–2029 para migraciones, desplazamientos y emergencias"
+    },
+    {
+      "url_hash": "308ca14b6d66406752c3f0ee761fb9a54c146adf7e729de74cdc195492036b4d",
+      "cluster": 13,
+      "link": "https://unesco.org/en/articles/development-literacy-and-numeracy-insights-supporting-learning-opportunities-early-years",
+      "title": "La alfabetización y la numeración se construyen desde el nacimiento hasta los ocho años"
+    },
+    {
+      "url_hash": "fb2756787b29344a99902541aec52d8c21ed59a7f44824eda413f86ccedede7c",
+      "cluster": 3,
+      "link": "https://unesco.org/en/articles/price-inaction-global-private-fiscal-and-social-costs-children-and-youth-not-learning",
+      "title": "No escolarizar ni asegurar aprendizajes básicos genera costos sociales y fiscales globales"
+    },
+    {
+      "url_hash": "0cdfb03dcdf1baff37c21cb0ca0db9bff093cc10b2148936fe27093956137205",
+      "cluster": null,
+      "link": "https://unesco.org/en/articles/language-acquisition-early-years-childhood-role-family-and-pre-primary-education-thematic-report",
+      "title": "La familia y la educación inicial condicionan la adquisición temprana del lenguaje"
+    },
+    {
+      "url_hash": "cae5d9b0b722e9b912ed4e1e9c51e2a602bee60077dc0295f18b65d284a05358",
+      "cluster": 3,
+      "link": "https://cepal.org/es/publicaciones/82426-impacto-cambio-climatico-la-pobreza-infantil-juvenil-america-latina",
+      "title": "El impacto del cambio climático en la pobreza infantil y juvenil de América Latina"
+    },
+    {
+      "url_hash": "a31d6930bd77190b68a796289b783bf80abb2661d4a3a5b449ab0f30fe67d9fa",
+      "cluster": 3,
+      "link": "https://cepal.org/es/notas/indice-pobreza-multidimensional-america-latina-revela-como-viven-hogares-pobres-la-region",
+      "title": "El Índice de Pobreza Multidimensional para América Latina revela cómo viven los hogares pobres de la región"
+    },
+    {
+      "url_hash": "1491d8f39a1d85d2672bf07426262c2139a90bddcccef4bdef2c236a3934da39",
+      "cluster": 1,
+      "link": "https://cepal.org/es/comunicados/cepal-lanza-anuario-estadistico-2025-indicadores-clave-desarrollo-economico-social",
+      "title": "CEPAL lanza el Anuario Estadístico 2025 con indicadores clave del desarrollo económico, social y ambiental de América La"
+    },
+    {
+      "url_hash": "e4f6f9075f0e9ac6e6ae772bf87704b44c27a7922044bcf4471c63daac6bcac0",
+      "cluster": 3,
+      "link": "https://cepal.org/es/publicaciones/81203-panorama-social-america-latina-caribe-2024-version-accesible",
+      "title": "La protección social no contributiva se vuelve central ante nuevos riesgos sociales en América Latina"
+    },
+    {
+      "url_hash": "a9e3447b504b503f98529a48ac66c86e9581a3d638f7af2a4ae13df6530bcde6",
+      "cluster": 3,
+      "link": "https://cepal.org/es/comunicados/la-concentracion-ingreso-sigue-siendo-extrema-america-latina-10-mas-rico-capta-342",
+      "title": "La concentración del ingreso sigue siendo extrema en América Latina: el 10% más rico capta el 34,2% del ingreso total, m"
+    },
+    {
+      "url_hash": "d12dae1a4e208098701b5c115637804817de868c4a5f8a7b51c915d274f04133",
+      "cluster": 3,
+      "link": "https://argentina.gob.ar/noticias/la-pobreza-continua-descendiendo-cayo-213-puntos-en-un-ano-y-es-la-mas-baja-desde-2018",
+      "title": "La pobreza continúa descendiendo: cayó 21,3 puntos en un año y es la más baja desde 2018"
+    },
+    {
+      "url_hash": "b2e44d30b173c358f3747f4314897351d97d754fadf445fe7a567c272d93d4f8",
+      "cluster": 4,
+      "link": "https://unicef.org/reports/threat-to-progress",
+      "title": "Seis amenazas climáticas deterioran la salud y el bienestar infantil"
+    },
+    {
+      "url_hash": "78714381b86959ad0f45e30fb99cd309febddcc73e75c9bc1abbe560d47434c7",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/unesco-supports-zimbabwes-journey-towards-climate-smart-education",
+      "title": "UNESCO supports Zimbabwe's journey towards climate-smart education"
+    },
+    {
+      "url_hash": "a20993c120a53c9ae7f442670f06b5417b01ea1dbbc383ce83c24e11622d1c06",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/how-teachers-are-transforming-climate-education?hub=761",
+      "title": "How teachers are transforming climate education"
+    },
+    {
+      "url_hash": "3854ddf741c34509df3b8782bca10aa094cc0b8c61c64a18bce63d1b7416fd06",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/how-caribbean-education-systems-are-adapting-climate-change",
+      "title": "How Caribbean education systems are adapting to climate change"
+    },
+    {
+      "url_hash": "f28111d65916576a3f8dfd89f62c18cb178f1360c6ad2df3e5b8eee6f9a46fe0",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/unesco-launches-new-initiatives-greening-education-classrooms",
+      "title": "UNESCO propone integrar educación ambiental en todas las materias y edades"
+    },
+    {
+      "url_hash": "347df72a87f84d26fab9ea3e5ffe868be0479b1cdaf4c1f8cbcc3cd68e747946",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/greening-curriculum-integrating-climate-change-education-malawis-national-curriculum",
+      "title": "Malawi integra educación climática en el currículo y la formación docente"
+    },
+    {
+      "url_hash": "fe224870e1ca1d0e2cef17418c90b141623884e04e8407002d7fb5a71d5ef80a",
+      "cluster": 4,
+      "link": "https://unesco.org/en/articles/planning-resilience-climate-smart-education-systems-caribbean",
+      "title": "El Caribe incorpora resiliencia climática en edificios, currículos y planificación educativa"
+    },
+    {
+      "url_hash": "4820e173d5f74e59ddbad31cd6296c273095a8fef22a82d703d4be71699c0e20",
+      "cluster": 1,
+      "link": "https://unesco.org/en/articles/educators-heart-greening-education-climate-resilience-toolkit-policymakers",
+      "title": "Una nueva guía ubica a los docentes en el centro de la resiliencia climática educativa"
+    },
+    {
+      "url_hash": "97e90d49aaafa3c4ec228a459461a8ad04f4279bd15ee124fe9ad2dbf054723e",
+      "cluster": 4,
+      "link": "https://unicef.org/reports/childrens-climate-risk-report-2026",
+      "title": "The Children’s Climate Risk Report 2026"
+    },
+    {
+      "url_hash": "66d0b630669027db381367d5f9b2f025d074849c204e1b55d344f6b5f7ae6e56",
+      "cluster": 1,
+      "link": "https://worldbank.org/en/topic/education/publication/education-for-climate-action",
+      "title": "Choosing Our Future: Education for Climate Action"
+    },
+    {
+      "url_hash": "4028f9294992c16fe01a248d145d5f371fd636f60f6025c2486d765e18d3596c",
+      "cluster": 7,
+      "link": "https://climatecentral.org/climate-matters/schools-and-urban-heat-2025",
+      "title": "Public Schools in Urban Heat Islands"
+    },
+    {
+      "url_hash": "94659b9853785f39893af2ffab8a7209ad39c0ed099850d2745cfb1d03cd2f98",
+      "cluster": 7,
+      "link": "https://apnews.com/article/d11facdb57910ed47a20068a669c43f6",
+      "title": "Puerto Rico's schools are unequipped to cope with ever hotter heat waves"
+    },
+    {
+      "url_hash": "0909a67e171757077aad41dcf6f91d50488a482af4bb9be0003584cb7c779f4c",
+      "cluster": 7,
+      "link": "https://time.com/7322746/us-schools-climate-extreme-weather-adaptation",
+      "title": "The Challenge of Building Climate-Resilient Schools"
+    },
+    {
+      "url_hash": "91e2e244fc620266c6a7a8d244f06d65e490e8b1783209dd143659b495c9f823",
+      "cluster": 7,
+      "link": "https://apnews.com/article/eb93150ca5c1f79a663f7c6755be3196",
+      "title": "Nearly 250 million children missed school last year because of extreme weather, UNICEF says"
+    },
+    {
+      "url_hash": "25fdf3a28717a449c8780dbf803b2c7a65716bc36c9ad3f21698faa628419562",
+      "cluster": 1,
+      "link": "https://arxiv.org/abs/2508.21666",
+      "title": "Harnessing IoT and Generative AI for Weather-Adaptive Learning in Climate Resilience Education"
+    },
+    {
+      "url_hash": "e6d198e38e12eeac5fbe3e0fe740c05a703e0e0c4c5a5dd33306b20a377057ae",
+      "cluster": 14,
+      "link": "https://cepal.org/es/publicaciones/82515-sostenibilidad-financiera-equidad-eficiencia-la-inversion-educativa-como",
+      "title": "Sostenibilidad financiera, equidad y eficiencia de la inversión educativa como requisitos habilitantes para la transform"
+    },
+    {
+      "url_hash": "4d4ba3106b5fcb01c904056cfaf1dc6bc0e6bda3269b2558b129d9397d96aecd",
+      "cluster": 14,
+      "link": "https://worldbank.org/en/results/2024/03/22/tackling-the-learning-crisis-in-latin-america-and-the-caribbean",
+      "title": "Tackling the Learning Crisis in Latin America and the Caribbean"
+    },
+    {
+      "url_hash": "94aabc0a1b001ac5661441e67132cbe20d657246aaee0edacf0f92622250e453",
+      "cluster": 13,
+      "link": "https://unicef.org/reports/foundations-first-2025",
+      "title": "Foundations First"
+    },
+    {
+      "url_hash": "41e4c2b36c1f779be0741939e88d0a0d7711a1b75ef301a7860efa3a75e9d532",
+      "cluster": 3,
+      "link": "https://repositorio.cepal.org/entities/publication/54663cfa-5a27-4fbc-809a-0352094f9d1d/full",
+      "title": "Panorama Social de América Latina y el Caribe, 2025: cómo salir de la trampa de alta desigualdad, baja movilidad social "
+    },
+    {
+      "url_hash": "77e9ae7364aebe352b295408929809e9bd03899a98150cd980a6627a90ed801d",
+      "cluster": 3,
+      "link": "https://mixedmigration.org/resource/dynamics-and-challenges-for-child-migration-in-south-america",
+      "title": "Dynamics and challenges for child migration in South America | Mixed Migration Centre"
+    },
+    {
+      "url_hash": "33c66de2e2d371bd5f3e56eafed76ddb91cde392784551c611d39accff30e8db",
+      "cluster": 18,
+      "link": "https://apnews.com/article/4fb9f2c0240993499870f4f204bf41c1",
+      "title": "Schools are starting to teach AI literacy. For many, that means helping kids see chatbots' flaws"
+    },
+    {
+      "url_hash": "610f0e070729798cde1b5c7dcab23af9488a1d1b52869e3d4faf0ea4e30cd67a",
+      "cluster": 17,
+      "link": "https://cosn.org/cosn-news/cosn-releases-first-of-its-kind-national-student-data-privacy-report",
+      "title": "CoSN Releases First-of-Its-Kind National Student Data Privacy Report"
+    },
+    {
+      "url_hash": "d0427b71d688114ec2e7d78ae4edfd9b7a381fff0ff7e84c6ebaf570748686ac",
+      "cluster": 19,
+      "link": "https://school-education.ec.europa.eu/en/discover/publications/neset-report-screen-time-and-educational-outcomes",
+      "title": "NESET report on screen time and educational outcomes | European School Education Platform"
+    },
+    {
+      "url_hash": "69277fbcbf8e1717b308c7c66a51368424f0020023c9b9c69915610e4e7bef4d",
+      "cluster": 17,
+      "link": "https://projectunicorn.org/state-of-the-sector",
+      "title": "The State of Privacy and Interoperability in K-12 Education — Project Unicorn"
+    },
+    {
+      "url_hash": "21ec12006758b69e0bcd93ba4cc777ccd3516a348cfc32e0df8155d1b6614a04",
+      "cluster": 11,
+      "link": "https://apnews.com/article/aa47a0f655d922be9069dc9e1191683e",
+      "title": "Five Things to Know About Largest Cell Phone Ban Study"
+    },
+    {
+      "url_hash": "92b0a782957b06bc330b7d0e96dd026827c2642ca7418fbf3dbd223afc76593f",
+      "cluster": 15,
+      "link": "https://arxiv.org/abs/2412.16369",
+      "title": "Navigating AI to Unpack Youth Privacy Concerns: An In-Depth Exploration and Systematic Review"
+    },
+    {
+      "url_hash": "195570a3e1f14b79cc87ff0355976953074b58dca7cce406ae900db49947a29a",
+      "cluster": 19,
+      "link": "https://arxiv.org/abs/2508.10062",
+      "title": "Excessive Screen Time is Associated with Mental Health Problems and ADHD in US Children and Adolescents: Physical Activi"
+    },
+    {
+      "url_hash": "1ce2cb5f80d5fadce95c69b57753b1af669ceb30bd5b85958f66dc96f9286e8c",
+      "cluster": null,
+      "link": "https://nature.com/articles/s41467-025-63259-8",
+      "title": "Neurodevelopmental commonalities in cognitive control networks for mathematics and reading in meta-analysis of 3308 part"
+    },
+    {
+      "url_hash": "5037730235de6c6f7732ea515021d6720a57615123e44edef932bc557423c410",
+      "cluster": 17,
+      "link": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/06/ico-statement-on-edtech-examined-report",
+      "title": "ICO statement on ‘Edtech examined’ report"
+    },
+    {
+      "url_hash": "21bd504f2f44ed697c1f037f30c0b2bd470721af0a0ded9c36d248b3d2a20711",
+      "cluster": 18,
+      "link": "https://apnews.com/article/25a3946727397951fd42324139aaf70f",
+      "title": "Schools use AI to monitor kids, hoping to prevent violence. Our investigation found security risks"
+    },
+    {
+      "url_hash": "13268c86955c460dbe601995188b6b0a6eb066aa115434e998b944fde3cfbbeb",
+      "cluster": 22,
+      "link": "https://brookings.edu/articles/school-finance-reforms-made-funding-more-equal-by-income-but-not-by-race",
+      "title": "School finance reforms made funding more equal by income, but not by race"
+    },
+    {
+      "url_hash": "41f64dfc39d67a88601ce837eb72b3c541240b2c7c6c82292a4d92de5140373b",
+      "cluster": 18,
+      "link": "https://hechingerreport.org/proof-points-offload-critical-thinking-ai",
+      "title": "University students offload critical thinking, other hard work to AI"
+    },
+    {
+      "url_hash": "e956e3bdb6d73c12742cd233574cadcbb9e0a4018a8e236ef0d63a8c29cc091f",
+      "cluster": 17,
+      "link": "https://newamerica.org/insights/empowering-student-agency-in-the-digital-age-the-role-of-privacy-in-edtech",
+      "title": "Empowering Student Agency in the Digital Age: The Role of Privacy in EdTech"
+    },
+    {
+      "url_hash": "d131a1a68045fa1b4a4ac6c58f0a65a9b0345203251b7cf2d2a77f2a32a6e6bd",
+      "cluster": 18,
+      "link": "https://newamerica.org/insights/new-trolley-problem",
+      "title": "All Aboard: The Ethics of Campus AI and Higher Education’s New Trolley Problem"
+    },
+    {
+      "url_hash": "ef271f42d0a5befb378aab7d4737fc8d2f689ff6fd559e0f56b5572543f64ea1",
+      "cluster": 17,
+      "link": "https://newamerica.org/insights/how-edtech-monitoring-is-reshaping-public-schools",
+      "title": "Public Schools, Private Eyes: How EdTech Monitoring Is Reshaping Public Schools"
+    },
+    {
+      "url_hash": "191890d7f4fd23f03f744edc58b36b8f8fd32e69e28adf906730d19a82aafcdf",
+      "cluster": 6,
+      "link": "https://europepmc.org/article/MED/42325261",
+      "title": "Potentially toxic elements in indoor and outdoor settled dust of houses and kindergartens in Tehran: characteristics, so"
+    },
+    {
+      "url_hash": "bedcb798f344434d13a3545ab53879a6d720aba52912ef5b34921f5167439680",
+      "cluster": 6,
+      "link": "https://europepmc.org/article/MED/42564783",
+      "title": "Gaps Between Use of Air Quality Information and Healthcare Provider Discussion in U.S. Children With Asthma and Their Ca"
+    },
+    {
+      "url_hash": "0e2f9238df343c32a4961bc1c753b05f2002e511bea03bef886a137a1808e80f",
+      "cluster": null,
+      "link": "https://europepmc.org/article/MED/42322741",
+      "title": "Distribution of radon concentrations on the ground floor of schools and kindergartens"
+    },
+    {
+      "url_hash": "042dfa1c506ce0201004fb16eb711ede5768d8500543ce200f47139bdc2287dc",
+      "cluster": 5,
+      "link": "https://europepmc.org/article/MED/42431535",
+      "title": "Air pollution and autism-like traits: Sensitive periods and joint effects of exposure to sources and constituents of fin"
+    },
+    {
+      "url_hash": "cac2153898223800fa002f6f4127baa94ed14519567fcbb66dd09cb635e02902",
+      "cluster": 5,
+      "link": "https://europepmc.org/article/MED/42419614",
+      "title": "Prenatal cold duration and childhood cognitive performance: Evidence from a multifaceted assessment of temperature frequ"
+    },
+    {
+      "url_hash": "f7d9d6b2f089d58c768a4ee20c650be092ae78f670bfdb2342eb12150f350c8e",
+      "cluster": 6,
+      "link": "https://europepmc.org/article/MED/42419612",
+      "title": "The hidden infectious disease-related sepsis risk of wildfire-specific PM2.5"
+    },
+    {
+      "url_hash": "121a1fc34a34c683392817b3737faacc380dd2bf93e681e6e41c2a533512f9f6",
+      "cluster": 5,
+      "link": "https://europepmc.org/article/MED/42379486",
+      "title": "Prenatal exposure to particulate matter and risk of autism spectrum disorder in children: a population-based cohort stud"
+    },
+    {
+      "url_hash": "eeed1ca9978e269cd983a1e69a50dfd2f2306606afffee3aea9eaf07a6f89c45",
+      "cluster": 6,
+      "link": "https://europepmc.org/article/MED/42559204",
+      "title": "Prevalence of hypertension and cross-sectional associations between household air pollution exposure and blood pressure "
+    },
+    {
+      "url_hash": "e7e86fb8a0664244347f742c421b9e16716c1cc524f30efd3ba7dfe3ffe64459",
+      "cluster": 5,
+      "link": "https://europepmc.org/article/MED/42498385",
+      "title": "Associations of prenatal exposure to air pollution with fetal growth trajectories phenotype in a cohort study: Implicati"
+    },
+    {
+      "url_hash": "6d6309200d60ad39c47e4caa11eb9ba23fa3c175fcf7b366b7976fefbc76cad1",
+      "cluster": 6,
+      "link": "https://europepmc.org/article/MED/42303031",
+      "title": "Early life exposure to an episode of extreme air pollution and lung function later in childhood: the Hazelwood early lif"
+    },
+    {
+      "url_hash": "2e799c318d796cc189448e97461eeef916fa25658cb4ad83526078af0e8d55e6",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42218937",
+      "title": "Prediction of low birth weight using machine learning-based analysis of environmental and maternal risk factors: insight"
+    },
+    {
+      "url_hash": "63673cce8c732f0a4f1f6ff4604708de2014186d47323e01156986ffb066efca",
+      "cluster": 5,
+      "link": "https://europepmc.org/article/MED/42218935",
+      "title": "Single and combined effects of prenatal exposure to air pollutants on children's cognitive performance"
+    },
+    {
+      "url_hash": "9e6f584ec3b08190983c0b549b3660bf9642764d17747e710576858388992863",
+      "cluster": 6,
+      "link": "https://europepmc.org/article/MED/42217744",
+      "title": "Childhood outdoor air pollution exposure across multiple microenvironments and metabolic syndrome: A HELIX cohort analys"
+    },
+    {
+      "url_hash": "76e3148e1575086b24d051de5234c8c3ce7d259032a7bb51d0f3097157373feb",
+      "cluster": 7,
+      "link": "https://europepmc.org/article/MED/42162721",
+      "title": "The role of the physical environment in school readiness in England: Evidence from the Millennium Cohort Study"
+    },
+    {
+      "url_hash": "be6197a10b7d42bf9be20386948e48663626faeabe106ab673bab554af2f9345",
+      "cluster": 5,
+      "link": "https://europepmc.org/article/MED/40120015",
+      "title": "Prenatal Exposure to Ambient Particulate Matter and Autism Spectrum Disorder in Children, a Case Control Study in France"
+    },
+    {
+      "url_hash": "b8ef8afe4a11c037931add29721eab9c2bbcca3fff4632eda2b99a7e43cd8bae",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42627830",
+      "title": "Urban tree canopy fragmentation and child mortality in low- and middle-income countries"
+    },
+    {
+      "url_hash": "dc4c8d09f4609bd86ca8a88bb0e8dd654d5432aca33022aabf392a2a39d9e5f0",
+      "cluster": 4,
+      "link": "https://europepmc.org/article/MED/42612000",
+      "title": "Marine heatwaves and undernutrition in low- and middle-income countries"
+    },
+    {
+      "url_hash": "8e8860eea5977b1cb63ded22ffce8b45a025b17e9751da72084862946cc30682",
+      "cluster": 4,
+      "link": "https://europepmc.org/article/MED/42637191",
+      "title": "Diurnal Differences in the Effects of Heat Exposure on Renal Function: A Randomized Controlled Crossover Trial"
+    },
+    {
+      "url_hash": "408bcbf43243a4e0aa7956a2ff20cfec6be73f44d359fe0f12b17e2fd2cdc946",
+      "cluster": 5,
+      "link": "https://europepmc.org/article/MED/42629451",
+      "title": "Child characteristics, household, and home environmental factors associated with eczema: a cross-sectional study"
+    },
+    {
+      "url_hash": "56e1eb97d590bc812c4ae8b056d7b77a7269688b1fe4d18882181a9c410163f8",
+      "cluster": 5,
+      "link": "https://europepmc.org/article/MED/42628669",
+      "title": "Associations between acrylamide and brain-derived neurotrophic factor levels in children in a European biomonitoring stu"
+    },
+    {
+      "url_hash": "20c2a57ea80c4c04cbd50754aed9c6ead7094a0d0acd25b17e51d4b5600bbb96",
+      "cluster": 6,
+      "link": "https://europepmc.org/article/MED/42612665",
+      "title": "Impact of the Ultra Low Emission Zone on lung function growth in children in London, UK: a prospective parallel cohort s"
+    },
+    {
+      "url_hash": "a2127b9748cc58642aaef5d3fc39b82aabb6d68752e963eb426c38fd28559329",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42490362",
+      "title": "Socioeconomic disadvantage accounts for most of the early childhood development gap among children of adolescent mothers"
+    },
+    {
+      "url_hash": "102aaac5d323ab088c760ae8e549242a0cb92d6871c823524b0961f2eb105c49",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42415700",
+      "title": "Maternal education-related inequality in female genital mutilation/cutting among daughters aged 0-14 years in three East"
+    },
+    {
+      "url_hash": "209da355591d1d06dcc9c3554af48ef6220a8534c929aba89b394f345e4b9750",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42136020",
+      "title": "Dietary intake, nutrition knowledge, and behavior in youth team sport athletes: a scoping review and call to advance res"
+    },
+    {
+      "url_hash": "9b4e1be335447f5230562195c7f2e2458726488fe8b76dbce1424a9136945905",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/41928424",
+      "title": "Telling the good story: supporting children's first 1,000 days in Northwest Tasmania"
+    },
+    {
+      "url_hash": "46c62741da72efce263f32a1968afc397b12436ec812a7b5a4db3c66ff423726",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/41503795",
+      "title": "Burden and associated risk factors of undernutrition among displaced pregnant and lactating women: A scoping review"
+    },
+    {
+      "url_hash": "840bd3b1d107780fd07f2841f930704b04051b05ba4716f14836289f554ff2bd",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42614749",
+      "title": "Comparative machine learning survival models for under-five mortality in Southern Africa with frailty modelling"
+    },
+    {
+      "url_hash": "1231d59300349d65e831f505c83048a1212aa074836e72c601c5d0a6e322436c",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42614659",
+      "title": "Supporting the economic and health resilience of last mile adolescent girls and young Women in mining communities: A glo"
+    },
+    {
+      "url_hash": "e4456e122df12b9db7962eb8ef9056f843f46ba53fff0cf36a1ddd52301c4a0e",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42552951",
+      "title": "Inequalities in maternal health service utilisation in Somalia: analysis of the 2020 Somali health and demographic surve"
+    },
+    {
+      "url_hash": "47656ffcf20a773d7d06537f39bf6ab6d31715a63817fe3673b4bb29a8da2e54",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42544920",
+      "title": "Coverage and factors associated with receipt of early newborn postnatal care components in Afghanistan: findings from th"
+    },
+    {
+      "url_hash": "0ea6ec103a3f9c2b699670e08a5b598f9d9e574aeed37c52522c1848a51b91ea",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42497676",
+      "title": "Extrinsic incentives can shape inequity aversion in primary school children"
+    },
+    {
+      "url_hash": "9abec3d14a1d531d16a79c8eea88d6280effca94f79cb0e99ef690ffbacec2d8",
+      "cluster": 19,
+      "link": "https://europepmc.org/article/MED/42543064",
+      "title": "The joint trajectories of screen time, sleep, and physical activity during primary school and their links to demographic"
+    },
+    {
+      "url_hash": "82d8ffb803b99dec2c60c2e77ff810b8ad7d9707260adcb227b1db967b3e2b8e",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/41685562",
+      "title": "Adolescent sexual and reproductive health and rights policy for ethnic minority girls in Vietnam: a qualitative study wi"
+    },
+    {
+      "url_hash": "9d81dd66a448b2c5d9fdd35f78c30eb0768c2fdabb0129a39f9a23552a987fa6",
+      "cluster": null,
+      "link": "https://europepmc.org/article/MED/42537544",
+      "title": "Temporal trend of adequate consumption of fruits and vegetables and associated factors in schoolchildren aged 7 to 14 ye"
+    },
+    {
+      "url_hash": "c90d9c3eb176fa703f9115681c35b75299f82577930c48bea85735cf2436f0eb",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42263873",
+      "title": "Parental depressive symptoms and child education delay in Indonesia: Indirect associations via growth and morbidity in a"
+    },
+    {
+      "url_hash": "7997eaf14791b51b7e77dab1988d51fd6ee54fb6e3be7d52488f93703c95c292",
+      "cluster": 5,
+      "link": "https://europepmc.org/article/MED/42603951",
+      "title": "Parental experience and information needs following a positive newborn screening test-based neonatal diagnosis of a chro"
+    },
+    {
+      "url_hash": "6d28f4d15cbf6c2a20afff43a731225d8a2741670692640c76d47630af1e5d13",
+      "cluster": 3,
+      "link": "https://europepmc.org/article/MED/42389673",
+      "title": "Measuring neurodevelopment in iron-deficient children in sub-Saharan Africa: A systematic review of evidence and gaps"
+    },
+    {
+      "url_hash": "709201fc459dc9219387ade2af15bea7ef6f2cd66d81416e97f19acc5207115a",
+      "cluster": 7,
+      "link": "https://hechingerreport.org/students-want-to-send-bill-for-lost-school-time-to-big-oil",
+      "title": "Big Oil should help foot the bill for lost school time, students say"
+    },
+    {
+      "url_hash": "7be1bbefaa24ed5d113429c283d32b6ff40c9f128ee4235e32df94fb10a1c07c",
+      "cluster": 7,
+      "link": "https://hechingerreport.org/too-hot-for-summer-school",
+      "title": "Too hot for summer school?"
+    },
+    {
+      "url_hash": "7af064f2ea29a552ed41bed92f5f4ec3b2b546398351eb554c6860753418a4ca",
+      "cluster": 1,
+      "link": "https://hechingerreport.org/students-schools-race-to-save-clean-energy-projects-in-face-of-trump-deadline",
+      "title": "Students, schools race to save clean energy projects in face of Trump deadline"
+    },
+    {
+      "url_hash": "08f4d97e68098d6ab4771a8dcafd8b318c5c31a5ba11e15db50b82797c4ce164",
+      "cluster": 7,
+      "link": "https://apnews.com/article/8099f7a58ba910b476049b7894736f32",
+      "title": "With poor ventilation and children packed in, UK's outdated schoolhouses swelter in the heat"
+    },
+    {
+      "url_hash": "cb12b91dd4b370e985dffabc4b05b2bedc6c0ee812e7ec221087e275cc413365",
+      "cluster": 7,
+      "link": "https://apnews.com/article/db329527d454636ca0140b14c17358f3",
+      "title": "Oppressive heat, high humidity grip much of the US as students start a new school year"
+    },
+    {
+      "url_hash": "e37a61740e51a9befe6a2e5977105038602234028fc4036c363257d485bd2184",
+      "cluster": 1,
+      "link": "https://arxiv.org/abs/2504.14324v1",
+      "title": "Meltdown: Bridging the Perception Gap in Sustainable Food Behaviors Through Immersive VR"
+    },
+    {
+      "url_hash": "092a806c9abd24562e6a861b6b97d8f99d0217b174b59dbc8011f80aa0402919",
+      "cluster": 1,
+      "link": "https://arxiv.org/abs/2410.17411v1",
+      "title": "Harnessing Visualization for Climate Action and Sustainable Future"
+    },
+    {
+      "url_hash": "34a5b8f49f93d31456808bf59fe9fc94b32d1397e09abc7cae4b6a4810c71c4e",
+      "cluster": 15,
+      "link": "https://arxiv.org/abs/2510.17389v1",
+      "title": "EduAdapt: A Question Answer Benchmark Dataset for Evaluating Grade-Level Adaptability in LLMs"
+    },
+    {
+      "url_hash": "d0096f785721599be00f4f6c220603b61a6ff864b1a9692d93f219294254b657",
+      "cluster": 15,
+      "link": "https://arxiv.org/abs/2503.04770v1",
+      "title": "High School Computer Science Participation: A 6-Year Enrollment Study"
+    },
+    {
+      "url_hash": "4f079d0e78a5ca3f3c76a18395c59c2de1b270ab8b1d2df1563559f49a078373",
+      "cluster": 18,
+      "link": "https://arxiv.org/abs/2602.23601v1",
+      "title": "Extended Reality (XR): The Next Frontier in Education"
+    },
+    {
+      "url_hash": "8f9052fac8388f9ea9bf250895e40fc5c5c32850a46b30b5afd6b32b433ef4f8",
+      "cluster": 15,
+      "link": "https://arxiv.org/abs/2510.25477v1",
+      "title": "A Study on Privacy-Preserving Scholarship Evaluation Based on Decentralized Identity and Zero-Knowledge Proofs"
+    },
+    {
+      "url_hash": "4f6f27e063f267e6bd0fcb40131615978aaa0d7d0d71f9711cd519666f48e9be",
+      "cluster": 15,
+      "link": "https://arxiv.org/abs/2505.09287v2",
+      "title": "Ranking-Based At-Risk Student Prediction Using Federated Learning and Differential Features"
+    },
+    {
+      "url_hash": "fe6ba6f58f93a0c894c7ccb6c3407bad211d96d6f7f9b4b024ef99426f1f5cb9",
+      "cluster": 19,
+      "link": "https://arxiv.org/abs/2505.03369v1",
+      "title": "Validating the Effectiveness of a Large Language Model-based Approach for Identifying Children's Development across Vari"
+    },
+    {
+      "url_hash": "c39362cf315682fda8796c526b3e616ccf7212160422df649bdfbe35f718dfdf",
+      "cluster": 18,
+      "link": "https://restofworld.org/2026/china-ai-adoption-jinguyuan",
+      "title": "A dumpling shop becomes a poster child of AI adoption in China"
+    },
+    {
+      "url_hash": "4c12ceb1389a7c2bff791eb0867c8504a82be01badcd80b81cc466416ffce94c",
+      "cluster": 18,
+      "link": "https://restofworld.org/2026/china-ev-exports-overcapacity-global-markets",
+      "title": "Chinese carmakers now sell one EV abroad for every two at home"
+    },
+    {
+      "url_hash": "2ad119cf91e710906e15914bf380acbe98054e4422ddbbe3c050cc77c5897534",
+      "cluster": 18,
+      "link": "https://restofworld.org/2026/china-robot-ban-silicon-valley",
+      "title": "Ban on Chinese robots leaves U.S. startups stranded"
+    },
+    {
+      "url_hash": "945c7476825c6b2e6ac2094e97c4e6c2fdbe1bac950fd6b8688c91491f33a152",
+      "cluster": 15,
+      "link": "https://arxiv.org/abs/2512.06529",
+      "title": "Inside the Degree, Outside the Discipline? Testing an Asymmetric Appraisal Model of the Curricular Legitimacy Gap in Com"
+    },
+    {
+      "url_hash": "a604ae83d69a40faa5ed92da28ba2df0c743f5327a25b38e1eae20171b78e4fd",
+      "cluster": null,
+      "link": "https://arxiv.org/abs/2509.25298",
+      "title": "Trajectories and Comparative Analysis of Global Countries Dominating AI Publications, 2000-2025"
+    },
+    {
+      "url_hash": "3e648f2981870d12e8718c6be2617931879d6fb1bbe672488670bb33ac131a7f",
+      "cluster": 16,
+      "link": "https://technologyreview.com/2026/08/26/1141949/editors-letter-september-2026",
+      "title": "Raised on AI"
+    },
+    {
+      "url_hash": "8da94bbec01f351963d6b731a30a5d442f827dd31079b130715ec0c5d74c4da2",
+      "cluster": 18,
+      "link": "https://technologyreview.com/2026/08/26/1141952/puzzles-ai-models-flub-these-tests",
+      "title": "AI models flub these intelligence tests. Can you fare any better?"
+    },
+    {
+      "url_hash": "ae014d01901004ba4c61803d7037815f3fd2e5152281bb5c77c2c9c40bc126a0",
+      "cluster": null,
+      "link": "https://nature.com/articles/s41539-026-00447-1",
+      "title": "Explaining forgetting at different timescales requires a time-variant forgetting function - npj Science of Learning"
+    },
+    {
+      "url_hash": "b2b11f86de4aeb2682b7c45217a6a065fa91c9ef5754116e163be25e7e0f6d11",
+      "cluster": null,
+      "link": "https://nature.com/articles/s41539-026-00439-1",
+      "title": "COVID-19-related school closures and students’ achievement and motivation: Did teacher support make a difference - npj S"
+    },
+    {
+      "url_hash": "913fee3d249a5adc1c1aa62c6ad88a81458285266aef97219ffd510a5de292ff",
+      "cluster": null,
+      "link": "https://nature.com/articles/s41539-026-00445-3",
+      "title": "Receptive and expressive language phenotyping in over 62,000 autistic individuals - npj Science of Learning"
+    },
+    {
+      "url_hash": "ab9835be8aa045a4bd5cafe5ada718b548304d93ae30a192d71291f0a662ebf7",
+      "cluster": 15,
+      "link": "https://nature.com/articles/s41539-026-00440-8",
+      "title": "Curious behaviors in times of uncertainty: dynamics of student question-posing in online educational discussion - npj Sc"
+    },
+    {
+      "url_hash": "7d7f62b7f420771fd63a0f276ed6d47d68787582ef18f65ea61bb9d5c19c53ce",
+      "cluster": 19,
+      "link": "https://nature.com/articles/s41539-026-00443-5",
+      "title": "Does tapping in sync reflect cognitive control? Links between sensorimotor synchronization, social context, and executiv"
+    },
+    {
+      "url_hash": "ba4f87c0cce68bd21954c3794eb5717aadf414d804ddfbf906bb4aebc258266e",
+      "cluster": null,
+      "link": "https://nature.com/articles/s41539-026-00438-2",
+      "title": "Comparing feedback learning and arousal responses in Down, Fragile X, and Williams syndromes - npj Science of Learning"
+    },
+    {
+      "url_hash": "d4e1dfb6bf07a3cb842eab17724ae32389af9346b444607768cd22709c32d3c0",
+      "cluster": 18,
+      "link": "https://arxiv.org/abs/2608.23580",
+      "title": "Agents of ViTAL: Ethics Missions -- A Narrative-Centered Learning Environment with a Co-Designed Conversational Agent fo"
+    },
+    {
+      "url_hash": "18514da62116892af479c4026fe96172abff6fd054f46d1635fb1be6935984db",
+      "cluster": 2,
+      "link": "https://restofworld.org/2026/google-amazon-cloud-china-india",
+      "title": "Why the global push to break free from Big Tech keeps falling short"
+    },
+    {
+      "url_hash": "7ae79c497d42b875ee480de57e224551ff0f7071674a46bf49dca678ae230439",
+      "cluster": 2,
+      "link": "https://chequeado.com/formar-para-verificar-en-red-una-iniciativa-latinoamericana-reconocida-a-nivel-global",
+      "title": "Formar para verificar en red: una iniciativa latinoamericana reconocida a nivel global"
+    },
+    {
+      "url_hash": "6797065784e31665d0ffcf6bf4f349d06af1e6d8a23a4c09b535701c8f325c4a",
+      "cluster": 13,
+      "link": "https://chequeado.com/lanzamos-desinformacion-ilustrada-un-libro-de-ilustraciones-para-que-no-te-la-dibujen",
+      "title": "Lanzamos “Desinformación Ilustrada”: un libro de ilustraciones “para que no te la dibujen”"
+    },
+    {
+      "url_hash": "ca2d030302414bf7f8b7c49d5134e9d5170de6cd0f4e93f66e798d0d98f477f8",
+      "cluster": 15,
+      "link": "https://arxiv.org/abs/2603.28317v1",
+      "title": "Mapping data literacy trajectories in K-12 education"
+    },
+    {
+      "url_hash": "7469d90bc0147b67874e2196cfc369ef3152ec368282b34e9ae0cb7aa8cf7fd6",
+      "cluster": 18,
+      "link": "https://arxiv.org/abs/2601.06101v1",
+      "title": "How to Assess AI Literacy: Misalignment Between Self-Reported and Objective-Based Measures"
+    },
+    {
+      "url_hash": "a53135a4c9a6151e5f01375aad99412ae7b37eda39bf3d9ecc0cf0fd52df7b3e",
+      "cluster": 18,
+      "link": "https://arxiv.org/abs/2508.13962v2",
+      "title": "Learning to Use AI for Learning: Teaching Responsible Use of AI Chatbot to K-12 Students Through an AI Literacy Module"
+    },
+    {
+      "url_hash": "c1b75970d55e8d4f5128317767f99ced35fed867a54c1892be5dd46271e44adc",
+      "cluster": 15,
+      "link": "https://arxiv.org/abs/2507.14207v1",
+      "title": "Mitigating Trojanized Prompt Chains in Educational LLM Use Cases: Experimental Findings and Detection Tool Design"
+    },
+    {
+      "url_hash": "d05f823cbf7a774ca0c85a9e930354ccbaca2375a3be7bb14da4e1ba56a1a08c",
+      "cluster": 15,
+      "link": "https://arxiv.org/abs/2412.06989v3",
+      "title": "Learning About Algorithm Auditing in Five Steps: Scaffolding How High School Youth Can Systematically and Critically Eva"
+    },
+    {
+      "url_hash": "303f7273976960e9b8e8dedb5e3b1197c15270db5dc0806dac8ba51b8ce8a559",
+      "cluster": 18,
+      "link": "https://arxiv.org/abs/2412.13554v1",
+      "title": "An XAI Social Media Platform for Teaching K-12 Students AI-Driven Profiling, Clustering, and Engagement-Based Recommendi"
+    }
+  ]
+}
