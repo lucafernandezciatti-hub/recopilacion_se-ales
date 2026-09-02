@@ -1,0 +1,72 @@
+{
+  "autor": "candela",
+  "_comentario": "Decisiones humanas sobre el corpus. Se aplica con scripts/import_reviews.py. Un archivo por persona.",
+  "reviews": [
+    {
+      "url_hash": "262c38eb5a142197490a6f835e3951a94062a0d60c7463bc5fffa36a8b3d07ce",
+      "id": 110,
+      "link": "https://uoc.edu/es/news/2026/el-calor-amenaza-el-aprendizaje-en-escuelas-no-adaptadas-al-clima",
+      "utility": "useful",
+      "why_it_matters": "Aunque la noticia sea de Cataluña, no de Argentina, apoya la idea de que el calor en el aula que erosiona directamente resultados de aprendizaje medibles. Abre la pregunta de si escuelas argentinas con edificios antiguos y sin normativa de confort térmico infantil mostrarían un efecto similar sobre pruebas como Aprender hacia 2050.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": "Candela",
+      "reviewed_at": "2026-09-02T12:40:43.391205"
+    },
+    {
+      "url_hash": "8686be7c08c3d612d52ebee040072d79aeb07bd8fe3d2e840f6e3572ccfb16d9",
+      "id": 234,
+      "link": "https://elpais.com/educacion/2026-06-17/radiografia-de-un-cole-achicharrado-mas-de-37-grados-en-unas-aulas-ardientes-recien-construidas.html",
+      "utility": "useful",
+      "why_it_matters": "Es una señal de Madrid que muestra que hay muchos diseños escolares incompatibles con el clima emergente. Para la educación primaria argentina hacia 2050, muestra qué condiciones materiales deberá garantizar la escuela primaria para seguir funcionando de manera segura y equitativa.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": "Candela",
+      "reviewed_at": "2026-09-02T12:48:37.784989"
+    },
+    {
+      "url_hash": "b636f8782829dd0326b718f87009b92843e1c8820a4b1796042a51cc3142bb96",
+      "id": 295,
+      "link": "https://interactive.carbonbrief.org/el-nino-explainer/index.html",
+      "utility": "poor",
+      "why_it_matters": "La señal muestra que un super el niño anticipa disrupciones simultáneas de calor, lluvias y continuidad escolar. Sirve para sustentar la preocupación en pensar como adaptar las escuelas bajo un clima más extremo e incluir en la currícula aprendizajes ambientales.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": "Candela",
+      "reviewed_at": "2026-09-02T12:53:25.140082"
+    },
+    {
+      "url_hash": "6c3c22e92352cdda1061359d5bbbb4dd5ed622f5569c01375df87c859d8b3085",
+      "id": 297,
+      "link": "https://theguardian.com/environment/2026/aug/25/at-least-35000-excess-deaths-europe-back-to-back-heatwaves",
+      "utility": "not_useful",
+      "why_it_matters": "Como la señal muestra el costo de vidas en relación al clima extremo, apoya la noción de que la adaptación al nuevo clima constituye una crisis de salud pública.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": "Candela",
+      "reviewed_at": "2026-09-02T12:59:39.244054"
+    },
+    {
+      "url_hash": "7b92d194046946448841d05f5ea9c0a216a4757ec61e6ea0bb020101af6cddb3",
+      "id": 300,
+      "link": "https://theguardian.com/environment/2026/aug/17/marine-heatwave-new-normal-britain-seas",
+      "utility": "not_useful",
+      "why_it_matters": "La señal muestra como afecta el calor a los mares en Reino Unido. No es particularmente útil para Educación, pero sí apoya la noción de que hay una crisis climática inminente e incluso ya presente.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": "Candela",
+      "reviewed_at": "2026-09-02T13:07:48.331410"
+    },
+    {
+      "url_hash": "1f65f13dcf08527569fe63a9e101bff1ecb5a8e889db76e0bbfb294b1bcd3789",
+      "id": 393,
+      "link": "https://unicef.org/media/159341/file/A_Threat_to_Progress_190824%20EN.pdf",
+      "utility": "useful",
+      "why_it_matters": "Como el informe estima que cada año casi 40 millones de niños sufren interrupciones educativas por amenazas naturales y brotes de enfermedades, refuerza la necesidad de infraestructura escolar adaptada al clima, planes de continuidad pedagógica y preparación docente ante emergencias.",
+      "status": "unverified",
+      "manual_notes": null,
+      "reviewed_by": "Candela",
+      "reviewed_at": "2026-09-02T13:37:33.347934"
+    }
+  ]
+}
